@@ -1,0 +1,161 @@
+/* Map for style file */
+/*--------------------*/
+//---1---FontIcon
+//---1.1---Class for using fonticons
+//---2---Font mixins
+//---3---Colors mixins
+//---4---Basic setting
+//---5---Work proccess
+//---5.1---Thene for blocks
+/*--------------------*/
+/* FontIcon */
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello.eot?26564774');
+  src: url('../fonts/fontello.eot?26564774#iefix') format('embedded-opentype'), url('../fonts/fontello.woff2?26564774') format('woff2'), url('../fonts/fontello.woff?26564774') format('woff'), url('../fonts/fontello.ttf?26564774') format('truetype'), url('../fonts/fontello.svg?26564774#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+/* Class for using fonticons*/
+.icon-magnet:before {
+  content: '\e800';
+}
+/* '' */
+.icon-camera-alt:before {
+  content: '\e801';
+}
+/* '' */
+.icon-cog-alt:before {
+  content: '\e802';
+}
+/* '' */
+.icon-plus:before {
+  content: '\e803';
+}
+/* '' */
+.icon-bug:before {
+  content: '\f188';
+}
+/* '' */
+/* Fonts mixin*/
+.reg {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+.semibold {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+/* Mixin colors */
+/* Baseic setting */
+html {
+  font-size: 10px;
+}
+body {
+  margin: 0 auto;
+  color: #000000;
+}
+.text-center {
+  text-align: center;
+}
+/* Work proccess */
+.work-proccess {
+  background-color: #ffffff;
+  height: 67.7rem;
+}
+.work-proccess_caption {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+  font-size: 5rem;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  margin-top: 8.6rem;
+}
+.work-proccess_caption span {
+  color: #fc6744;
+}
+.work-proccess_annotation {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.6rem;
+  color: rgba(0, 0, 0, 0.7);
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+.work-proccess_blocks {
+  margin-top: 9.6rem;
+}
+.work-proccess_block {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 1rem 2rem;
+  width: 25rem;
+  padding-top: 3.3rem;
+}
+.work-proccess_block > i {
+  font-size: 5rem;
+}
+.work-proccess_block button {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  border-radius: 2.7rem;
+  background-color: #ffffff;
+  border: none;
+  display: inline-block;
+  -webkit-box-shadow: 3px 5px 14px 0px rgba(20, 20, 21, 0.09);
+          box-shadow: 3px 5px 14px 0px rgba(20, 20, 21, 0.09);
+  width: 22.8rem;
+  height: 5.5rem;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 1.6rem;
+  margin-bottom: -2.7rem;
+}
+.work-proccess_block button i {
+  margin-right: 0.2rem;
+}
+/* Themes for blocks */
+.block_theme-lightblue {
+  background-color: #4eb2f7;
+}
+.block_theme-purpure {
+  background-color: #c049f8;
+}
+.block_theme-violet {
+  background-color: #817eff;
+}
+.block_theme-lightred {
+  background-color: #f74770;
+}
