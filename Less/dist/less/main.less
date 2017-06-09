@@ -1,0 +1,244 @@
+/* Map for style file */
+/*--------------------*/
+//---1---Fonts
+//---2---Font mixins
+//---3---Colors mixins
+//---4---Basic setting
+//---5---Header
+/*--------------------*/
+
+
+/* Fonts */
+@font-face {
+	font-family: 'Rockwell';
+	src: url('Rockwell-Italic.eot');
+	src: url('Rockwell-Italic.eot?#iefix') format('embedded-opentype'),
+		url('Rockwell-Italic.woff2') format('woff2'),
+		url('Rockwell-Italic.woff') format('woff'),
+		url('Rockwell-Italic.ttf') format('truetype'),
+		url('Rockwell-Italic.svg#Rockwell-Italic') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Rockwell';
+	src: url('Rockwell-Bold.eot');
+	src: url('Rockwell-Bold.eot?#iefix') format('embedded-opentype'),
+		url('Rockwell-Bold.woff2') format('woff2'),
+		url('Rockwell-Bold.woff') format('woff'),
+		url('Rockwell-Bold.ttf') format('truetype'),
+		url('Rockwell-Bold.svg#Rockwell-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Rockwell';
+	src: url('Rockwell.eot');
+	src: url('Rockwell.eot?#iefix') format('embedded-opentype'),
+		url('Rockwell.woff2') format('woff2'),
+		url('Rockwell.woff') format('woff'),
+		url('Rockwell.ttf') format('truetype'),
+		url('Rockwell.svg#Rockwell') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Fonts mixins */
+.reg {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+}
+
+.semi {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+}
+
+.bold {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+}
+
+.header-font {
+	font-family: 'Rockwell', sans-serif;
+	font-weight: bold;
+}
+
+.header-font-normal {
+	font-family: 'Rockwell', sans-serif;
+	font-weight: normal;
+}
+
+.header-font-italic {
+	font-family: 'Rockwell', sans-serif;
+	font-weight: italic;
+}
+
+/* Colors mixins*/
+@dark-color: rgb(32, 34, 66);
+@light-color: rgb(255, 225, 62);
+@line-color: rgb(235, 235, 235);
+@header-text-color: rgb(255,255,255);
+/* Basic Setting */
+html{
+	font-size: 10px;
+}
+body{
+	color: @dark-color;
+}
+
+/* Header */
+header{
+	height: 100vh;
+	min-height: 60rem;
+	background: url(../img/bg-header.png) no-repeat center center;
+	background-size: cover;
+	text-align: center;
+}
+
+.header{
+
+	&-top-block{
+		background-color: #fff;
+		height: 11rem;
+	}
+	
+	&-logo{
+		height: 100%;
+		line-height: 12rem;
+		img{
+			vertical-align: middle;
+		}
+		span{
+			.header-font;
+			font-size: 2rem;
+			margin-left: 0.5rem;
+			vertical-align: middle;
+		}
+	}
+
+	&-nav{
+		border-right: 1px solid @line-color;
+		-webkit-margin-before: 0em;
+    	-webkit-margin-after: 0em;
+		height: 11rem;
+		line-height: 11rem;
+		text-align: center;
+		li{
+			a{
+				.reg;
+				text-transform: uppercase;
+				font-size: 1.5rem;
+				color: @dark-color;
+				&:hover{
+					text-decoration: none;
+				}
+			}
+			&.nav-item_active a{
+				.bold;
+				color: @light-color;
+			}	
+			display: inline-block;
+			margin: 0 1rem;
+		}
+	}
+
+	&-callback{
+		&_text{
+			p{
+				.semi;
+				padding-top: 1rem;
+				font-size: 1.2rem;
+			}
+		}
+		a:hover{
+				text-decoration: none;
+			}
+		&_btn{
+			display: inline-block;
+			padding: 1rem 2.5rem;
+			background-color: @light-color;
+			margin-right: 2rem;
+			.bold;
+			color: @dark-color;
+			
+
+		}
+		&_phone{
+			color: @dark-color;
+			font-weight: bold;
+			font-size: 2.4rem;
+			padding-left: 2rem;
+			border-left: 1px solid darken(@line-color, 30%);
+		}
+		text-align: center;
+	}
+
+	&-text-block{
+		text-align: center;
+		padding-top: 10%;
+		color: @header-text-color;
+		h1{
+			.header-font-normal;
+			font-size: 4.8rem;
+			text-align: center;
+			margin-bottom: .2rem;
+		}
+		p{
+			font-size: 2rem;
+			.reg;
+		}
+	}
+	&-main-img{
+		margin-top: 3rem;
+	}
+}
+.main{
+	&-form-block{
+		padding: 2rem;
+		width: 50rem;
+		height: 9rem;
+		margin: 4rem auto;
+		text-align: center;
+		background-color: fadeout(@header-text-color, 50%);
+	}
+	&-form-input{
+		display: inline-block;
+		background-color: #fff;
+		padding: 1rem;
+		height: 5rem;
+		vertical-align: middle;
+		margin-right: -4px;
+		border: none;
+		width: 50%;
+	}
+	&-form-input{
+		display: inline-block;
+		background-color: #fff;
+		padding: 1rem;
+		height: 5rem;
+		vertical-align: middle;
+		margin-right: -4px;
+		border: none;
+	}
+	&-form-btn{
+		display: inline-block;
+		border: none;
+		background-color: @light-color;
+		color: #fff;
+		height: 5rem;
+	}
+}
+.input-addon{
+	.bold;
+	display: inline-block;
+	background-color: @light-color;
+	height: 5rem;
+	width: 9rem;
+	border-right: 1px solid #fff;
+	margin-right: -4px;
+	line-height: 5rem;
+	vertical-align: middle;
+}
