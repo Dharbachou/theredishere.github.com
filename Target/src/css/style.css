@@ -1,0 +1,371 @@
+*
+{
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1920px;
+}
+
+body
+{
+    max-width: 1920px;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+/*
+**
+**хеадер 
+**
+*/
+header
+{
+    width: 100%;
+    height: 980px;
+    background: url("../img/header_bg.jpg") no-repeat;
+    background-size: 100%;
+}
+.middle_header
+{
+    position: relative;
+    /*top: 40%;*/
+    margin-top: 10%;
+    height: 300px;
+    background: #fff;
+}
+.blue
+{
+    height: 100%;
+    background-color: #009ca7;
+    opacity: 0.8;
+    color: #fff;
+    padding-top: 30px;
+}
+.blue h2
+{
+    font-size: 56px;
+    text-align: center;
+    font-weight: 300px;
+    color: #fff;
+}
+.mg_15
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+.white
+{
+    height: 100%;
+    padding-top: 50px;
+}
+.our_service ul
+{
+    padding-top: 20px;
+    margin-left: 7%;
+    color: #111;
+    font-size: 20px;
+}
+.presentation_name
+{
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+.height_
+{
+    min-height: 600px;
+}
+
+.name_service
+{
+    height: 80px;
+    width: 102.5%;
+    color: #fff;
+    background: #009ca7;
+    line-height: 80px;
+    text-align: center;
+    font-size: 40px;
+}
+.logo
+{
+    background: url(../img/logo.png) no-repeat;
+    background-size: 100%;
+    height: 150px;
+    width: 300px;
+}
+.border_service_s
+{
+    height: 370px;
+    border-left: 3px solid #009ca7;
+    border-right: 3px solid #009ca7;
+    border-bottom: 3px solid #009ca7;
+}
+.our_company
+{
+    background: #009ca7;
+    color: #fff;
+    font-size: 24px;
+    height: 300px;
+    padding: 40px 0 20px 0;
+    text-align: justify;
+}
+
+.p0{
+	padding: 5px;
+}
+.n_p
+{
+    color: #111;
+}
+
+.our_clients_slider
+{
+    margin-top: 2%;
+    font-size: 20px;
+}
+a 
+{
+    color: : #009ca7;
+}
+.border
+{
+    height: 80px;
+    background: #009ca7;
+    margin-top: 40px;
+    clear: both;
+}
+.icons
+{
+
+}
+div img 
+{
+    max-width: 500px;
+}
+.icon
+{
+}
+/*
+**
+**конец хеадер 
+**
+*/
+.presentation
+{
+    height:350px;
+    margin-top: 40px;
+    text-align: justify;
+    font-size: 24px;
+}
+
+a>i
+{
+    padding: 20px;
+    font-size: 180px;
+}
+
+.our_clients
+{
+    height: 850px;
+}
+.our_clients h1
+{
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 70px;
+}
+.block_client
+{
+    margin-top: 50px;
+}
+
+.our_clients_slider ul li
+{
+    margin-top: 3px;
+    margin-left: 10%;
+}
+.name_client
+{
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    padding: 10px 0 30px 0;
+    background: #009ca7;
+    color: #fff;
+}
+.task, .solution, .result
+{
+    margin-top: 40px;
+}
+.goal
+{
+    
+    
+}
+.info_goal
+{
+    margin-top: 3px;
+
+}
+
+/*
+**
+**отзывы 
+**
+*/
+.review_person
+{
+    height: 350px;
+    background-color: #009ca7;
+    padding-top: 20px;
+    color: #fff;
+    font-size: 20px;
+}
+.review_person p
+{
+    text-align: justify;
+}
+    .item 
+    {
+        height: 250px;
+    }
+.info_person
+{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.blue
+{
+    color: #009ca7;
+}
+/*
+**
+**конец отзывов 
+**
+*/
+/*
+**
+**сообщения 
+**
+*/
+.message
+{
+    height: 800px;
+    background: url(../img/contact-us.jpg) no-repeat;
+    background-size: 100%;
+}
+.message_write
+{
+    margin-top: 90px;
+    background-color: #fff;
+    height: 600px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.form_message
+{
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.form_message input
+{
+    width: 300px
+}
+.contact_data
+{
+    margin-top: 40px;
+}
+.form_message textarea
+{
+    width: 300px
+}
+/*
+**
+**конец собщения 
+**
+*/
+/*
+**
+**футтер 
+**
+*/
+
+
+.our_service
+{
+    height: 500px;
+}
+.caption_service
+{
+    margin-top: 20px;
+    width: 100%;
+    height: 100px;
+    background: #009ca7;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    font-size: 32px;
+}
+footer
+{
+    height: 80px;
+    width: 100%;
+    background-color: #111;
+}
+.send_message
+{
+    background-color: #009ca7;
+    border: 0;
+    color: #fff;
+    font-size: 24px;
+}
+.footer_info
+{
+    color: #fff;
+    font-size: 16px;
+    line-height: 80px;
+}
+p i
+{
+    margin-right: 10px;
+}
+
+
+
+#message
+{
+    
+display: block;
+display: none;
+
+/* ссылка над всеми элементами */
+z-index: 999;
+
+/* ссылка не заслоняет полностью текст под ней */
+opacity: 0.8;
+
+/* ссылка всегда на одном и том же месте */
+position: fixed;
+
+/* ссылка внизу страницы */
+top: 100%;
+margin-top: -80px; /* = height + preferred bottom margin */
+
+/* ссылка по центру */
+left: 80%;
+margin-left: -80px;
+
+/* закругленные углы */
+-moz-border-radius: 24px;
+-webkit-border-radius: 24px;
+
+/* ссылка большая, заметная и ее легко найти */
+width: 300px;
+line-height: 48px;
+height: 48px;
+padding: 10px;
+background-color: #000;
+font-size: 24px;
+text-align: center;
+}
+
+#message a { color: #fff; }
