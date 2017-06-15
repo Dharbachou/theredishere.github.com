@@ -1,0 +1,286 @@
+
+/* Fonts */
+@font-face {
+  font-family: 'Panton';
+  src: url('../fonts/Panton-Light.eot');
+  src: url('../fonts/Panton-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Panton-Light.woff') format('woff'),
+    url('../fonts/Panton-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Panton';
+  src: url('../fonts/Panton-Black.eot');
+  src: url('../fonts/Panton-Black.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Panton-Black.woff') format('woff'),
+    url('../fonts/Panton-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Panton ExtraBlack';
+  src: url('../fonts/Panton-ExtraBlack.eot');
+  src: url('../fonts/Panton-ExtraBlack.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Panton-ExtraBlack.woff') format('woff'),
+    url('../fonts/Panton-ExtraBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Panton';
+  src: url('../fonts/Panton-SemiBold.eot');
+  src: url('../fonts/Panton-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Panton-SemiBold.woff') format('woff'),
+    url('../fonts/Panton-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Fonts mixins*/
+.light{
+  font-family: 'Panton';
+  font-weight: 300;
+}
+
+.black{
+  font-family: 'Panton';
+  font-weight: 900;
+}
+
+.semibold{
+  font-family: 'Panton';
+  font-weight: 600;
+}
+
+.extrabold{
+  font-family: 'Panton';
+  font-weight: 700;
+}
+
+/* Colors mixins*/
+@dark-color: rgb(0,0,0);
+@light-color: rgb(255,255,255);
+
+/* Basic settings */
+
+html{
+  font-size: 10px;
+}
+body{
+  max-width: 1920px;
+  display: block;
+  margin: 0 auto;
+}
+
+p{
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
+/* Header setting */
+header{
+  display: block;
+  max-width: 1920px;
+  height: 1050px;
+}
+
+.header{
+  &_top{
+    padding-top: 2.1rem;
+    min-height: 12.1rem;
+    background-color: @light-color;
+  }
+  &_caption{
+    .extrabold;
+    font-size: 2.4rem;
+    color:  #363636;
+    text-align: center;
+  }
+  &_contacts{
+    margin-right: 12%;
+    float: right;
+    .call_btn{
+      .semibold;
+      border-radius: 10px;
+      border-width: 2px;
+      border-color:  #282828;
+      border-style: solid;
+      width: 263px;
+      height: 47px;
+      background-color: transparent;
+      color:  #363636;
+      font-size: 2.6rem;/* Приближение из-за подстановки шрифтов */
+      text-align: center;
+    }
+  }
+   &_phone{
+    .extrabold;
+    font-size: 3rem;   
+    text-align: left; 
+  }
+
+
+  &_menu{
+    margin-top: 1.8rem;
+    background-color: rgb(37, 41, 45);
+    color: @light-color;
+    min-height: 9.3rem;
+  }
+
+  &_menu-items{
+    margin: 2.3rem auto 2.3rem auto;
+    list-style-type: none;
+
+    .menu-item{
+        display: inline-block;
+        text-align: center;
+        margin-right: 3rem;
+
+      a{
+        .light;
+        color: @light-color;
+        text-decoration: none;
+        font-size: 2.6rem;
+        text-align: center;
+        &:hover{
+          color: @light-color;
+        }
+      }
+
+    }
+  }
+  &_main{
+    overflow: hidden;
+    min-height: 76.2%;
+    background: url(../img/Header/Background.png) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    color: @light-color;
+    h1{
+     
+      .black;
+      font-size: 4rem;
+    }
+    h2{
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0;
+      display: inline-block;
+      text-align: center;
+            margin-top: 1.5rem;
+      width: 57.2rem;
+      .semibold;
+      font-size: 2.4rem;
+      text-transform: uppercase;
+    }
+    p{
+      margin-top: 6rem;
+      text-align: center;
+      .semibold;
+      font-size: 2.4rem;
+     
+    }
+
+    p.header_bottom-text{
+    margin-top: 10rem;
+  }
+  }
+  &_main-btn{
+    background-color:  #059feb;
+    width: 350px;
+    height: 66px;
+    border: none;
+    border-radius: 40px;
+    .extrabold;
+    margin-top: 3rem;
+color:  #ffffff;
+font-size: 3rem;/* Приближение из-за подстановки шрифтов */
+text-align: center;
+  }
+  
+  &_line{
+    height: 10px;
+    margin-left: 53rem;
+    animation-name: line_rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  &_logo{
+     margin-top:11.5%;
+    text-align: center;
+    display: inline-block;
+    min-height: 20px;
+  }
+
+
+}
+
+ .mouse{
+    margin-top: 1rem;
+  }
+
+.about-us{
+  min-height: 10rem;
+  max-width: 1920px;
+  padding-bottom: 4rem;
+  h1{
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    color:  #363636;
+    font-size: 3.6rem;
+    text-align: center;
+    .black;
+  }
+  .caption_block-item{
+    
+    .caption_block{
+      border-left: 0.5rem solid #059feb;;
+      padding-left: 1rem;
+      h2{
+      font-family: Panton;
+      color:  #363636;
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: left;
+    }
+    }
+     .block_annotation{
+      .semibold;
+      margin-top: 3.1rem;
+      color:  #000000;
+      font-size: 1.8rem;
+      text-align: left;
+    }
+   
+  }
+  
+}
+
+@keyframes line_rotate{
+  0%{
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg)
+    scale(1);
+  }
+  10%{
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg)
+    scale(1.5);
+  }
+  20%{
+    transform: rotate(10deg)
+    scale(1);
+  }
+  50%{
+    transform: rotate(10deg)
+    scale(1);
+  }
+  100%{
+    transform: rotate(10deg)
+    scale(1);
+  }
+}
