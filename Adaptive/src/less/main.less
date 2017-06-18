@@ -1,0 +1,344 @@
+
+/* Fonts icons */
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/font_icons/fontello.eot?94716365');
+  src: url('../fonts/font_icons/fontello.eot?94716365#iefix') format('embedded-opentype'),
+       url('../fonts/font_icons/fontello.woff2?94716365') format('woff2'),
+       url('../fonts/font_icons/fontello.woff?94716365') format('woff'),
+       url('../fonts/font_icons/fontello.ttf?94716365') format('truetype'),
+       url('../fonts/font_icons/fontello.svg?94716365#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-torso:before { content: '\e800'; } 
+.icon-phone:before { content: '\e801'; } 
+.icon-right-open-1:before { content: '\f006'; } 
+
+
+/* Colors mixins */
+@color-dark: rgb(0, 0, 0);
+@color-light: rgb(255, 255, 255);
+@color-yellow: rgb(255, 255, 51);
+
+/* Basic settings */
+html{
+  font-size: 10px;
+}
+
+body{
+    max-width: 1920px;
+    overflow-x: hidden;
+}
+
+/* Header */
+header{
+  background: url(../img/header/bg.png) no-repeat center center;
+  background-size: cover;
+  width: 100vw;
+  min-height: 75rem;
+  color: @color-light;
+  padding-top: 5rem;
+  .logo-img{
+    vertical-align: top;
+    display: inline-block;
+  }
+  .logo-text{
+    padding-top: 0.5rem;
+    margin-left: 1.6rem;
+    display: inline-block;
+    h2{
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0;
+      font-size: 1.8rem;
+      font-weight: 800;
+      line-height: 2rem;
+      text-align: left;
+
+    }
+    p{
+      font-size: 1.2rem;
+      font-weight: 100;
+      line-height: 1.333;
+      text-align: left;
+    }
+  }
+  h1{
+    margin-top: 4.8rem;
+    margin-bottom: 5.3rem;
+    color: @color-yellow;
+    font-size: 3.7rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .text-box{
+    padding-top: 16rem;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.75;
+    text-align: left;
+    p{
+      
+    }
+  }
+  form{
+    padding: 5rem;
+    width: 42rem;
+    height: 41.3rem;
+    background: @color-light;
+    border-radius: 0.4rem;
+    p{
+      margin-bottom: 4.5rem;
+      color:  #333333;
+      font-size: 2.2rem;
+      font-weight: 300;
+      line-height: 1.136;
+      text-align: center;
+    }
+    .input-group{
+      margin-bottom: 1rem;
+      height: 5.9rem;
+      &-addon{
+        border-radius: 0.7rem 0 0 0.7rem;
+        width: 5.9rem;
+        height: 5.9rem;
+        background: rgb(48, 48, 48);
+        i{
+          color: @color-light;
+        }
+      }
+      .form-control{
+        height: 5.9rem;
+        width: 25.9rem;
+      }
+    }
+    .form-btn{
+      width: 32rem;
+      height: 5.5rem;
+      background: @color-yellow;
+      border: none;
+      border-radius: 0.4rem;
+      box-shadow: 0 0.3rem 0 darken(@color-yellow, 30%);
+      color:  #333333;
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+  }
+
+  .money{
+      margin-bottom: -3rem;
+  }
+}
+
+.header{
+  &-btn{
+    border-radius: 0.4rem;
+    border-width: 0.1rem;
+    border-style: solid;
+    background: transparent;
+    width: 16rem;
+    height: 4.9rem;
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-align: center;
+    &:hover{
+      box-shadow: 0 0 1rem @color-light;
+    }
+  }
+  &-hide-btn{
+    display: none;
+  }
+  &-phone{
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.8;
+    text-align: right;
+    color: @color-light;
+    text-decoration: none;
+    &:hover{
+      text-decoration: none;
+      color: @color-light;
+    }
+  }
+}
+
+/* Services */
+.services{
+  padding-top: 10rem;
+  .item-box{
+    height: 20rem;
+  }
+  .border-img{
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    background-color:  #ffff33;
+    width: 80px;
+    height: 80px;
+    img{
+      position: relative;
+      top: 50%;
+      transform: translateY(-17px);
+    }
+  }
+  h3{
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.222;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px)
+{
+  html{
+    font-size: 10px;
+  }
+.header{
+  &-phone{
+    font-size: 1rem;
+  }
+}
+
+  .money{
+    margin-top: 4rem;
+    margin-bottom: -9rem;
+  }
+}
+@media (max-width: 768px)
+{
+  html{
+    font-size: 8px;
+  }
+  header{
+    .logo-img{
+      margin-left: 1rem;
+    vertical-align: top;
+    display: inline-block;
+    width: 40%;
+  }
+  .logo-text{
+    width: 50%;
+    padding-top: 0.5rem;
+    margin-left: .5rem;
+    display: inline-block;
+    h2{
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0;
+      font-size: 1.5rem;
+      font-weight: 800;
+      line-height: 2rem;
+      text-align: left;
+
+    }
+    p{
+      font-size: 0.7rem;
+      font-weight: 100;
+      text-align: left;
+    }
+  }
+    h1{
+      font-size: 3rem;
+    }
+    .text-box{
+      margin-left: 1rem;
+      padding-top:2rem;
+      padding-bottom: 2rem;
+      font-size: 1.5rem;
+    }
+    .money{
+      margin-top: 2rem;
+      margin-bottom: -10rem;
+    }
+    form{
+      border-radius: 0.7rem;
+      display: inline-block;
+      margin: 0 auto;
+      width: 100%;
+    padding: 4rem 5rem 4rem;
+    height:  35rem;
+    p{
+      margin-bottom: 3.5rem;
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+    .input-group{
+      height: 4.9rem;
+      &-addon{
+        width: 4.9rem;
+        height: 4.9rem;
+      }
+      .form-control{
+        height: 4.9rem;
+        width: 25.9rem;
+      }
+    }
+    }
+  }
+
+  .header{
+  &-btn{
+    border-radius: 0.4rem;
+    border-width: 0.1rem;
+    border-style: solid;
+    background: transparent;
+    width: 12rem;
+    height: 2.9rem;
+    font-size: 1rem;
+    font-weight: 100;
+    text-align: center;
+    &:hover{
+      box-shadow: 0 0 .4rem @color-light;
+    }
+  }
+  &-phone{
+    font-size: 1rem;
+    font-weight: 800;
+    text-align: right;
+    color: @color-light;
+    text-decoration: none;
+    &:hover{
+      text-decoration: none;
+      color: @color-light;
+    }
+  }
+}
+
+}
