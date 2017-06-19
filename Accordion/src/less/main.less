@@ -1,0 +1,89 @@
+/* Basic settings */
+*{
+  box-sizing: border-box;
+}
+
+html{
+  font-family: Ubuntu;
+  font-size: 10px;
+}
+
+body{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* Colors mixins */
+@color-lightblue: #0bbaf0;
+
+/* Accordion */
+.accordion{
+  max-width: 1920px;
+  height: 100vh;
+  min-height: 500px;
+  background: url('../img/bg.png');
+  background-size: cover;
+  padding-top: 20rem;
+  h1{
+    color: @color-lightblue;
+    font-size: 3.6rem;
+    font-weight: 700;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    margin-bottom: 0.5rem;
+  }
+  h2{
+    color:  @color-lightblue;
+    font-size: 2.4rem;
+    font-weight: 400;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+  }
+  hr{
+    width: 12.4rem;
+    color: #c4c4c4;
+  }
+
+  &-box{
+    width: 86rem;
+    margin: 3rem auto;
+    .tab-link{
+      margin-bottom: 2px;
+      position: relative;
+      background-color:  @color-lightblue;
+      width: 86rem;
+      height: 5.4rem;
+      z-index: 2;
+      a{
+        color:  #ffffff;
+        font-size: 2.32rem;
+        font-weight: 400;
+        text-align: center;
+        text-decoration: none;
+        line-height: 5.4rem;
+        &:hover{
+          text-decoration: none;
+          color: #ffffff;
+        }
+      }
+    }
+    .content{
+      display: none;
+      z-index: 1;
+      border-radius: 10px;
+      border-width: 4px;
+      border-color:  #dcdcdc;
+      border-style: solid;
+      background-color:  #ffffff;
+      width: 838px;
+      height: 138px;
+      margin: -10px auto 3px;
+      p{
+        color:  #535353;
+        font-size: 2.2rem;
+        font-weight: 400;
+        text-align: left;
+        padding: 2.6rem 3.2rem;
+      }
+    }
+  }
+}
