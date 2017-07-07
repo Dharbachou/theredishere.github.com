@@ -85,10 +85,7 @@ $(document).ready(function() {
             $('.totop').fadeOut();
         }
     });
-    $('.totop').click(function() {
-        $('body,html').animate({ scrollTop: 0 }, 800);
-    });
-    $(".menu-head > li > a").on("click", function(event) {
+    $(".menu-main > li > a").on("click", function(event) {
         event.preventDefault();
         var id = $(this).attr('href'),
             top = $(id).offset().top;
