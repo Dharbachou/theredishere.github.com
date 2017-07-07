@@ -124,7 +124,7 @@ $(document).ready(function() {
         $(target).fadeIn(); 
         event.preventDefault();
     });
-    $('.head-btn').click(function(){
+    $('.main-btn').click(function(){
         $('.modal-form').fadeIn();
         $('.modal-wrap').addClass('modal-active');
         $('body').css('overflow', 'hidden');
