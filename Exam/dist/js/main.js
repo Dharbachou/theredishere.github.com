@@ -34,13 +34,15 @@ $(document).ready(function() {
         $(target).show(); 
         event.preventDefault();
     });
-    var stepsTab = $('.steps-tab');
-    $(stepsTab).on('click', function() { 
+var stepsTab = $('.steps-tab'); //Создаём переменную tab
+
+    $(stepsTab).on('click', function() { //При клике на tab
         var targetbg = $(this).attr('id');
         var targetimg = $('#' + targetbg + ' .steps-icon');
         console.log(targetbg);
         console.log(targetimg);
-        $(stepsTab).removeClass('active-tab'); 
+        $(stepsTab).removeClass('active-tab'); //У всех элементов с tab удаляем класс active-menu
+        $('.hide-steps').removeClass('showed');
         $('.steps-img').removeClass('bgred');
         $('.steps-icon').removeClass('icon-1c');
         $('.steps-icon').removeClass('icon-2c');
@@ -67,17 +69,34 @@ $(document).ready(function() {
                 }
             }
         }
+        if($(window).width() < '740')
+        {
+            $('#' + targetbg + ' .hide-steps').addClass('showed');
+        }
         $('#' + targetbg + ' .steps-img').addClass('bgred');
-        $(this).addClass('active-tab'); 
+        $(this).addClass('active-tab'); //Всем элементам с tab добавляем класс active-menu
+
     });
-    stepsTab.click(function() { 
-        var target = $(this).attr('data-tab'); 
-        $('.steps-row').hide(); 
-        $(target).show();
+
+    //SLIDER CONTENT
+
+    stepsTab.click(function() { //При клике на tab
+        var target = $(this).attr('data-tab'); //Создаём переменную target, в которую запишем id
+        $('.steps-row').hide(); //Скрыть все элементы с классом .projects-content
+        $(target).show(); //Показать элемент с id = target
         event.preventDefault();
     });
     $(window).scroll(function() {
-        if ($(this).scrollTop() > $(window).height()) {
+        if ($(this).scrollTop() > '100')
+        {
+            $('.menu-link').attr('id', 'bg__menu');
+            
+        }
+        if ($(this).scrollTop() < '100')
+        {
+            $('.menu-link').removeAttr('id');
+        }
+        if ($(this).scrollTop() > $(window).height() && $(window).width() >= '740') {
             $('.fix-menu').addClass('slide');
             $('.totop').fadeIn();
         } else {
@@ -142,5 +161,24 @@ $(document).ready(function() {
         $('.modal-wrap').removeClass('modal-active');
         $('body').css('overflow', 'auto');
     }); 
+
+    
+        {var link = $('.menu-link');
+    var link_active = $('.menu-link_active');
+    var menu = $('.menu');
+    var nav_link = $('.menu a'); 
+
+    link.click(function(){
+        link.toggleClass('menu-link_active');
+        menu.toggleClass('menu_active');
+    });
+    link_active.click(function(){
+        link.removeClass('menu-link_active');
+    });
+    nav_link.click(function(){
+        link.removeClass('menu-link_active');
+        menu.removeClass('menu_active');
+    });
+}
 
 });
