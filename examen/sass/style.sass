@@ -1,0 +1,1532 @@
+@font-face 
+	font-family: 'Museo Sans Cyrl'
+	src: url('../fonts/MuseoSansCyrl-300.eot')
+	src: url('../fonts/MuseoSansCyrl-300.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/MuseoSansCyrl-300.woff2') format('woff2'),
+	url('../fonts/MuseoSansCyrl-300.woff') format('woff'),
+	url('../fonts/MuseoSansCyrl-300.ttf') format('truetype'),
+	url('../fonts/MuseoSansCyrl-300.svg#MuseoSansCyrl-300') format('svg')
+	font-weight: 300
+	font-style: normal
+
+
+@font-face 
+	font-family: 'Museo Sans'
+	src: url('../fonts/MuseoSansCyrl-900.eot')
+	src: url('../fonts/MuseoSansCyrl-900.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/MuseoSansCyrl-900.woff2') format('woff2'),
+	url('../fonts/MuseoSansCyrl-900.woff') format('woff'),
+	url('../fonts/MuseoSansCyrl-900.ttf') format('truetype'),
+	url('../fonts/MuseoSansCyrl-900.svg#MuseoSansCyrl-900') format('svg')
+	font-weight: 900
+	font-style: normal
+
+
+@font-face 
+	font-family: 'Museo Sans'
+	src: url('../fonts/MuseoSansCyrl-700.eot')
+	src: url('../fonts/MuseoSansCyrl-700.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/MuseoSansCyrl-700.woff2') format('woff2'),
+	url('../fonts/MuseoSansCyrl-700.woff') format('woff'),
+	url('../fonts/MuseoSansCyrl-700.ttf') format('truetype'),
+	url('../fonts/MuseoSansCyrl-700.svg#MuseoSansCyrl-700') format('svg')
+	font-weight: 700
+	font-style: normal
+
+@font-face 
+	font-family: 'Museo Sans'
+	src: url('../fonts/MuseoSansCyrl-500.eot')
+	src: url('../fonts/MuseoSansCyrl-500.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/MuseoSansCyrl-500.woff2') format('woff2'),
+	url('../fonts/MuseoSansCyrl-500.woff') format('woff'),
+	url('../fonts/MuseoSansCyrl-500.ttf') format('truetype'),
+	url('../fonts/MuseoSansCyrl-500.svg#MuseoSansCyrl-500') format('svg')
+	font-weight: 500
+	font-style: normal	
+
+
+@font-face 
+	font-family: 'Museo Sans'
+	src: url('../fonts/MuseoSansCyrl-300.eot')
+	src: url('../fonts/MuseoSansCyrl-300.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/MuseoSansCyrl-300.woff2') format('woff2'),
+	url('../fonts/MuseoSansCyrl-300.woff') format('woff'),
+	url('../fonts/MuseoSansCyrl-300.ttf') format('truetype'),
+	url('../fonts/MuseoSansCyrl-300.svg#MuseoSansCyrl-300') format('svg')
+	font-weight: 300
+	font-style: normal
+@font-face 
+	font-family: 'Font Awesome'
+	src: url('../fonts/fontawesome.eot')
+	src: url('../fonts/fontawesome.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/fontawesome.woff2') format('woff2'),
+	url('../fonts/fontawesome.woff') format('woff'),
+	url('../fonts/fontawesome.ttf') format('truetype'),
+	url('../fonts/fontawesome.svg#fontawesome') format('svg')
+	font-weight: normal
+	font-style: normal	
+
+=thin
+	font-family: 'Museo Sans'
+	font-weight: 300
+=reg
+	font-family: 'Museo Sans'
+	font-weight: 500	
+=bold
+	font-family: 'Museo Sans'
+	font-weight: 700		
+=black
+	font-family: 'Museo Sans'
+	font-weight: 900	
+
+$base: #393945
+$red: #fe5c2e
+$gray: #cdcdcf
+$menu: #7b7b81
+*
+	box-sizing: border-box
+
+body, html, ul, p, h1, h2, h3, h4, h5, ul, li, .h1, .h2, .h3, .h4, .h5
+	padding: 0
+	margin: 0	
+a, a:focus, a:hover, a:visited
+	text-decoration: none
+	outline: none
+/* ============================================================================================= */		
+
+body
+	background: url(../img/back.png) no-repeat scroll center top #FAFAFA
+	color: #393945
+	font-size: 16px
+	+reg
+	min-width: 320px
+
+.head
+	&-info
+		padding-top: 45px
+		padding-bottom: 45px
+	&-mail
+		+thin
+		color: $base
+		transition: all 0.4s
+		height: 24px
+		display: inline-block
+		&:hover
+			color: $red
+	&-phone
+		margin-left: 55px
+		+black
+		color: $base
+		transition: all 0.4s
+		font-size: 20px
+		&:hover
+			color: $red	
+	&-social
+		display: inline-block
+		margin-left: 13px
+		a
+			font-family: 'Font Awesome'
+			color: $gray			
+			transition: all 0.4s
+			font-size: 14px
+			margin-left: 10px
+			&:hover
+				color: $red
+
+header
+	padding-bottom: 139px
+	.container
+		border-top-left-radius: 5px
+		border-top-right-radius: 5px
+		.row:nth-child(2)
+			margin-bottom: 96px
+		.shadow
+			position: relative
+			padding-top: 45px
+			margin-bottom: 91px
+			background-color: #FAFAFA
+			&::before
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 420px
+				content: ''
+				box-shadow: 0 0 35px 25px rgba(241,241,241,0.8)
+				z-index: -1	
+			.row:nth-child(1)
+				margin-bottom: 93px
+			.row:nth-child(2)
+				margin-bottom: 34px		
+		img
+			padding-left: 21px	
+	.text-box
+		display: inline-block
+		padding-top: 37px
+		h1
+			+bold
+			font-size: 54px
+			color: $base
+			margin-bottom: 37px
+		.h1
+			+bold
+			font-size: 54px
+			color: $base
+			margin-bottom: 37px
+		h2
+			+reg
+			font-size: 18px
+			color: $base
+			margin-bottom: 53px
+		.h2
+			+reg
+			font-size: 18px
+			color: $base
+			margin-bottom: 53px
+		span
+			color: $red
+			margin-left: 15px	
+		.head-btn
+			background-color: $red
+			border: none
+			+bold
+			font-size: 16px
+			color: #FFF
+			padding: 19px 86px
+			border-radius: 5px
+			transition: all 0.4s
+			span
+				font-family: 'Font Awesome'
+				font-size: 16px
+				color: #fff
+				margin-left: 10px
+				position: relative
+				left: 0
+				transition: all 0.4s
+			&:hover
+				box-shadow: 0 5px 16px rgba(254,92,46, 0.34)
+			&:hover span
+				left: 50px					
+	.menu-head
+		display: inline-block
+		text-align-last: justify
+		width: 100%
+		.menu-slide	.sub-menu
+			z-index: 150
+			top: 21px
+		li
+			display: inline-block
+			border-bottom: 2px solid transparent
+			transition: all 0.4s
+			a
+				+reg
+				color: $menu
+				font-size: 15px
+				transition: all 0.4s
+				display: block
+				&:hover
+					color: $base
+			&:hover
+				border-bottom: 2px solid $red		
+	.abriviations
+		&-item
+			margin-bottom: 2px
+			p
+				display: inline
+				font-size: 14px
+				color: base
+			a
+				display: inline-block
+				text-decoration: underline
+				color: $base
+				+black
+				font-size: 20px	
+				transition: all 0.4s
+				text-transform: uppercase
+				&:hover
+					color: $red
+	.header-description
+		&>div
+			padding-left: 0
+			padding-right: 0
+		.descr-item
+			height: 300px
+			padding: 50px 12px 0 12px
+			text-align: center
+			cursor: pointer
+			transition: all 0.4s
+			&:hover
+				background-color: #FFF
+				box-shadow: 0 0 40px 10px rgba(241,241,241,0.7)
+			&:hover .img-box .red-circle
+				transform: scale(1.1)
+				opacity: 1	
+			.description-img
+				width: 38px
+				height: 38px
+				display: block
+				margin: 0 auto 38px
+				opacity: 0.5
+				transition: all 0.4s
+			&:hover .img-box .description-img
+				opacity: 0.99	
+			.img-box
+				position: relative	
+				.red-circle
+					display: block
+					width: 28px
+					height: 28px
+					top: -8px
+					left: 57px
+					position: absolute
+					border-radius: 50%
+					transition: all 0.4s
+					background-color: $red
+					opacity: 0
+					transform: scale(0)
+			h3
+				font-size: 16px
+				color: $base
+				text-transform: uppercase
+				+black
+				margin-bottom: 25px
+			p
+				font-size: 16px
+				color: $base
+				+reg	
+	.sale-offer
+		p
+			color: $red
+			font-size: 16px
+			+reg
+		span
+			text-decoration: underline
+			font-size: 22px
+			color: $red
+			+bold
+
+.text-custom
+	text-align: center
+.rel-col
+	position: relative
+
+.results
+	padding-bottom: 111px
+	.container
+		&>.row:first-child
+			margin-bottom: 46px
+	&-row-img
+		margin-bottom: 18px
+	&-head
+		h2
+			font-size: 44px
+			+bold
+			color: $base
+			margin-bottom: 35px
+		p
+			color: $base
+			+reg
+			font-size: 18px	
+	&-text
+		width: 45%
+		margin: 0 auto		
+		
+	&-item
+		height: 242px
+		background-color: #FFF
+		padding: 35px 40px 65px 40px
+		overflow: hidden
+		transition: all 0.4s
+		&:hover
+			box-shadow: 0 0 20px 10px rgba(241,241,241,0.7)
+		&:hover .dark-circle
+			transform: scale(1.1)
+			opacity: 1	
+		h4
+			display: inline-block
+			+bold
+			font-size: 18px
+			color: $base
+	&-img-box
+		float: right
+		position: relative
+	&-img
+		width: 38px
+		height: 38px
+		display: block
+		position: relative
+	.dark-circle
+		display: block
+		width: 28px
+		height: 28px
+		top: -3px
+		left: -9px
+		position: absolute
+		border-radius: 50%
+		transition: all 0.4s
+		background-color: $base
+		opacity: 0
+		transform: scale(0)
+	&-content
+		overflow: hidden
+		height: 99px
+		margin-bottom: 9px
+		&-item
+			&:nth-child(odd) span
+				+black
+			padding-right: 35px
+			margin-bottom: 5px
+			p
+				display: inline-block
+				color: #aeaeb1
+				font-size: 12px
+				+thin
+			span
+				display: inline
+				color: $base
+				font-size: 14px				
+	&-btn
+		color: $red
+		+reg
+		font-size: 12px
+		position: relative
+		cursor: pointer
+		display: inline-block
+		&::before
+			font-family: 'Font Awesome'
+			font-size: 14px
+			position: absolute
+			right: -15px
+			top: -1px
+			color: $red
+			content: '\f107'
+		&:hover, &:visited, &:focus
+			color: $red				
+.lense
+	font-family: 'Font Awesome'
+	font-size: 15px
+	color: $base
+	display: inline-block
+	transition: all 0.4s
+	&:hover
+		color: $red				
+.marg-bot
+	margin-bottom: 30px
+.vh
+	height: 100vh
+.test
+	width: 38px
+	height: 38px
+	background: url(../img/sprite.png) -179px -45px
+.results-btn.ok::before
+	content: '\f106' 
+.active
+	height: auto!important
+.active-circle
+	transform: scale(1.1)!important
+	opacity: 1!important
+.open
+	box-shadow: 0 0 20px 10px rgba(241,241,241,0.7)!important
+	z-index: 10
+	position: absolute
+	top: 0
+	left: 15px
+	height: auto!important
+.rotate
+	transform: rotate(180deg)	
+.results-item.open .results-content
+	height: auto
+
+.sm-btn-box
+	text-align: center
+	display: none
+	.sm-btn
+		background-color: $red
+		border: none
+		+bold
+		font-size: 16px
+		color: #FFF
+		padding: 19px 86px
+		border-radius: 5px
+		transition: all 0.4s
+		span
+			font-family: 'Font Awesome'
+			font-size: 16px
+			color: #fff
+			margin-left: 10px
+			position: relative
+			left: 0
+			transition: all 0.4s
+		&:hover
+			box-shadow: 0 5px 16px rgba(254,92,46, 0.34)
+
+.results-content-box .row
+	margin: 0			
+
+
+
+
+.work-system
+	padding-bottom: 142px
+	&-text
+		width: 83.333333%
+		margin: 0 auto
+	&-head
+		margin-bottom: 48px
+		h2
+			font-size: 44px
+			+bold
+			color: $base
+			margin-bottom: 35px
+		p
+			color: $base
+			+reg
+			font-size: 18px
+	&-promo
+		display: block
+		text-align-last: justify
+		margin-bottom: 68px
+		.promo-img
+			display: inline-block
+			vertical-align: middle
+			opacity: 0.5
+			transition: all 0.4s
+			&:hover
+				opacity: 1
+	&-content
+	&-tabs
+		margin-bottom: 63px
+		.tab
+			display: inline-block
+			border: 1px solid $base
+			color: $base
+			font-size: 14px
+			+bold
+			text-transform: uppercase
+			padding: 17px 28px 18px 28px
+			border-radius: 5px
+			margin: 0 5px
+			transition: all 0.4s
+			&:hover
+				background-color: $base
+				color: #fff
+		.active-menu
+			background-color: $red
+			border: 1px solid $red
+			color: #fff		
+.system-tabs
+	display: none
+	h5
+		font-size: 18px
+		+bold
+		color: $base
+		text-align: center
+		width: 83.33333%
+		margin: 0 auto
+		margin-bottom: 46px
+		span
+			text-decoration: underline
+			text-transform: uppercase
+	p
+		font-size: 14px
+		text-align: center
+		color: $base
+		+bold
+		margin-bottom: 19px
+	&>span
+		display: inline-block
+		font-size: 20px
+		color: $base
+		+bold
+		margin-bottom: 22px
+	.row
+		margin-bottom: 28px			
+.tabs-logos
+	.logo-img
+		display: inline-block
+		margin-right: 25px
+
+.tab-list
+	list-style: none
+	margin-bottom: 33px
+	li
+		font-size: 14px
+		color: $base
+		+reg
+		position: relative
+		margin-bottom: 6px
+		padding: 2px 0px 2px 33px
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 22px
+			height: 22px
+			background: url(../img/sprite.png) no-repeat -282px -104px
+		&:hover::before
+			background: url(../img/sprite.png) no-repeat -253px -104px
+				
+.value-list
+	margin-bottom: 10px
+	.value-item
+		font-size: 16px
+		color: $base
+		+thin
+		padding-left: 30px
+		position: relative
+		transition: all 0.4s
+		margin-bottom: 14px
+		min-height: 110px
+		&:hover span
+			background-color: $red
+			transition: all 0.4s
+		span
+			color: #fff
+			background-color: $base
+			width: 22px
+			height: 22px
+			text-align: center
+			font-size: 14px
+			+bold			
+			display: inline-block
+			border-radius: 50%
+			line-height: 23px
+			margin-right: 10px
+			position: absolute
+			top: 2px
+			left: 0
+			transition: all 0.4s	
+
+.why-we
+	padding-bottom: 136px
+	.container .row:nth-child(2)
+		margin-bottom: 20px
+	&-text
+		width: 83.333333%
+		margin: 0 auto
+	&-head
+		margin-bottom: 48px
+		h2
+			font-size: 44px
+			+bold
+			color: $base
+			margin-bottom: 35px
+		p
+			color: $base
+			+reg
+			font-size: 18px
+	&-img
+		width: 38px
+		height: 38px
+		display: block
+		position: relative
+		margin: 0 auto
+		margin-bottom: 39px
+	&-item
+		height: 260px
+		padding: 35px 20px 0 20px
+		transition: all 0.4s
+		cursor: pointer
+		box-shadow: 0 0 20px 10px transparent
+		&:hover
+			background-color: #FFF
+			box-shadow: 0 0 20px 10px rgba(241,241,241,0.7)
+		&:hover .red-circle
+			transition: all 0.4s
+			opacity: 1
+			transform: scale(1.1)	
+		p
+			text-align: center
+			font-size: 14px
+			color: $base
+			+reg
+	&-img-box
+		position: relative	
+		.red-circle
+			display: block
+			width: 28px
+			height: 28px
+			top: -8px
+			left: 87px
+			position: absolute
+			border-radius: 50%
+			transition: all 0.4s
+			background-color: $red
+			opacity: 0
+			transform: scale(0)	
+	.red-offer
+		text-align: center
+		span
+			font-size: 18px
+			color: $red
+			text-decoration: underline
+			+bold				
+
+
+.steps
+	padding-bottom: 145px
+	&-head
+		margin-bottom: 48px
+		h2
+			font-size: 44px
+			+bold
+			color: $base
+	&-tabs-box
+		margin: 0 auto
+		text-align: center
+		overflow: hidden	
+	&-tab
+		display: inline-block
+		width: 200px
+		height: 268px
+		vertical-align: top
+		padding-top: 40px
+		cursor: pointer
+		span
+			font-size: 18px
+			color: $base
+			+bold
+			text-transform: uppercase
+			margin-bottom: 12px
+			display: inline-block
+		p
+			font-size: 16px
+			+thin
+			color: $base			
+	&-img
+		width: 90px
+		height: 90px
+		margin: 0 auto
+		border-radius: 50%
+		background-color: #FFF
+		text-align: center
+		line-height: 114px
+		margin-bottom: 23px
+		.icon-1
+			background-position: 0px -159px
+		.icon-2
+			background-position: -68px -159px
+		.icon-3
+			background-position: -136px -159px
+		.icon-4
+			background-position: -203px -159px
+		.icon-5
+			background-position: -265px -158px	
+	&-icon
+		width: 38px
+		height: 38px
+		display: inline-block
+		background-image: url(../img/sprite.png)
+		background-repeat: no-repeat
+	&-tabs-content
+		background-color: #FFF
+		padding: 30px
+		box-shadow: 0 0 20px 10px rgba(241,241,241,0.7)
+		.steps-items
+			display: inline-block
+			vertical-align: top
+			width: 20%
+			margin-right: 50px
+			position: relative
+			opacity: 0.5
+			transition: all 0.4s
+			&:hover
+				opacity: 1
+			&:hover .red-circle
+				opacity: 1
+				transform: scale(1.1)
+				transition: all 0.4s	
+			.head-step
+				font-size: 16px
+				color: $base
+				+bold
+				margin-bottom: 10px
+				text-transform: uppercase
+				display: inline-block
+				position: relative
+			p
+				font-size: 14px
+				color: $base
+				+thin
+			.red-circle
+				display: block
+				width: 28px
+				height: 28px
+				top: -4px
+				left: -15px
+				position: absolute
+				border-radius: 50%
+				transition: all 0.4s
+				background-color: $red
+				opacity: 0
+				transform: scale(0)
+				transition: all 0.4s		
+		.steps-row	
+			display: none
+
+.active-tab
+	background-color: #FFF
+	box-shadow: 0 0 20px 10px rgba(241,241,241,0.7)
+	padding-bottom: 333px
+.bgred
+	background-color: $red!important
+.icon-1c
+	background-position: 0px -216px!important
+.icon-2c
+	background-position: -68px -213px!important
+.icon-3c
+	background-position: -136px -214px!important
+.icon-4c
+	background-position: -203px -216px!important
+.icon-5c
+	background-position: -265px -216px!important	
+
+
+.trust
+	padding-bottom: 148px
+	&-head
+		margin-bottom: 52px
+		h2
+			font-size: 44px
+			+bold
+			color: $base
+			text-align: center
+	&-logos
+		text-align-last: justify
+	&-logo
+		display: inline-block
+		opacity: 0.5
+		transition: all 0.4s
+		vertical-align: middle
+		&:hover
+			opacity: 1		
+
+.we-wont
+	.container
+		border-bottom-left-radius: 5px
+		border-bottom-right-radius: 5px
+		.shadow
+			position: relative
+			padding-bottom: 5px
+			background-color: #FAFAFA
+			&::before
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 100%
+				height: 330px
+				content: ''
+				box-shadow: 0 0 35px 25px rgba(241,241,241,0.8)
+				z-index: -1	
+			.row:nth-child(1)
+				margin-bottom: 93px
+			.row:nth-child(2)
+				margin-bottom: 34px		
+		img
+			padding-left: 25px	
+	.text-box
+		display: inline-block
+		padding-top: 6px
+		h1
+			+bold
+			font-size: 44px
+			color: $base
+			margin-bottom: 37px
+		.h1
+			+bold
+			font-size: 44px
+			color: $base
+			margin-bottom: 37px
+		span
+			color: $red
+			margin-left: 15px	
+		.head-btn
+			background-color: $red
+			border: none
+			+bold
+			font-size: 16px
+			color: #FFF
+			padding: 19px 86px
+			border-radius: 5px
+			transition: all 0.4s
+			span
+				font-family: 'Font Awesome'
+				font-size: 16px
+				color: #fff
+				margin-left: 10px
+				position: relative
+				left: 0
+				transition: all 0.4s
+			&:hover
+				box-shadow: 0 5px 16px rgba(254,92,46, 0.34)
+			&:hover span
+				left: 50px					
+	&-list
+		display: inline-block
+		width: 50%
+		vertical-align: top
+		ul
+			list-style: none
+			li
+				text-decoration: underline
+				color: $base
+				font-size: 14px
+				+thin
+				margin-bottom: 4px
+	.right-list
+		margin-left: -4px
+		ul
+			padding-left: 15px
+			li
+				span
+					font-family: 'Font Awesome'
+					text-decoration: none
+					color: $base
+					margin-left: 5px
+					display: inline-block
+	&-lists-box
+		margin-bottom: 42px	
+	.float-right
+		float: right
+	
+
+footer
+	padding-top: 45px
+	padding-bottom: 45px
+	p
+		font-size: 15px
+		color: $base
+		+thin
+	.head-mail
+		line-height: 1.7				
+.footer-xs
+	display: none
+	text-align: center
+	padding: 20px 0
+	.head-phone
+		display: block
+		font-size: 14px
+		+black
+		color: $base
+		transition: all 0.4s
+		margin-left: 0
+		margin-bottom: 20px
+		&:hover
+			color: $red
+	.head-mail
+		display: block
+		font-size: 10px
+		+thin
+		color: $base		
+		transition: all 0.4s
+		margin-bottom: 20px
+		&:hover
+			color: $red
+	p
+		font-size: 12px
+		color: $base
+		+thin
+
+.fix-menu
+	box-shadow: 0 0 20px 10px rgba(241,241,241,0.7)
+	background-color: #FFF
+	height: 70px
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	transform: translateY(-300px)
+	transition: all 0.6s
+	.menu-head
+		display: inline-block
+		text-align-last: justify
+		width: 100%
+		line-height: 70px
+		li
+			display: inline-block
+			border-bottom: 2px solid transparent
+			transition: all 0.4s
+			a
+				+reg
+				color: $menu
+				font-size: 15px
+				transition: all 0.4s
+				display: block
+				&:hover
+					color: $base
+			&:hover
+				border-bottom: 2px solid $red
+	.head-phone
+		+black
+		color: $base
+		transition: all 0.4s
+		font-size: 20px
+		&:hover
+		color: $base	
+		line-height: 70px
+		&:hover
+			color: $red
+
+.slide
+	transform: translateY(0)
+	transition: all 0.4s				
+.totop
+	width: 50px
+	height: 50px
+	font-family: 'Font Awesome'
+	color: #fff
+	background-color: $red
+	display: block
+	position: fixed
+	right: 5%
+	bottom: 5%
+	box-shadow: 0 0 20px 10px rgba(241,241,241,0.7)
+	transition: all 0.4s
+	font-size: 30px
+	border-radius: 50%
+	text-align: center
+	line-height: 50px
+	display: none
+	&:hover
+		color: #fff
+		transform: scale(1.3)
+
+.menu-slide
+	position: relative
+	.sub-menu
+		position: absolute
+		display: inline-block
+		top: 70px
+		left: 0px
+		width: 140px
+		background-color: #FFF		
+		box-shadow: 0 0 20px 10px rgba(241,241,241,0.7)
+		padding-top: 10px
+		padding-bottom: 10px
+		border-top: 2px solid $red
+		text-align-last: left
+		line-height: 1
+		display: none
+		li
+			display: block
+			border-left: 2px solid transparent
+			border-bottom: none
+			line-height: 30px
+			width: 100%
+			padding-left: 10px
+			&:hover
+				border-left: 2px solid $red
+				border-bottom: none
+			a
+				text-transform: uppercase
+			&:hover a
+				color: $red	
+
+.modal-form
+	position: fixed
+	width: 100%
+	height: 100vh
+	top: 0
+	left: 0
+	background-color: rgba(255,255,255,0.8)
+	padding: 10% 0
+	display: none
+	.modal-wrap
+		background-color: #FFF
+		position: absolute
+		left: 50%
+		top: 100px
+		box-shadow: 0 2px 40px 20px rgba(241,241,241,0.7)
+		z-index: 200
+		width: 350px
+		padding: 40px
+		transform: translatex(-50%) translateY(-100px)
+		transition: all 0.4s
+		&>span
+			color: $base
+			font-size: 16px
+			+black
+			text-transform: uppercase
+			display: inline-block
+			text-align: center
+			margin-bottom: 10px
+		p
+			color: $base
+			font-size: 14px
+			text-align: center
+			+thin
+			margin-bottom: 20px	
+		input
+			display: block
+			width: 100%
+			background-color: #f5f5f5
+			border: none
+			font-size: 16px
+			+thin
+			color: $base
+			padding: 23px 27px 23px 27px
+			transition: all 0.4s
+			box-shadow: 0 0 10px rgba(0,0,0,0)
+			margin-bottom: 10px
+			&:hover, &:focus, &:visited
+				outline: none
+				box-shadow: 0 0 10px rgba(0,0,0,0.3)
+		input[type="email"]
+			margin-bottom: 20px		
+		button
+			background-color: $red
+			width: 100%
+			border: none
+			+bold
+			font-size: 16px
+			color: #FFF
+			padding: 19px 86px
+			border-radius: 5px
+			transition: all 0.4s
+			span
+				font-family: 'Font Awesome'
+				font-size: 16px
+				color: #fff
+				margin-left: 10px
+				position: relative
+				left: 0
+				transition: all 0.4s
+			&:hover
+				box-shadow: 0 5px 16px rgba(254,92,46, 0.34)
+			&:hover span
+				left: 50px
+.close
+	font-family: 'Font Awesome'
+	opacity: 0.25
+	color: $base
+	font-size: 20px
+	display: block
+	position: absolute
+	top: 8px
+	right: 15px
+	transition: all 0.4s
+	&:hover, &:focus, &:visited
+		opacity: 1
+
+.modal-active
+	transform: translatex(-50%) translateY(0)!important
+
+
+.hide-steps
+	display: none
+
+@media (min-width: 320px) and (max-width: 479px)
+	.xxs-size
+		width: 100%
+		margin-left: 0
+	.results-img-box
+		float: none
+		width: 38px
+		margin: 0 auto
+		margin-bottom: 10px	
+	.results-row-img
+		text-align: center
+	.results-item
+		height: 270px	
+	.trust-logo:nth-child(1), .trust-logo:nth-child(2) 
+		display: none
+	.trust-logo
+		width: 33.333%
+		margin-left: -4px
+		img
+			width: 90%	 
+
+
+.head-info-xs
+	display: none
+
+@media (max-width: 767px)
+	.fixed-btn span:first-child
+		width: 26px
+		height: 2px
+		position: absolute
+		top: 0
+		left: 0
+		background-color: $base
+		display: block
+		transition: all 0.4s
+	.fixed-btn span:last-child
+		width: 30px
+		height: 2px
+		position: absolute
+		bottom: 0
+		left: 0
+		background-color: $base
+		display: block
+		transition: all 0.4s
+	.fixed-btn
+		width: 30px
+		height: 20px
+		position: fixed
+		overflow: hidden
+		display: none
+		cursor: pointer
+		top: 38px
+		left: 15px
+		&::before
+			width: 26px
+			height: 2px
+			position: absolute
+			bottom: 6px
+			left: 0
+			background-color: $base
+			display: block
+			content: ''
+			transition: all 0.4s
+		&::after
+			width: 30px
+			height: 2px
+			position: absolute
+			top: 6px
+			left: 0
+			background-color: $base
+			display: block
+			content: ''
+			transition: all 0.4s
+	.fixed-btn.toggle-close
+		&::after
+			left: 100%
+		&::before
+			left: -100%
+		span:first-child
+			transform: rotate(45deg)
+			top: 9px
+			width: 30px
+		span:last-child
+			transform: rotate(-45deg)
+			bottom: 9px
+	.head-info-xs
+		padding-top: 10px
+		padding-bottom: 10px
+		display: block
+		width: 100%
+		.menu-xs-box
+			position: relative
+			display: none
+		.menu-xs
+			background-color: #FFF
+			position: fixed
+			z-index: 10
+			list-style: none
+			width: 100%
+			box-shadow: 0 0 40px 10px rgba(241, 241, 241, 0.7)
+			padding: 30px 40px
+			left: 0
+			top: 80px
+			li
+				a
+					color: #7b7b81
+					font-size: 15px
+					+thin
+					display: inline-block
+					border-bottom: 2px solid transparent
+					transition: all 0.4s
+					&:hover
+						border-bottom: 2px solid $red
+			.menu-slide .sub-menu
+				top: 22px				
+		.head-phone
+			text-align: right
+			display: block
+		.head-xs-row
+			text-align-last: justify
+		.head-mail
+			font-size: 10px
+		.head-social a
+			font-size: 10px
+		.toggle-btn span:first-child
+			width: 26px
+			height: 2px
+			position: absolute
+			top: 0
+			left: 0
+			background-color: $base
+			display: block
+			transition: all 0.4s
+		.toggle-btn span:last-child
+			width: 30px
+			height: 2px
+			position: absolute
+			bottom: 0
+			left: 0
+			background-color: $base
+			display: block
+			transition: all 0.4s
+		.toggle-btn
+			width: 30px
+			height: 20px
+			position: relative
+			overflow: hidden
+			display: inline-block
+			cursor: pointer
+			&::before
+				width: 26px
+				height: 2px
+				position: absolute
+				bottom: 6px
+				left: 0
+				background-color: $base
+				display: block
+				content: ''
+				transition: all 0.4s
+			&::after
+				width: 30px
+				height: 2px
+				position: absolute
+				top: 6px
+				left: 0
+				background-color: $base
+				display: block
+				content: ''
+				transition: all 0.4s
+	.toggle-btn.toggle-close
+		&::after
+			left: 100%
+		&::before
+			left: -100%
+		span:first-child
+			transform: rotate(45deg)
+			top: 9px
+			width: 30px
+		span:last-child
+			transform: rotate(-45deg)
+			bottom: 9px
+	.head-info
+		display: none
+	header .container .shadow .row:nth-child(1)
+		display: none
+	header
+		.text-box
+			text-align: left
+			padding: 0 20px
+			margin-bottom: 20px
+			.h1
+				font-size: 30px
+				margin-bottom: 30px	
+			.h2
+				font-size: 14px
+				margin-bottom: 30px
+			.head-btn
+				padding: 19px 76px
+				margin: 0 auto
+				margin-bottom: 15px
+				display: block
+			&>span
+				margin-left: 0
+				width: 100%
+				text-align: center
+				display: inline-block
+	.fix-menu
+			display: none
+	header .sale-offer p
+		font-size: 14px
+	header .sale-offer span
+		font-size: 20px		
+	header .container img
+		padding-left: 0
+	.img-center
+		text-align: center
+	.xs-disable
+		display: none
+	footer
+		display: none
+	.footer-xs
+		display: block
+	.float-right
+		float: none
+	.work-system-tabs .tab
+		padding: 17px 20px 18px 20px
+		font-size: 10px!important
+		margin-bottom: 10px		
+	.results-head h2
+		font-size: 30px
+	.results-head p
+		font-size: 14px
+	.results-text
+		width: 100%	
+	.work-system-head h2
+		font-size: 30px
+	.work-system-head p
+		font-size: 14px
+	.work-system-text
+		width: 100%
+	.system-tabs h5
+		width: 100%
+		text-align: left
+	.system-tabs p
+		text-align: left
+	.work-system
+		padding-bottom: 20px	
+	.why-we-head h2
+		font-size: 30px
+	.why-we-head p			
+		font-size: 14px
+	.why-we .red-offer span
+		font-size: 16px
+	.steps-head h2
+		font-size: 30px
+	.trust-head h2
+		font-size: 30px
+	.we-wont .text-box .h1
+		font-size: 26px
+		padding-left: 15px
+	.we-wont-list ul li
+		font-size: 10px
+	.we-wont-list
+		width: 100%
+	.we-wont-list ul
+		padding-left: 15px
+	.we-wont .right-list
+		margin-left: 0px
+	.we-wont .text-box .head-btn
+		display: block
+		margin: 0 auto
+		margin-bottom: 10px
+	.we-wont .text-box > span
+		margin: 0
+		font-size: 14px	
+		text-align: center
+		display: block
+	.we-wont .container .shadow .row:nth-child(1)
+		margin-bottom: 25px
+	.text-box
+		width: 100%			
+	.steps-tab
+		width: 100%
+		text-align: left
+		padding-left: 20px
+		height: 177px
+	.steps-tabs-content
+		display: none
+	.hide-steps
+		position: absolute
+		background-color: #FFF
+		width: 100%
+		text-align: left
+		padding-left: 15px
+		display: none
+		left: 0
+		padding: 0 40px
+		text-align-last: justify
+		.steps-items
+			margin-bottom: 10px
+			display: block
+			text-align: left
+			position: relative
+			p
+				font-size: 14px
+				text-align-last: left
+			span
+				margin-bottom: 0px
+			.red-circle
+				display: block
+				width: 28px
+				height: 28px
+				top: -3px
+				left: -21px
+				position: absolute
+				border-radius: 50%
+				transition: all 0.4s
+				background-color: $red
+				opacity: 0
+				transform: scale(0)
+			.head-step
+				position: relative
+		.steps-items:hover .red-circle
+			opacity: 1
+			transform: scale(1.1)					
+	.steps-tab
+		p
+			display: block
+			text-align: left
+		.support
+			margin-left: 20px
+			span
+				margin-bottom: 0			
+	.steps-img
+		display: inline-block		
+	.support
+		display: inline-block
+	.showed
+		display: block
+	.modal-form .modal-wrap input
+		padding: 15px 27px
+	.modal-form .modal-wrap
+		width: 290px
+	.modal-form .modal-wrap button
+		padding: 19px 50px	
+
+@media (max-width: 991px)
+	header .header-description .descr-item .img-box .red-circle
+		left: -14px			
+	header .header-description .descr-item:hover .img-box .red-circle
+		left: -14px
+	header .header-description .descr-item .img-box
+		width: 38px
+		margin: 0 auto
+	.why-we-img-box
+		width: 38px
+		margin: 0 auto	
+	.why-we-img-box .red-circle
+		left: -10px
+	.why-we-item:hover .red-circle
+		left: -10px	
+	.sm-btn-box
+		display: block
+	.value-list .value-item
+		min-height: auto
+	.work-system-tabs .tab
+		font-size: 12px			
+
+@media (min-width: 768px) and (max-width: 991px)
+	header .menu-head li a
+		font-size: 12px
+	.lense
+		font-size: 12px
+	.text-custom
+		text-align: left
+	.text-box
+		padding-left: 40px
+	.img-center
+		text-align: center
+	.fix-menu .menu-head li a
+		font-size: 12px
+	.fix-menu .head-phone
+		font-size: 14px
+		margin-left: 0
+	.results-content-box > div:last-child .marg-bot
+		margin: 0
+	footer
+		.head-phone
+			font-size: 16px
+		.head-mail
+			font-size: 14px
+		p
+			font-size: 13px			
+	.steps-tab
+		width: 140px
+	.steps-tabs-content .steps-items
+		width: 16.9%
+	.steps-tab p
+		font-size: 14px
+	.steps-tab span
+		font-size: 16px
+	.steps-tabs-content .steps-items p
+		font-size: 12px	
+
+
+@media (min-width: 992px) and (max-width: 1199px)
+	.fix-menu .head-phone
+		margin-left: 0
+	.value-list .value-item
+		min-height: 132px
+	.steps-tab
+		width: 175px				
+	.steps-tabs-content .steps-items
+		width: 18.9%	
