@@ -8,6 +8,12 @@
     <link href="https://fonts.googleapis.com/css?family=Lato&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/logo.png" type="image/png">
+    <link rel="stylesheet" href="./css/flaticon.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+
 </head>
 <body>
     <!--<div class="debug">-->
@@ -88,31 +94,31 @@
             </h1>
             <div class="we-helps_items">
                 <div class="we-helps_item">
-                    <img src="./img/icons%20we%20helps/money.png" alt="" class="we-helps_item_img">
+                    <div class="we-helps_item_img"><img src="./img/icons%20we%20helps/money.png" alt=""></div>
                     <p class="we-helps_item_info">
                         Вам срочно  требуются деньги
                     </p>
                 </div>
                 <div class="we-helps_item">
-                    <img src="./img/icons%20we%20helps/task.png" alt="" class="we-helps_item_img">
+                    <div class="we-helps_item_img"><img src="./img/icons%20we%20helps/task.png" alt=""></div>
                     <p class="we-helps_item_info">
                         Вы получаете  отказы в банке
                     </p>
                 </div>
                 <div class="we-helps_item">
-                    <img src="./img/icons%20we%20helps/check.png" alt="" class="we-helps_item_img">
+                    <div class="we-helps_item_img"><img src="./img/icons%20we%20helps/check.png" alt=""></div>
                     <p class="we-helps_item_info">
                         У вас негативная  кредитная история
                     </p>
                 </div>
                 <div class="we-helps_item">
-                    <img src="./img/icons%20we%20helps/card.png" alt="" class="we-helps_item_img">
+                    <div class="we-helps_item_img"><img src="./img/icons%20we%20helps/card.png" alt=""></div>
                     <p class="we-helps_item_info">
                         Вы работаете  неофициально или у Вас  нет регистрации в СПб
                     </p>
                 </div>
                 <div class="we-helps_item">
-                    <img src="./img/icons%20we%20helps/graphic.png" alt="" class="we-helps_item_img">
+                    <div class="we-helps_item_img"><img src="./img/icons%20we%20helps/graphic.png" alt=""></div>
                     <p class="we-helps_item_info">
                         Хотите уменьшить финансовую нагрузку
                     </p>
@@ -315,5 +321,236 @@
             </div>
         </div>
     </section>
+    <section class="get">
+        <div class="wrapper">
+            <h1 class="get_caption">
+                Как получить кредит  в центре «эксперт»?
+            </h1>
+            <div class="get_content">
+                <div class="get_content_block">
+                    <img src="./img/next.png" class="get_content_block_next"/>
+                    <div class="get_content_block_img">
+                        <i>1</i>
+                        <img src="./img/icons/if_phone1_172517.png" alt="">
+                    </div>
+                    <h3 class="get_content_block_caption">Бесплатная консультация</h3>
+                    <div class="get_content_block_text">Вы получаете бесплатную консультацию и подробный разбор Вашей ситуации</div>
+                </div>
+                <div class="get_content_block">
+                    <img src="./img/next.png" class="get_content_block_next"/>
+                    <div class="get_content_block_img">
+                        <i>2</i>
+                        <img src="./img/icons/if_12.png" alt="">
+                    </div>
+                    <h3 class="get_content_block_caption">Заключаем договор</h3>
+                    <div class="get_content_block_text">Заключаем договор, в нашем офисе или дистанционно. В договоре фиксируется ставка, сумма кредита, переплат и график платежей. Вы не платите сверх сумм, указанных в договоре.</div>
+                </div>
+                <div class="get_content_block">
+                    <img src="./img/next.png" class="get_content_block_next"/>
+                    <div class="get_content_block_img">
+                        <i>3</i>
+                        <img src="./img/icons/if_billing-data-dollar-currency_2009880.png" alt="">
+                    </div>
+                    <h3 class="get_content_block_caption">Отсылаем анкету</h3>
+                    <div class="get_content_block_text">Мы отсылаем анкету в боле 60 банков-партнеров и выбираем для  Вас выгодные предложения</div>
+                </div>
+                <div class="get_content_block">
+                    <img src="./img/next.png" class="get_content_block_next"/>
+                    <div class="get_content_block_img">
+                        <i>4</i>
+                        <img src="./img/icons/if_clock_172584.png" alt="">
+                    </div>
+                    <h3 class="get_content_block_caption">Ждете решение</h3>
+                    <div class="get_content_block_text">Вы ждете решения от 15 минут  до 3 рабочих дней</div>
+                </div>
+                <div class="get_content_block">
+                    <div class="get_content_block_img">
+                        <i>5</i>
+                        <img src="./img/icons/if_finance-money-pocket-dollar-currency_2009872.png" alt="">
+                    </div>
+                    <h3 class="get_content_block_caption">Получаете одобрение</h3>
+                    <div class="get_content_block_text">Получаете положительное  решение и деньги</div>
+                    <a href="#" class="get_content_block_btn">Получить</a>
+                </div>
+            </div>
+            <div class="get_content">
+                <div class="get_info-block">
+                    <p class="get_info-block_information">Мы ответственны за полное исполнение всех наших обязательств, своевременность  и скорость выполнения. Подобные задачи мы решаем уже 7 лет и всегда держим высокую планку качества.</p>
+                    <a href="#" class="get_info-block_information_order">оставить заявку</a>
+                    <a href="#" class="get_info-block_information_status">проверить мой статус в бки</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="our-testimonies">
+        <div class="wrapper">
+            <h1 class="our-testimonies_caption">
+                Наши  свидетельства
+            </h1>
+            <div class="our-testimonies_slider">
+
+            </div>
+        </div>
+    </section>
+    <section class="partners">
+        <div class="wrapper">
+            <h1 class="partners_caption">Банки  партнеры</h1>
+            <div class="partners_content">
+                <div class="partners_content_block">
+                    <img src="./img/partners/hone.png" alt="">
+                </div>
+                <div class="partners_content_block">
+                    <img src="./img/partners/eist.png" alt="">
+                </div>
+                <div class="partners_content_block">
+                    <img src="./img/partners/raf.png" alt="">
+                </div>
+                <div class="partners_content_block">
+                    <img src="./img/partners/eist.png" alt="">
+                </div>
+                <div class="partners_content_block">
+                    <img src="./img/partners/tin.png" alt="">
+                </div>
+                <div class="partners_content_block">
+                    <img src="./img/partners/eist.png" alt="">
+                </div>
+                <div class="partners_content_block">
+                    <img src="./img/partners/eist.png" alt="">
+                </div>
+                <div class="partners_content_block">
+                    <img src="./img/partners/eist.png" alt="">
+                </div>
+                <div class="partners_content_block">
+                    <img src="./img/partners/eist.png" alt="">
+                </div>
+                <div class="partners_content_block">
+                    <img src="./img/partners/eist.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="reviews">
+        <div class="wrapper">
+            <h1 class="reviews_caption">Отзывы о  работе с нами</h1>
+            <div class="reviews_content">
+                <div class="lazy slider" data-sizes="50vw">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ask-answer">
+        <div class="wrapper">
+            <h1 class="ask-answer_caption">вопрос - ответ</h1>
+            <div class="ask-answer_content">
+                <div class="accordion">
+                    <div class="accordion_item">
+                        <h3 data-href="#box-1" class="accordion_item_title_block">Как мне получить скидку 10% на услуги брокера?<span class="flaticon-angle-arrow-down"></span></h3>
+                        <div id="box-1" class="accordion_item_info">
+                            <p class="accordion_item_info_content">Собственник не меняется, на объект накладывается только обременение - ипотека в силу закона. Выписываться не нужно. Если необходимо, заемщик может продать свою недвижимость, погасив средствами от продажи недвижимости сумму кредита.</p>
+                        </div>
+                    </div>
+                    <div class="accordion_item">
+                        <h3 data-href="#box-2" class="accordion_item_title_block">Какие документы необходимы для получения кредита?<span class="flaticon-angle-arrow-down"> </span></h3>
+                        <div id="box-2" class="accordion_item_info">
+                            <p class="accordion_item_info_content">Собственник не меняется, на объект накладывается только обременение - ипотека в силу закона. Выписываться не нужно. Если необходимо, заемщик может продать свою недвижимость, погасив средствами от продажи недвижимости сумму кредита.</p>
+                        </div>
+                    </div>
+                    <div class="accordion_item">
+                        <h3 data-href="#box-3" class="accordion_item_title_block">Какие требования к заемщику?<span class="flaticon-angle-arrow-down"></span></h3>
+                        <div id="box-3" class="accordion_item_info">
+                            <p class="accordion_item_info_content">Собственник не меняется, на объект накладывается только обременение - ипотека в силу закона. Выписываться не нужно. Если необходимо, заемщик может продать свою недвижимость, погасив средствами от продажи недвижимости сумму кредита.</p>
+                        </div>
+                    </div>
+                    <div class="accordion_item">
+                        <h3 data-href="#box-4" class="accordion_item_title_block">Какие последствия будут в случае неплатежей по кредиту?<span class="flaticon-angle-arrow-down"></span></h3>
+                        <div id="box-4" class="accordion_item_info">
+                            <p class="accordion_item_info_content">Собственник не меняется, на объект накладывается только обременение - ипотека в силу закона. Выписываться не нужно. Если необходимо, заемщик может продать свою недвижимость, погасив средствами от продажи недвижимости сумму кредита.</p>
+                        </div>
+                    </div>
+                    <div class="accordion_item">
+                        <h3 data-href="#box-5" class="accordion_item_title_block">Я беру кредит под залог недвижимости. Нужно ли выписываться из квартиры? Меняется ли собственник?  <span class="flaticon-angle-arrow-down"></span>  </h3>
+                        <div id="box-5" class="accordion_item_info">
+                            <p class="accordion_item_info_content">Собственник не меняется, на объект накладывается только обременение - ипотека в силу закона. Выписываться не нужно. Если необходимо, заемщик может продать свою недвижимость, погасив средствами от продажи недвижимости сумму кредита.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="no-answer">
+        <div class="wrapper">
+            <h1 class="no-answer_caption">не нашли ответа на свой вопрос?</h1>
+                <from class="no-answer_content">
+                    <h3 class="no-answer_content_caption">
+                        Задайте свой вопрос
+                    </h3>
+                    <label class="no-answer_content_box">
+                        <span class="no-answer_content_name">Введите ваше имя:</span>
+                        <input type="text" class="no-answer_content_box_input">
+                    </label>
+                    <label class="no-answer_content_box">
+                        <span class="no-answer_content_name">Введите ваш телефон:</span>
+                        <input type="text" class="no-answer_content_box_input">
+                    </label>
+                    <label class="no-answer_content_box-big">
+                        <span class="no-answer_content_name">Напишите ваш вопрос:</span>
+                        <textarea></textarea>
+                    </label>
+                    <input type="submit" class="no-answer_content_send" value="задать вопрос">
+                </from>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="wrapper">
+            <h1 class="contact_caption">Контакты</h1>
+            <div class="contact_content">
+                <div class="contact_content_block">
+                    <h2>Адрес:</h2>
+                    <p>г. Санкт-Петербург, ул. Рентгена, д.7</p>
+                </div>
+                <div class="contact_content_block">
+                    <h2>Телефон:</h2>
+                    <p>8 (962) 729-22-72</p>
+                </div>
+                <div class="contact_content_block">
+                    <h2>E-mail:</h2>
+                    <p> mail@mail.ru</p>
+                </div>
+                <div class="contact_content_block">
+                    <h2>Режим работы:</h2>
+                    <p> Понедельник - суббота с 10:00 до 19:00</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact_map">
+            <div id="map"></div>
+        </div>
+    </section>
+    <footer>
+        <div class="wrapper">
+            <div class="footer_content">
+                <div class="footer_content_logo">
+                    <div class="footer_content_logo_img">
+                        <img src="./img/logo.png" alt="">
+                    </div>
+                    <div class="footer_content_logo_caption">
+                        <p class="footer_content_logo_caption_name">ЭКСПЕРТ</p>
+                        <span class="footer_content_logo_caption_info">Кредитный центр</span>
+                    </div>
+                </div>
+                <div class="footer_content_info">
+                    <h2>ООО «Эксперт-кредитный центр»</h2>
+                    <p><span>ОГРН:</span> 513325785456475 </p>
+                    <p><span>ИНН:</span>  7714923260</p>
+                </div>
+                <div class="footer_content_phone">
+                    <span class="footer_content_phone_number"><i class="footer_content_phone_number_icon">
+&#128222;</i>8 (962) 729-22-72</span>
+                    <a href="#" class="header_top_phone_call">Заказать звонок</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
