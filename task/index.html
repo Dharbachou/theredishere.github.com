@@ -35,7 +35,8 @@
         <!--</div>-->
     <!--</div>-->
     <header>
-        <div class="wrapper flex-column">
+        <div class="header_white">
+        <div class="wrapper flex-column header_white">
             <div class="header_top">
                 <div class="header_top_logo">
                     <div class="header_top_logo_img">
@@ -48,16 +49,16 @@
                 </div>
                 <div class="header_top_menu">
                     <ul class="header_top_menu_items">
-                        <li class="header_top_menu_item"><a class="header_top_menu_item_link" href="#">Наши услуги</a></li>
-                        <li class="header_top_menu_item"><a class="header_top_menu_item_link" href="#">Подбор кредита</a></li>
-                        <li class="header_top_menu_item"><a class="header_top_menu_item_link" href="#">Гарантии</a></li>
-                        <li class="header_top_menu_item"><a class="header_top_menu_item_link" href="#">Отзывы</a></li>
+                        <li class="header_top_menu_item"><a class="header_top_menu_item_link go_to" href=".our-service">Наши услуги</a></li>
+                        <li class="header_top_menu_item"><a class="header_top_menu_item_link go_to" href=".get">Подбор кредита</a></li>
+                        <li class="header_top_menu_item"><a class="header_top_menu_item_link go_to" href=".safeguards">Гарантии</a></li>
+                        <li class="header_top_menu_item"><a class="header_top_menu_item_link go_to" href=".reviews">Отзывы</a></li>
                     </ul>
                 </div>
                 <div class="header_top_phone">
                     <span class="header_top_phone_number"><i class="header_top_phone_number_icon">
 &#128222;</i>8 (962) 729-22-72</span>
-                    <a href="#" class="header_top_phone_call">Заказать звонок</a>
+                    <a href="#modal3" class="open_modal header_top_phone_call">Заказать звонок</a>
                 </div>
             </div>
             <div class="header_content">
@@ -83,8 +84,9 @@
                         </p>
                     </div>
                 </div>
-                <input type="button" class="header_content_bth" value="Оформить заявку">
+                <a href="#modal1" class="open_modal header_content_bth" >Оформить заявку</a>
             </div>
+        </div>
         </div>
     </header>
     <section class="we-helps">
@@ -143,6 +145,8 @@
                    <li class="our-service_content_item">Кредит под залог автомобиля</li>
                </ul>
                <div class="our-service_content_box">
+                   <div class="our-service_content_box_relev"></div>
+                   <div class="our-service_content_box_img_bor"></div>
                    <img src="img/service_content.png" alt="" class="our-service_content_box_img">
                </div>
                <div class="our-service_content_box-info">
@@ -178,7 +182,7 @@
                     <span class="situation_content_name"><i>1</i>Вид кредита:</span>
                     <span class="situation_content_type_select">
                         <div>
-                            <input type="radio" id="radio" name="radio" />
+                            <input checked type="radio" id="radio" name="radio" />
                             <label for="radio">Потребительский кредит</label>
                         </div>
                         <div>
@@ -201,7 +205,7 @@
                 </label>
                 <label class="situation_content_box">
                     <span class="situation_content_name"><i>2</i>Нужная сумма:</span>
-                    <input type="text" class="situation_content_box_input">
+                    <input placeholder="400000" type="text" class="situation_content_box_input">
                 </label>
                 <label class="situation_content_box">
                     <span class="situation_content_name"><i>3</i>Срок:</span>
@@ -217,11 +221,11 @@
                 </label>
                 <label class="situation_content_box">
                     <span class="situation_content_name"><i>6</i>Ваш телефон:</span>
-                    <input type="text" class="situation_content_box_input">
+                    <input placeholder="+7 (909) 903-12-12" type="text" class="situation_content_box_input">
                 </label>
                 <label class="situation_content_box">
                     <label class="situation_content_box_checkbox">
-                        <input type="checkbox" id="check"><label for="check">Деньги нужны срочно</label>
+                        <input checked type="checkbox" id="check"><label for="check">Деньги нужны срочно</label>
                     </label>
                     <input type="submit" class="situation_content_box_send" value="Получить индивидуальные условия">
                 </label>
@@ -257,7 +261,7 @@
                 <div class="safeguards_content_request">
                     <h2 class="safeguards_content_request_name">Оставьте заявку</h2>
                     <p class="safeguards_content_request_info">И наш менеджер свяжется с Вами в  ближайшее время для уточнения деталей </p>
-                    <a href="#" class="safeguards_content_request_btn">оставить заявку</a>
+                    <a href="#modal1" class="open_modal safeguards_content_request_btn">оставить заявку</a>
                 </div>
             </div>
         </div>
@@ -376,8 +380,8 @@
             <div class="get_content">
                 <div class="get_info-block">
                     <p class="get_info-block_information">Мы ответственны за полное исполнение всех наших обязательств, своевременность  и скорость выполнения. Подобные задачи мы решаем уже 7 лет и всегда держим высокую планку качества.</p>
-                    <a href="#" class="get_info-block_information_order">оставить заявку</a>
-                    <a href="#" class="get_info-block_information_status">проверить мой статус в бки</a>
+                    <a href="#modal1" class="open_modal get_info-block_information_order">оставить заявку</a>
+                    <a  href="#modal2" class="open_modal get_info-block_information_status">проверить мой статус в бки</a>
                 </div>
             </div>
         </div>
@@ -406,25 +410,25 @@
                     <img src="./img/partners/raf.png" alt="">
                 </div>
                 <div class="partners_content_block">
-                    <img src="./img/partners/eist.png" alt="">
-                </div>
-                <div class="partners_content_block">
                     <img src="./img/partners/tin.png" alt="">
                 </div>
                 <div class="partners_content_block">
-                    <img src="./img/partners/eist.png" alt="">
+                    <img src="./img/partners/logo_otkrytie_bank.png" alt="">
                 </div>
                 <div class="partners_content_block">
-                    <img src="./img/partners/eist.png" alt="">
+                    <img src="./img/partners/80b5468c_resizedScaled_1020to499.png" alt="">
                 </div>
                 <div class="partners_content_block">
-                    <img src="./img/partners/eist.png" alt="">
+                    <img src="./img/partners/Ỿ頹5.png" alt="">
                 </div>
                 <div class="partners_content_block">
-                    <img src="./img/partners/eist.png" alt="">
+                    <img src="./img/partners/Ỿ頹7.png" alt="">
                 </div>
                 <div class="partners_content_block">
-                    <img src="./img/partners/eist.png" alt="">
+                    <img src="./img/partners/Ỿ頹9.png" alt="">
+                </div>
+                <div class="partners_content_block">
+                    <img src="./img/partners/kak-perevesti-dengi-s-karty-na-kartu-v-vtb24.png" alt="">
                 </div>
             </div>
         </div>
@@ -487,15 +491,15 @@
                     </h3>
                     <label class="no-answer_content_box">
                         <span class="no-answer_content_name">Введите ваше имя:</span>
-                        <input type="text" class="no-answer_content_box_input">
+                        <input placeholder="Виталий Максимов" type="text" class="no-answer_content_box_input">
                     </label>
                     <label class="no-answer_content_box">
                         <span class="no-answer_content_name">Введите ваш телефон:</span>
-                        <input type="text" class="no-answer_content_box_input">
+                        <input placeholder="+7 (909) 322-32-23" type="text" class="no-answer_content_box_input">
                     </label>
                     <label class="no-answer_content_box-big">
                         <span class="no-answer_content_name">Напишите ваш вопрос:</span>
-                        <textarea></textarea>
+                        <textarea placeholder="Введите сообщение"></textarea>
                     </label>
                     <input type="submit" class="no-answer_content_send" value="задать вопрос">
                 </from>
@@ -547,10 +551,91 @@
                 <div class="footer_content_phone">
                     <span class="footer_content_phone_number"><i class="footer_content_phone_number_icon">
 &#128222;</i>8 (962) 729-22-72</span>
-                    <a href="#" class="header_top_phone_call">Заказать звонок</a>
+                    <a href="#modal3" class="open_modal header_top_phone_call">Заказать звонок</a>
                 </div>
             </div>
         </div>
     </footer>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() { // запускаем скрипт после загрузки всех элементов
+            /* засунем сразу все элементы в переменные, чтобы скрипту не приходилось их каждый раз искать при кликах */
+            var overlay = $('#overlay'); // подложка, должна быть одна на странице
+            var open_modal = $('.open_modal'); // все ссылки, которые будут открывать окна
+            var close = $('.modal_close, #overlay'); // все, что закрывает модальное окно, т.е. крестик и оверлэй-подложка
+            var modal = $('.modal_div'); // все скрытые модальные окна
+
+            open_modal.click( function(event){ // ловим клик по ссылке с классом open_modal
+                event.preventDefault(); // вырубаем стандартное поведение
+                var div = $(this).attr('href'); // возьмем строку с селектором у кликнутой ссылки
+                overlay.fadeIn(400, //показываем оверлэй
+                    function(){ // после окончания показывания оверлэя
+                        $(div) // берем строку с селектором и делаем из нее jquery объект
+                            .css('display', 'block')
+                            .animate({opacity: 1, top: '50%'}, 200); // плавно показываем
+                    });
+            });
+
+            close.click( function(){ // ловим клик по крестику или оверлэю
+                modal // все модальные окна
+                    .animate({opacity: 0, top: '45%'}, 200, // плавно прячем
+                        function(){ // после этого
+                            $(this).css('display', 'none');
+                            overlay.fadeOut(400); // прячем подложку
+                        }
+                    );
+            });
+        });
+    </script>
+
+    <!-- Модальные окна -->
+    <div id="modal1" class="modal_div">
+        <span class="modal_close">X</span>
+        <form action="" method="post">
+            <h3 class="modal_caption">Оформить заявку</h3>
+            <p class="modal_text">Введите Ваш телефон и наши специалисты проконсультируют Вас в течении 15 минут</p>
+            <label>
+                <span class="modal_inp_name">Ваш номер телефона:</span>
+                <input class="modal_edittext" type="text" placeholder="+7 (909) 898-23-23">
+            </label>
+            <p class="modal_text">Оставление заявки Вас ни к чему не обязывает. Мы не распространяем информацию о Вас третьим лицам.</p>
+            <input class="modal_send" type="text" value="Оформить заявку">
+        </form>
+    </div>
+
+    <div id="modal2" class="modal_div">
+        <span class="modal_close">X</span>
+        <form action="" method="post">
+            <h3 class="modal_caption">Проверить статус в БКИ</h3>
+            <p class="modal_text">Узнайте свою кредитную историю, не  выходя из дома. Мы свяжемся с Вами и  проконсультируем по статусу.</p>
+            <label>
+                <span class="modal_inp_name">Ваш номер телефона:</span>
+                <input class="modal_edittext" type="text" placeholder="+7 (909) 898-23-23">
+            </label>
+            <p class="modal_text">Оставление заявки Вас ни к чему не обязывает. Мы не распространяем информацию о Вас третьим лицам.</p>
+            <input class="modal_send" type="text" value="Проверить статус">
+        </form>
+    </div>
+
+    <div id="modal3" class="modal_div">
+        <span class="modal_close">X</span>
+        <form action="" method="post">
+            <h3 class="modal_caption">Заказать звонок</h3>
+            <p class="modal_text">Введите Ваш телефон и наши  спеуиалисты проконсультируют Вас  в течении 15 минут.</p>
+            <label>
+                <span class="modal_inp_name">Ваш номер телефона:</span>
+                <input class="modal_edittext" type="text" placeholder="+7 (909) 898-23-23">
+            </label>
+            <p class="modal_text">Оставление заявки Вас ни к чему не обязывает. Мы не распространяем информацию о Вас третьим лицам.</p>
+            <input class="modal_send" type="text" value="Заказать звонок">
+        </form>
+    </div>
+
+
+
+
+    <!-- Подложка только одна -->
+    <div id="overlay"></div>
 </body>
 </html>
