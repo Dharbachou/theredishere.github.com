@@ -3,7 +3,7 @@
   padding-bottom: 100px;
   background-color: #f3f3f3; }
   .ask-answer_caption {
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Bold;
     color: #333333;
     font-size: 48px;
     width: 40%;
@@ -22,6 +22,24 @@
     justify-content: center; }
 
 @charset "UTF-8";
+@font-face {
+  font-family: Lato-Regular;
+  /* Гарнитура шрифта */
+  src: url(../font/Lato-Regular.ttf);
+  /* Путь к файлу со шрифтом */ }
+
+@font-face {
+  font-family: Lato-Bold;
+  /* Гарнитура шрифта */
+  src: url(../font/Lato-Bold.ttf);
+  /* Путь к файлу со шрифтом */ }
+
+@font-face {
+  font-family: Lato-Black;
+  /* Гарнитура шрифта */
+  src: url(../font/Lato-Black.ttf);
+  /* Путь к файлу со шрифтом */ }
+
 body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, input, textarea, p, blockquote, th, td {
   margin: 0;
   padding: 0; }
@@ -72,7 +90,7 @@ body {
   min-width: 320px;
   background: url("../img/bg.png") repeat-y;
   background-size: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: Lato-Regular;
   color: #333333;
   overflow-x: hidden; }
 
@@ -113,7 +131,7 @@ section {
       box-shadow: 6px 10px 35px 0px rgba(0, 0, 0, 0.08);
       width: 100%;
       height: 97px;
-      font-family: 'Lato', sans-serif;
+      font-family: Lato-Black;
       color: #000000;
       font-size: 24px;
       font-weight: 900;
@@ -125,6 +143,12 @@ section {
         position: absolute;
         right: 20px;
         font-weight: 900; }
+      @media screen and (max-width: 720px) {
+        .accordion_item_title_block {
+          height: 150px; } }
+      @media screen and (max-width: 576px) {
+        .accordion_item_title_block {
+          font-size: 14px; } }
     .accordion_item_title_block_active {
       border-radius: 9px 9px 0 0; }
     .accordion_item_info {
@@ -140,9 +164,16 @@ section {
       width: 100%;
       height: 157px;
       transition: all 0.3s; }
+      @media screen and (max-width: 576px) {
+        .accordion_item_info {
+          height: 200px; } }
+      @media screen and (max-width: 576px) {
+        .accordion_item_info {
+          height: 200px;
+          font-size: 12px; } }
 
 .modal_caption {
-  font-family: 'Lato', sans-serif;
+  font-family: Lato-Black;
   color: #333333;
   font-size: 35.98px;
   /* Приближение из-за подстановки шрифтов */
@@ -154,7 +185,7 @@ section {
   /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */ }
 
 .modal_text {
-  font-family: 'Lato', sans-serif;
+  font-family: Lato-Regular;
   color: #333333;
   font-size: 17.99px;
   /* Приближение из-за подстановки шрифтов */
@@ -166,7 +197,7 @@ section {
   /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */ }
 
 .modal_inp_name {
-  font-family: 'Lato', sans-serif;
+  font-family: Lato-Black;
   color: #333333;
   font-size: 14px;
   /* Приближение из-за подстановки шрифтов */
@@ -191,7 +222,7 @@ section {
   background-color: #01afa5;
   width: 266px;
   height: 64px;
-  font-family: 'Lato', sans-serif;
+  font-family: Lato-Black;
   color: #fcfcfc;
   font-size: 16px;
   /* Приближение из-за подстановки шрифтов */
@@ -271,7 +302,7 @@ section {
   padding-top: 100px;
   padding-bottom: 50px; }
   .contact_caption {
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Bold;
     color: #333333;
     font-size: 48px;
     width: 40%;
@@ -325,7 +356,7 @@ section {
           text-align: center;
           font-size: 14px; } }
       .contact_content_block h2 {
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Bold;
         color: #000000;
         font-size: 24px;
         font-weight: 700;
@@ -337,7 +368,7 @@ section {
             font-size: 20px; } }
       .contact_content_block p {
         margin-top: 3px;
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Regular;
         color: #000000;
         font-size: 18px;
         font-weight: 400;
@@ -390,7 +421,7 @@ footer {
           .footer_content_logo_img > img {
             height: 30px; } }
     .footer_content_logo_caption_name {
-      font-family: 'Lato', sans-serif;
+      font-family: Lato-Black;
       color: #333333;
       font-size: 30px;
       font-weight: 900;
@@ -403,7 +434,7 @@ footer {
         .footer_content_logo_caption_name {
           font-size: 20px; } }
     .footer_content_logo_caption_info {
-      font-family: 'Lato', sans-serif;
+      font-family: Lato-Regular;
       font-size: 16px;
       font-weight: 400;
       text-align: left; }
@@ -418,7 +449,7 @@ footer {
     flex-grow: 1;
     text-align: left; }
     .footer_content_info h2 {
-      font-family: 'Lato', sans-serif;
+      font-family: Lato-Black;
       color: #000000;
       font-size: 18px;
       font-weight: 900;
@@ -432,7 +463,7 @@ footer {
           font-size: 12px;
           text-align: center; } }
     .footer_content_info p {
-      font-family: 'Lato', sans-serif;
+      font-family: Lato-Regular;
       color: #000000;
       font-size: 18px;
       font-weight: 400;
@@ -456,7 +487,7 @@ footer {
       font-size: 24px;
       font-weight: 400;
       text-align: left;
-      font-family: 'Lato', sans-serif; }
+      font-family: Lato-Regular; }
       .footer_content_phone_number_icon {
         padding-top: 5px;
         display: inline-block;
@@ -465,7 +496,7 @@ footer {
         font-style: normal;
         transform: rotate(-20deg); }
     .footer_content_phone_call {
-      font-family: 'Lato', sans-serif;
+      font-family: Lato-Regular;
       color: #01afa5;
       font-size: 18px;
       font-weight: 400;
@@ -509,12 +540,30 @@ footer {
         outline: 1px solid red;
         background: rgba(0, 0, 0, 0.5); }
 
+@charset "UTF-8";
+@font-face {
+  font-family: Lato-Regular;
+  /* Гарнитура шрифта */
+  src: url(../font/Lato-Regular.ttf);
+  /* Путь к файлу со шрифтом */ }
+
+@font-face {
+  font-family: Lato-Bold;
+  /* Гарнитура шрифта */
+  src: url(../font/Lato-Bold.ttf);
+  /* Путь к файлу со шрифтом */ }
+
+@font-face {
+  font-family: Lato-Black;
+  /* Гарнитура шрифта */
+  src: url(../font/Lato-Black.ttf);
+  /* Путь к файлу со шрифтом */ }
 
 .get {
   padding-top: 100px;
   padding-bottom: 100px; }
   .get_caption {
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Bold;
     color: #333333;
     font-size: 48px;
     width: 50%;
@@ -595,14 +644,14 @@ footer {
         font-size: 30px;
         color: #e1e1e1; }
       .get_content_block_caption {
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Black;
         color: #000000;
         font-size: 24px;
         font-weight: 900;
         text-align: left; }
       .get_content_block_text {
         margin-top: 20px;
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Regular;
         color: #000000;
         font-size: 18px;
         font-weight: 400;
@@ -615,7 +664,7 @@ footer {
         background-color: #01afa5;
         width: 266px;
         padding: 20px 0;
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Black;
         color: #fcfcfc;
         font-size: 16px;
         font-weight: 900;
@@ -654,7 +703,7 @@ footer {
         font-size: 36px;
         width: 100%; } }
     .get_info-block_information {
-      font-family: 'Lato', sans-serif;
+      font-family: Lato-Regular;
       color: #333333;
       font-size: 27px;
       font-weight: 400;
@@ -670,7 +719,7 @@ footer {
         background-color: #333333;
         width: 387px;
         padding: 20px 0;
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Black;
         color: #fcfcfc;
         font-size: 16px;
         font-weight: 900;
@@ -691,7 +740,7 @@ footer {
         background-color: #01afa5;
         width: 387px;
         padding: 20px 0;
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Black;
         color: #fcfcfc;
         font-size: 16px;
         font-weight: 900;
@@ -700,6 +749,25 @@ footer {
         margin-bottom: 20px; }
         .get_info-block_information_status:hover {
           box-shadow: 0px 0px 2px 2px #999; }
+
+@charset "UTF-8";
+@font-face {
+  font-family: Lato-Regular;
+  /* Гарнитура шрифта */
+  src: url(../font/Lato-Regular.ttf);
+  /* Путь к файлу со шрифтом */ }
+
+@font-face {
+  font-family: Lato-Bold;
+  /* Гарнитура шрифта */
+  src: url(../font/Lato-Bold.ttf);
+  /* Путь к файлу со шрифтом */ }
+
+@font-face {
+  font-family: Lato-Black;
+  /* Гарнитура шрифта */
+  src: url(../font/Lato-Black.ttf);
+  /* Путь к файлу со шрифтом */ }
 
 header {
   background: url("../img/bg_header.png") no-repeat;
@@ -759,7 +827,7 @@ header {
       text-align: left;
       line-height: 30px; }
     .header_top_logo_caption_info {
-      font-family: 'Lato', sans-serif;
+      font-family: Lato-Regular;
       font-size: 16px;
       font-weight: 400;
       text-align: left; }
@@ -772,7 +840,7 @@ header {
     display: inline-block;
     list-style-type: none; }
     .header_top_menu_item_link {
-      font-family: 'Lato', sans-serif;
+      font-family: Lato-Regular;
       font-size: 18px;
       font-weight: 400;
       text-align: left;
@@ -788,7 +856,7 @@ header {
       font-size: 24px;
       font-weight: 400;
       text-align: left;
-      font-family: 'Lato', sans-serif; }
+      font-family: Lato-Regular; }
       .header_top_phone_number_icon {
         padding-top: 5px;
         display: inline-block;
@@ -797,7 +865,7 @@ header {
         font-style: normal;
         transform: rotate(-20deg); }
     .header_top_phone_call {
-      font-family: 'Lato', sans-serif;
+      font-family: Lato-Regular;
       color: #01afa5;
       font-size: 18px;
       font-weight: 400;
@@ -828,10 +896,10 @@ header {
   .header_content_caption {
     margin-left: -30px;
     border-left: 8px solid #01afa5;
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Black;
     line-height: 48px;
     font-size: 48px;
-    font-weight: 700;
+    font-weight: 900;
     text-align: left;
     text-transform: uppercase;
     padding-left: 20px; }
@@ -843,7 +911,7 @@ header {
         font-size: 30px; } }
   .header_content_info {
     margin-top: 10px;
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Regular;
     font-size: 27px;
     line-height: 30px;
     width: 75%;
@@ -869,7 +937,7 @@ header {
     margin-right: 15px;
     width: calc(100% / 12 * 3.5 - 30px);
     text-align: left;
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Regular;
     color: #333333;
     font-size: 18px;
     font-weight: 400;
@@ -878,7 +946,7 @@ header {
       .header_content_condition {
         font-size: 14px; } }
     .header_content_condition span {
-      font-family: 'Lato', sans-serif;
+      font-family: Lato-Black;
       color: #333333;
       font-size: 18px;
       font-weight: 900;
@@ -901,6 +969,7 @@ header {
     height: 64px;
     color: #fcfcfc;
     font-size: 16px;
+    font-family: Lato-Bold;
     font-weight: 700;
     line-height: 24px;
     border-radius: 50px;
@@ -920,6 +989,42 @@ header {
   background-color: #01afa5; }
 
 @charset "UTF-8";
+@font-face {
+  font-family: Lato-Regular;
+  /* Гарнитура шрифта */
+  src: url(../font/Lato-Regular.ttf);
+  /* Путь к файлу со шрифтом */ }
+
+@font-face {
+  font-family: Lato-Bold;
+  /* Гарнитура шрифта */
+  src: url(../font/Lato-Bold.ttf);
+  /* Путь к файлу со шрифтом */ }
+
+@font-face {
+  font-family: Lato-Black;
+  /* Гарнитура шрифта */
+  src: url(../font/Lato-Black.ttf);
+  /* Путь к файлу со шрифтом */ }
+
+@font-face {
+  font-family: Lato-Regular;
+  /* Гарнитура шрифта */
+  src: url(../font/Lato-Regular.ttf);
+  /* Путь к файлу со шрифтом */ }
+
+@font-face {
+  font-family: Lato-Bold;
+  /* Гарнитура шрифта */
+  src: url(../font/Lato-Bold.ttf);
+  /* Путь к файлу со шрифтом */ }
+
+@font-face {
+  font-family: Lato-Black;
+  /* Гарнитура шрифта */
+  src: url(../font/Lato-Black.ttf);
+  /* Путь к файлу со шрифтом */ }
+
 body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, input, textarea, p, blockquote, th, td {
   margin: 0;
   padding: 0; }
@@ -970,7 +1075,7 @@ body {
   min-width: 320px;
   background: url("../img/bg.png") repeat-y;
   background-size: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: Lato-Regular;
   color: #333333;
   overflow-x: hidden; }
 
@@ -1011,7 +1116,7 @@ section {
       box-shadow: 6px 10px 35px 0px rgba(0, 0, 0, 0.08);
       width: 100%;
       height: 97px;
-      font-family: 'Lato', sans-serif;
+      font-family: Lato-Black;
       color: #000000;
       font-size: 24px;
       font-weight: 900;
@@ -1023,6 +1128,12 @@ section {
         position: absolute;
         right: 20px;
         font-weight: 900; }
+      @media screen and (max-width: 720px) {
+        .accordion_item_title_block {
+          height: 150px; } }
+      @media screen and (max-width: 576px) {
+        .accordion_item_title_block {
+          font-size: 14px; } }
     .accordion_item_title_block_active {
       border-radius: 9px 9px 0 0; }
     .accordion_item_info {
@@ -1038,9 +1149,16 @@ section {
       width: 100%;
       height: 157px;
       transition: all 0.3s; }
+      @media screen and (max-width: 576px) {
+        .accordion_item_info {
+          height: 200px; } }
+      @media screen and (max-width: 576px) {
+        .accordion_item_info {
+          height: 200px;
+          font-size: 12px; } }
 
 .modal_caption {
-  font-family: 'Lato', sans-serif;
+  font-family: Lato-Black;
   color: #333333;
   font-size: 35.98px;
   /* Приближение из-за подстановки шрифтов */
@@ -1052,7 +1170,7 @@ section {
   /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */ }
 
 .modal_text {
-  font-family: 'Lato', sans-serif;
+  font-family: Lato-Regular;
   color: #333333;
   font-size: 17.99px;
   /* Приближение из-за подстановки шрифтов */
@@ -1064,7 +1182,7 @@ section {
   /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */ }
 
 .modal_inp_name {
-  font-family: 'Lato', sans-serif;
+  font-family: Lato-Black;
   color: #333333;
   font-size: 14px;
   /* Приближение из-за подстановки шрифтов */
@@ -1089,7 +1207,7 @@ section {
   background-color: #01afa5;
   width: 266px;
   height: 64px;
-  font-family: 'Lato', sans-serif;
+  font-family: Lato-Black;
   color: #fcfcfc;
   font-size: 16px;
   /* Приближение из-за подстановки шрифтов */
@@ -1195,6 +1313,24 @@ section {
         outline: 1px solid red;
         background: rgba(0, 0, 0, 0.5); }
 
+@font-face {
+  font-family: Lato-Regular;
+  /* Гарнитура шрифта */
+  src: url(../font/Lato-Regular.ttf);
+  /* Путь к файлу со шрифтом */ }
+
+@font-face {
+  font-family: Lato-Bold;
+  /* Гарнитура шрифта */
+  src: url(../font/Lato-Bold.ttf);
+  /* Путь к файлу со шрифтом */ }
+
+@font-face {
+  font-family: Lato-Black;
+  /* Гарнитура шрифта */
+  src: url(../font/Lato-Black.ttf);
+  /* Путь к файлу со шрифтом */ }
+
 header {
   background: url("../img/bg_header.png") no-repeat;
   background-size: cover;
@@ -1253,7 +1389,7 @@ header {
       text-align: left;
       line-height: 30px; }
     .header_top_logo_caption_info {
-      font-family: 'Lato', sans-serif;
+      font-family: Lato-Regular;
       font-size: 16px;
       font-weight: 400;
       text-align: left; }
@@ -1266,7 +1402,7 @@ header {
     display: inline-block;
     list-style-type: none; }
     .header_top_menu_item_link {
-      font-family: 'Lato', sans-serif;
+      font-family: Lato-Regular;
       font-size: 18px;
       font-weight: 400;
       text-align: left;
@@ -1282,7 +1418,7 @@ header {
       font-size: 24px;
       font-weight: 400;
       text-align: left;
-      font-family: 'Lato', sans-serif; }
+      font-family: Lato-Regular; }
       .header_top_phone_number_icon {
         padding-top: 5px;
         display: inline-block;
@@ -1291,7 +1427,7 @@ header {
         font-style: normal;
         transform: rotate(-20deg); }
     .header_top_phone_call {
-      font-family: 'Lato', sans-serif;
+      font-family: Lato-Regular;
       color: #01afa5;
       font-size: 18px;
       font-weight: 400;
@@ -1322,10 +1458,10 @@ header {
   .header_content_caption {
     margin-left: -30px;
     border-left: 8px solid #01afa5;
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Black;
     line-height: 48px;
     font-size: 48px;
-    font-weight: 700;
+    font-weight: 900;
     text-align: left;
     text-transform: uppercase;
     padding-left: 20px; }
@@ -1337,7 +1473,7 @@ header {
         font-size: 30px; } }
   .header_content_info {
     margin-top: 10px;
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Regular;
     font-size: 27px;
     line-height: 30px;
     width: 75%;
@@ -1363,7 +1499,7 @@ header {
     margin-right: 15px;
     width: calc(100% / 12 * 3.5 - 30px);
     text-align: left;
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Regular;
     color: #333333;
     font-size: 18px;
     font-weight: 400;
@@ -1372,7 +1508,7 @@ header {
       .header_content_condition {
         font-size: 14px; } }
     .header_content_condition span {
-      font-family: 'Lato', sans-serif;
+      font-family: Lato-Black;
       color: #333333;
       font-size: 18px;
       font-weight: 900;
@@ -1395,6 +1531,7 @@ header {
     height: 64px;
     color: #fcfcfc;
     font-size: 16px;
+    font-family: Lato-Bold;
     font-weight: 700;
     line-height: 24px;
     border-radius: 50px;
@@ -1421,7 +1558,7 @@ header {
   padding-top: 100px;
   padding-bottom: 100px; }
   .no-answer_caption {
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Bold;
     color: #fff;
     font-size: 48px;
     width: 40%;
@@ -1466,7 +1603,7 @@ header {
       margin-bottom: 20px;
       width: 100%;
       text-align: left;
-      font-family: 'Lato', sans-serif;
+      font-family: Lato-Black;
       color: #000000;
       font-size: 30px;
       font-weight: 900;
@@ -1493,7 +1630,7 @@ header {
         width: calc(100% / 12 * 12 - 30px); }
         .no-answer_content_box-big span {
           display: block;
-          font-family: 'Lato', sans-serif;
+          font-family: Lato-Black;
           color: #333333;
           font-size: 14px;
           font-weight: 900;
@@ -1507,7 +1644,7 @@ header {
           background-color: #ffffff;
           height: 194px;
           padding: 10px;
-          font-family: 'Lato', sans-serif;
+          font-family: Lato-Regular;
           color: #333333;
           font-size: 16px;
           font-weight: 400;
@@ -1515,7 +1652,7 @@ header {
           text-align: left; }
       .no-answer_content_box span {
         display: block;
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Black;
         color: #333333;
         font-size: 14px;
         font-weight: 900;
@@ -1530,7 +1667,7 @@ header {
         box-sizing: border-box;
         height: 54px;
         padding: 10px;
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Regular;
         color: #333333;
         font-size: 16px;
         font-weight: 400;
@@ -1543,7 +1680,7 @@ header {
       text-align: center;
       border: none;
       border-radius: 50px;
-      font-family: 'Lato', sans-serif;
+      font-family: Lato-Bold;
       color: #fcfcfc;
       font-size: 16px;
       font-weight: 700;
@@ -1560,7 +1697,7 @@ header {
   padding-bottom: 100px;
   background: #f3f3f3; }
   .our-testimonies_caption {
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Bold;
     color: #333333;
     font-size: 48px;
     width: 50%;
@@ -1574,7 +1711,7 @@ header {
   padding-top: 100px;
   padding-bottom: 100px; }
   .partners_caption {
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Bold;
     color: #333333;
     font-size: 48px;
     width: 35%;
@@ -1637,7 +1774,7 @@ header {
   padding-top: 100px;
   padding-bottom: 100px; }
   .principles_caption {
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Bold;
     color: #333333;
     font-size: 48px;
     width: 35%;
@@ -1674,7 +1811,7 @@ header {
         .principles_content_item {
           width: calc(100% / 12 * 12 - 30px); } }
       .principles_content_item_info {
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Regular;
         color: #000000;
         font-size: 24px;
         font-weight: 400;
@@ -1696,11 +1833,11 @@ header {
         width: 60px;
         text-align: center; }
 
+@charset "UTF-8";
 .reviews {
-  padding-top: 100px;
-  padding-bottom: 100px; }
+  padding-top: 100px; }
   .reviews_caption {
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Bold;
     color: #333333;
     font-size: 48px;
     width: 40%;
@@ -1709,14 +1846,32 @@ header {
     border-left: 8px solid #01afa5;
     padding-left: 20px;
     text-transform: uppercase; }
+  .reviews_cont {
+    padding-left: 40px;
+    display: flex; }
+    .reviews_cont_block {
+      padding: 40px 30px 10px; }
+    .reviews_cont_name {
+      font-family: Lato-Black;
+      color: #000000;
+      font-size: 24px;
+      /* Приближение из-за подстановки шрифтов */
+      font-weight: 900;
+      text-align: left;
+      margin-bottom: 30px; }
+    .reviews_cont_tex {
+      padding-top: 23px;
+      font-family: Lato-Regular;
+      color: #000000;
+      font-size: 18px;
+      /* Приближение из-за подстановки шрифтов */
+      font-weight: 400;
+      line-height: 24px;
+      /* Приближение из-за подстановки шрифтов */
+      text-align: left; }
   .reviews_content {
-    margin-top: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -15px;
-    margin-right: -15px;
-    flex-wrap: wrap;
-    justify-content: center; }
+    width: 100%;
+    margin: 100px auto 0; }
     .reviews_content_block {
       box-sizing: border-box;
       word-wrap: break-word;
@@ -1739,7 +1894,7 @@ header {
   padding-top: 100px; }
   .safeguards_caption {
     width: 45%;
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Bold;
     color: #333333;
     font-size: 48px;
     font-weight: 700;
@@ -1792,7 +1947,7 @@ header {
         margin-bottom: 30px; }
       .safeguards_content_item_name {
         padding: 0 30px;
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Black;
         color: #000000;
         font-size: 24px;
         font-weight: 900;
@@ -1800,7 +1955,7 @@ header {
         text-align: center;
         margin-bottom: 20px; }
       .safeguards_content_item_info {
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Regular;
         color: #000000;
         font-size: 16px;
         font-weight: 400;
@@ -1822,14 +1977,14 @@ header {
         .safeguards_content_request {
           width: calc(100% / 12 * 11 - 30px); } }
       .safeguards_content_request_name {
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Bold;
         color: #000000;
         font-size: 30px;
         font-weight: 700;
         text-align: left;
         margin-bottom: 20px; }
       .safeguards_content_request_info {
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Regular;
         color: #000000;
         font-size: 21px;
         font-weight: 400;
@@ -1841,7 +1996,7 @@ header {
         width: 266px;
         border-radius: 50px;
         padding: 30px;
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Bold;
         color: #fcfcfc;
         font-size: 16px;
         font-weight: 700;
@@ -1857,7 +2012,7 @@ header {
   padding-top: 100px;
   padding-bottom: 100px; }
   .our-service_caption {
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Bold;
     color: #333333;
     font-size: 48px;
     font-weight: 700;
@@ -1884,7 +2039,7 @@ header {
           width: calc(100% / 12 * 5 - 30px); } }
     .our-service_content_item {
       box-sizing: border-box;
-      font-family: 'Lato', sans-serif;
+      font-family: Lato-Regular;
       color: #000000;
       font-size: 18px;
       font-weight: 400;
@@ -1954,7 +2109,7 @@ header {
         .our-service_content_box-info {
           width: calc(100% / 12 * 10 - 30px); } }
       .our-service_content_box-info_caption {
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Black;
         color: #333333;
         font-size: 29.99px;
         font-weight: 900;
@@ -1964,7 +2119,7 @@ header {
       .our-service_content_box-info_items {
         margin-top: 20px; }
       .our-service_content_box-info_item {
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Regular;
         color: #333333;
         font-size: 17.99px;
         font-weight: 400;
@@ -1977,7 +2132,7 @@ header {
           flex: 20px;
           color: #01afa5; }
       .our-service_content_box-info_alarm {
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Black;
         color: #333333;
         font-size: 17.99px;
         font-weight: 900;
@@ -1988,7 +2143,7 @@ header {
       .our-service_content_box-info_terms {
         border-left: 4px solid #01afa5;
         padding-left: 10px;
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Regular;
         color: #333333;
         font-size: 17.99px;
         font-weight: 400;
@@ -2000,7 +2155,7 @@ header {
         display: block;
         background-color: #01afa5;
         width: 266px;
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Bold;
         color: #fcfcfc;
         font-size: 15.99px;
         font-weight: 700;
@@ -2019,7 +2174,7 @@ header {
   background-size: cover;
   padding: 126px 0; }
   .situation_caption {
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Bold;
     color: #fff;
     line-height: 50px;
     width: 50%;
@@ -2097,7 +2252,7 @@ header {
           .situation_content_type_select div input[type=radio]:checked + label:before {
             font-size: 15px; }
           .situation_content_type_select div label {
-            font-family: 'Lato', sans-serif;
+            font-family: Lato-Regular;
             color: #333333;
             font-size: 16px;
             font-weight: 400;
@@ -2122,7 +2277,7 @@ header {
         background-color: #ffffff;
         width: 100%;
         height: 64px;
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Regular;
         color: #333333;
         font-size: 16px;
         font-weight: 400;
@@ -2136,7 +2291,7 @@ header {
           display: none; }
         .situation_content_box_checkbox label {
           padding-left: 10px;
-          font-family: 'Lato', sans-serif;
+          font-family: Lato-Regular;
           color: #333333;
           font-size: 16px;
           font-weight: 400;
@@ -2167,7 +2322,7 @@ header {
         background-color: #01afa5;
         width: 472px;
         height: 64px;
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Bold;
         color: #fcfcfc;
         font-size: 15.99px;
         font-weight: 700;
@@ -2185,7 +2340,7 @@ header {
             width: 322px;
             display: block; } }
     .situation_content_name {
-      font-family: 'Lato', sans-serif;
+      font-family: Lato-Bold;
       color: #333333;
       font-size: 14px;
       font-weight: 700;
@@ -2209,7 +2364,7 @@ header {
   background-size: cover;
   padding: 76px 0; }
   .vs_caption {
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Bold;
     color: #fff;
     line-height: 50px;
     width: 55%;
@@ -2222,7 +2377,7 @@ header {
   .vs_info {
     margin-top: 10px;
     margin-left: 20px;
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Regular;
     color: #ffffff;
     font-size: 21px;
     font-weight: 400;
@@ -2247,7 +2402,7 @@ header {
       .vs_content_block:nth-child(odd) {
         border-radius: 5000px 0 0 0 !important; }
       .vs_content_block_caption {
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Black;
         color: #000000;
         font-size: 24px;
         font-weight: 900;
@@ -2265,7 +2420,7 @@ header {
           .vs_content_block_caption i.red {
             color: #da5353; }
       .vs_content_block_main {
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Regular;
         background: #fff;
         padding: 30px 70px;
         color: #000000;
@@ -2276,7 +2431,7 @@ header {
         box-shadow: 6px 10px 35px rgba(0, 0, 0, 0.08);
         border: 1px solid #d7d7d7; }
       .vs_content_block_caption_result {
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Black;
         color: #000000;
         font-size: 24px;
         font-weight: 900;
@@ -2286,7 +2441,7 @@ header {
         box-shadow: 6px 10px 35px rgba(0, 0, 0, 0.08);
         border: 1px solid #d7d7d7; }
       .vs_content_block_result {
-        font-family: 'Lato', sans-serif;
+        font-family: Lato-Regular;
         color: #000000;
         font-size: 18px;
         font-weight: 400;
@@ -2302,7 +2457,7 @@ header {
 .we-helps {
   padding-top: 100px; }
   .we-helps_caption {
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Bold;
     width: 40%;
     color: #333333;
     font-size: 48px;
@@ -2336,7 +2491,7 @@ header {
     justify-content: center; }
   .we-helps_item {
     margin-bottom: 10px;
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Regular;
     box-sizing: border-box;
     word-wrap: break-word;
     margin-left: 15px;
@@ -2364,17 +2519,30 @@ header {
       padding: 10px; }
     .we-helps_item_info {
       margin-top: 20px;
-      font-family: 'Lato', sans-serif;
+      font-family: Lato-Regular;
       color: #333333;
       font-size: 18px;
       font-weight: 400;
       line-height: 24px;
       text-align: center; }
   .we-helps_info {
-    font-family: 'Lato', sans-serif;
+    font-family: Lato-Regular;
     color: #333333;
     font-size: 27px;
     font-weight: 400;
     line-height: 36px;
     text-align: center;
     padding: 50px 12%; }
+
+.all_b {
+  height: 400px;
+  display: flex;
+  justify-content: center; }
+
+.slider {
+  margin-top: 50px;
+  height: 400px; }
+
+.sliders {
+  height: 200px;
+  margin-bottom: 100px; }

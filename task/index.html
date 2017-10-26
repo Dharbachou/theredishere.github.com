@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Эксперт кредитный центр</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato&amp;subset=latin-ext" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Lato&amp;subset=latin-ext" rel="stylesheet">-->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/logo.png" type="image/png">
     <link rel="stylesheet" href="./css/flaticon.css">
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./slick/slick.min.js"></script>
     <script src="./js/main.js"></script>
 
 </head>
@@ -392,7 +396,14 @@
                 Наши  свидетельства
             </h1>
             <div class="our-testimonies_slider">
-
+                <div class="slider single-item">
+                    <div class="all_b"><img src="./img/slider_1/1.png" alt=""></div>
+                    <div class="all_b"><img src="./img/slider_1/2.png" alt=""></div>
+                    <div class="all_b"><img src="./img/slider_1/3.png" alt=""></div>
+                    <div class="all_b"><img src="./img/slider_1/1.png" alt=""></div>
+                    <div class="all_b"><img src="./img/slider_1/2.png" alt=""></div>
+                    <div class="all_b"><img src="./img/slider_1/3.png" alt=""></div>
+                </div>
             </div>
         </div>
     </section>
@@ -437,8 +448,43 @@
         <div class="wrapper">
             <h1 class="reviews_caption">Отзывы о  работе с нами</h1>
             <div class="reviews_content">
-                <div class="lazy slider" data-sizes="50vw">
-
+                <div class="single-iteml sliders" data-sizes="50vw">
+                    <div>
+                        <div class="reviews_cont">
+                            <img src="./img/rw/review.png" alt="" class="reviews_cont_img">
+                            <div class="reviews_cont_block">
+                                <h2 class="reviews_cont_name">Иванов Кирилл</h2>
+                                <p class="reviews_cont_text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="reviews_cont">
+                            <img src="./img/rw/review.png" alt="" class="reviews_cont_img">
+                            <div class="reviews_cont_block">
+                                <h2 class="reviews_cont_name">Иванов Кирилл</h2>
+                                <p class="reviews_cont_text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div>-->
+                        <!--<div class="reviews_cont">-->
+                            <!--<img src="./img/rw/review.png" alt="" class="reviews_cont_img">-->
+                            <!--<div class="reviews_cont_block">-->
+                                <!--<h2 class="reviews_cont_name">Иванов Кирилл</h2>-->
+                                <!--<p class="reviews_cont_text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. </p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div>-->
+                        <!--<div class="reviews_cont">-->
+                            <!--<img src="./img/rw/review.png" alt="" class="reviews_cont_img">-->
+                            <!--<div class="reviews_cont_block">-->
+                                <!--<h2 class="reviews_cont_name">Иванов Кирилл</h2>-->
+                                <!--<p class="reviews_cont_text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. </p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
                 </div>
             </div>
         </div>
@@ -556,38 +602,6 @@
             </div>
         </div>
     </footer>
-
-
-    <script type="text/javascript">
-        $(document).ready(function() { // запускаем скрипт после загрузки всех элементов
-            /* засунем сразу все элементы в переменные, чтобы скрипту не приходилось их каждый раз искать при кликах */
-            var overlay = $('#overlay'); // подложка, должна быть одна на странице
-            var open_modal = $('.open_modal'); // все ссылки, которые будут открывать окна
-            var close = $('.modal_close, #overlay'); // все, что закрывает модальное окно, т.е. крестик и оверлэй-подложка
-            var modal = $('.modal_div'); // все скрытые модальные окна
-
-            open_modal.click( function(event){ // ловим клик по ссылке с классом open_modal
-                event.preventDefault(); // вырубаем стандартное поведение
-                var div = $(this).attr('href'); // возьмем строку с селектором у кликнутой ссылки
-                overlay.fadeIn(400, //показываем оверлэй
-                    function(){ // после окончания показывания оверлэя
-                        $(div) // берем строку с селектором и делаем из нее jquery объект
-                            .css('display', 'block')
-                            .animate({opacity: 1, top: '50%'}, 200); // плавно показываем
-                    });
-            });
-
-            close.click( function(){ // ловим клик по крестику или оверлэю
-                modal // все модальные окна
-                    .animate({opacity: 0, top: '45%'}, 200, // плавно прячем
-                        function(){ // после этого
-                            $(this).css('display', 'none');
-                            overlay.fadeOut(400); // прячем подложку
-                        }
-                    );
-            });
-        });
-    </script>
 
     <!-- Модальные окна -->
     <div id="modal1" class="modal_div">
