@@ -2299,13 +2299,16 @@ header {
             padding: 15px; } }
         @media screen and (max-width: 576px) {
           .safeguards_content_request_btn {
+            margin-top: 0;
             text-align: center;
-            display: block;
+            display: inline-block;
             margin-left: 50%;
-            transform: translateX(-140px);
+            transform: translateX(-100px);
             font-size: 12px;
             line-height: 16px;
-            margin-bottom: 10px; } }
+            margin-bottom: 10px;
+            width: 200px;
+            box-sizing: border-box; } }
 
 .our-service {
   padding-top: 100px;
