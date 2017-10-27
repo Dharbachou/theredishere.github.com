@@ -3,15 +3,30 @@
   padding-bottom: 100px;
   background-color: #f3f3f3; }
   .ask-answer_caption {
-    font-family: Lato-Bold;
+    font-family: Lato;
     color: #333333;
     font-size: 48px;
     width: 40%;
-    font-weight: 700;
+    font-weight: bold;
     text-align: left;
     border-left: 8px solid #01afa5;
     padding-left: 20px;
     text-transform: uppercase; }
+    @media screen and (max-width: 1200px) {
+      .ask-answer_caption {
+        width: 70%; } }
+    @media screen and (max-width: 992px) {
+      .ask-answer_caption {
+        font-size: 44px;
+        width: 80%; } }
+    @media screen and (max-width: 720px) {
+      .ask-answer_caption {
+        font-size: 40px;
+        width: 90%; } }
+    @media screen and (max-width: 576px) {
+      .ask-answer_caption {
+        font-size: 36px;
+        width: 100%; } }
   .ask-answer_content {
     margin-top: 100px;
     display: flex;
@@ -20,25 +35,31 @@
     margin-right: -15px;
     flex-wrap: wrap;
     justify-content: center; }
+    @media screen and (max-width: 720px) {
+      .ask-answer_content {
+        margin-top: 50px; } }
 
 @charset "UTF-8";
 @font-face {
-  font-family: Lato-Regular;
-  /* Гарнитура шрифта */
-  src: url(../font/Lato-Regular.ttf);
-  /* Путь к файлу со шрифтом */ }
+  font-family: 'Lato';
+  src: url("../font/Lato-Regular.eot");
+  src: url("../font/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Regular.woff") format("woff"), url("../font/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 
 @font-face {
-  font-family: Lato-Bold;
-  /* Гарнитура шрифта */
-  src: url(../font/Lato-Bold.ttf);
-  /* Путь к файлу со шрифтом */ }
+  font-family: 'Lato';
+  src: url("../font/Lato-Bold.eot");
+  src: url("../font/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Bold.woff") format("woff"), url("../font/Lato-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
 
 @font-face {
-  font-family: Lato-Black;
-  /* Гарнитура шрифта */
-  src: url(../font/Lato-Black.ttf);
-  /* Путь к файлу со шрифтом */ }
+  font-family: 'Lato';
+  src: url("../font/Lato-Black.eot");
+  src: url("../font/Lato-Black.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Black.woff") format("woff"), url("../font/Lato-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
 
 body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, input, textarea, p, blockquote, th, td {
   margin: 0;
@@ -87,12 +108,13 @@ img {
   height: auto; }
 
 body {
-  min-width: 320px;
+  min-width: 310px;
   background: url("../img/bg.png") repeat-y;
   background-size: 100%;
-  font-family: Lato-Regular;
+  font-family: Lato;
   color: #333333;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  margin: 0 auto; }
 
 section {
   max-width: 1920px;
@@ -123,6 +145,7 @@ section {
     width: 100%;
     margin-bottom: 10px; }
     .accordion_item_title_block {
+      cursor: pointer;
       position: relative;
       border-radius: 9px;
       border: 1px solid #d7d7d7;
@@ -131,7 +154,7 @@ section {
       box-shadow: 6px 10px 35px 0px rgba(0, 0, 0, 0.08);
       width: 100%;
       height: 97px;
-      font-family: Lato-Black;
+      font-family: Lato;
       color: #000000;
       font-size: 24px;
       font-weight: 900;
@@ -145,25 +168,24 @@ section {
         font-weight: 900; }
       @media screen and (max-width: 720px) {
         .accordion_item_title_block {
-          height: 150px; } }
+          height: 140px;
+          font-size: 18px; } }
       @media screen and (max-width: 576px) {
         .accordion_item_title_block {
           font-size: 14px; } }
     .accordion_item_title_block_active {
       border-radius: 9px 9px 0 0; }
     .accordion_item_info {
+      cursor: default;
       margin-top: -1px;
       display: none;
-      padding: 50px 50px;
       box-sizing: border-box;
       z-index: 0;
       border-radius: 0 0 9px 9px;
       border: 1px solid  #d7d7d7;
       background-color: white;
       box-shadow: 6px 10px 35px 0px rgba(0, 0, 0, 0.08);
-      width: 100%;
-      height: 157px;
-      transition: all 0.3s; }
+      width: 100%; }
       @media screen and (max-width: 576px) {
         .accordion_item_info {
           height: 200px; } }
@@ -171,9 +193,11 @@ section {
         .accordion_item_info {
           height: 200px;
           font-size: 12px; } }
+      .accordion_item_info_content {
+        padding: 50px 50px; }
 
 .modal_caption {
-  font-family: Lato-Black;
+  font-family: Lato;
   color: #333333;
   font-size: 35.98px;
   /* Приближение из-за подстановки шрифтов */
@@ -183,22 +207,30 @@ section {
   text-align: center;
   transform: scaleY(1.0004);
   /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */ }
+  @media screen and (max-width: 576px) {
+    .modal_caption {
+      font-size: 30px; } }
 
 .modal_text {
-  font-family: Lato-Regular;
+  font-family: Lato;
   color: #333333;
   font-size: 17.99px;
   /* Приближение из-за подстановки шрифтов */
-  font-weight: 400;
+  font-weight: normal;
   line-height: 27px;
   /* Приближение из-за подстановки шрифтов */
   text-align: center;
   transform: scaleY(1.0004);
   /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */ }
+  @media screen and (max-width: 576px) {
+    .modal_text {
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 10px; } }
 
 .modal_inp_name {
   display: block;
-  font-family: Lato-Black;
+  font-family: Lato;
   color: #333333;
   font-size: 14px;
   /* Приближение из-за подстановки шрифтов */
@@ -206,6 +238,12 @@ section {
   line-height: 33px;
   /* Приближение из-за подстановки шрифтов */
   margin-bottom: 10px; }
+  @media screen and (max-width: 576px) {
+    .modal_inp_name {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 12px;
+      line-height: 20px; } }
 
 .modal_edittext {
   border-radius: 9px;
@@ -217,12 +255,17 @@ section {
   width: 370px;
   height: 64px;
   padding: 10px 20px; }
+  @media screen and (max-width: 576px) {
+    .modal_edittext {
+      margin-bottom: 10px;
+      height: 40px;
+      width: 280px; } }
 
 .modal_send {
   background-color: #01afa5;
   width: 266px;
   height: 64px;
-  font-family: Lato-Black;
+  font-family: Lato;
   color: #fcfcfc;
   font-size: 16px;
   /* Приближение из-за подстановки шрифтов */
@@ -231,7 +274,8 @@ section {
   /* Приближение из-за подстановки шрифтов */
   border: none;
   border-radius: 50px;
-  text-align: center; }
+  text-align: center;
+  margin-top: 10px; }
 
 .modal_div {
   border-radius: 6px;
@@ -248,6 +292,12 @@ section {
   z-index: 5;
   padding: 20px 10px;
   transform: translateX(-260px) translateY(-294px); }
+  @media screen and (max-width: 576px) {
+    .modal_div {
+      width: 320px;
+      height: auto;
+      transform: translateX(-160px) translateY(-254px);
+      top: 100px; } }
   .modal_div form {
     height: 100%;
     padding: 20px 10px;
@@ -258,6 +308,9 @@ section {
     flex-direction: column;
     justify-content: space-around;
     align-items: center; }
+    @media screen and (max-width: 576px) {
+      .modal_div form {
+        padding: 20px 15px; } }
     .modal_div form label {
       display: flex;
       flex-wrap: wrap;
@@ -265,6 +318,9 @@ section {
       margin-right: -15px;
       flex-direction: column;
       justify-content: center; }
+      @media screen and (max-width: 576px) {
+        .modal_div form label {
+          width: 100%; } }
 
 /* Кнопка закрыть для тех кто в танке) */
 .modal_close {
@@ -303,11 +359,11 @@ section {
   padding-top: 100px;
   padding-bottom: 50px; }
   .contact_caption {
-    font-family: Lato-Bold;
+    font-family: Lato;
     color: #333333;
     font-size: 48px;
     width: 40%;
-    font-weight: 700;
+    font-weight: bold;
     text-align: left;
     border-left: 8px solid #01afa5;
     padding-left: 20px;
@@ -351,16 +407,16 @@ section {
           width: calc(100% / 12 * 6 - 30px); } }
       @media screen and (max-width: 576px) {
         .contact_content_block {
-          width: calc(100% / 12 * 10 - 30px); } }
+          width: calc(100% / 12 * 12 - 30px); } }
       @media screen and (max-width: 576px) {
         .contact_content_block {
           text-align: center;
           font-size: 14px; } }
       .contact_content_block h2 {
-        font-family: Lato-Bold;
+        font-family: Lato;
         color: #000000;
         font-size: 24px;
-        font-weight: 700;
+        font-weight: bold;
         line-height: 30px;
         text-align: left; }
         @media screen and (max-width: 576px) {
@@ -369,10 +425,10 @@ section {
             font-size: 20px; } }
       .contact_content_block p {
         margin-top: 3px;
-        font-family: Lato-Regular;
+        font-family: Lato;
         color: #000000;
         font-size: 18px;
-        font-weight: 400;
+        font-weight: normal;
         line-height: 30px;
         text-align: left; }
         @media screen and (max-width: 576px) {
@@ -386,10 +442,10 @@ section {
     background: #999999; }
     @media screen and (max-width: 720px) {
       .contact_map {
-        height: 400px; } }
+        height: 300px; } }
     @media screen and (max-width: 576px) {
       .contact_map {
-        height: 300px; } }
+        height: 200px; } }
     .contact_map div {
       width: 100%;
       height: 100%; }
@@ -411,6 +467,9 @@ footer {
     margin-left: 12px;
     display: flex;
     margin-bottom: 10px; }
+    @media screen and (max-width: 576px) {
+      .footer_content_logo {
+        margin-left: 0; } }
     .footer_content_logo_img {
       margin-right: 10px; }
       .footer_content_logo_img > img {
@@ -422,7 +481,7 @@ footer {
           .footer_content_logo_img > img {
             height: 30px; } }
     .footer_content_logo_caption_name {
-      font-family: Lato-Black;
+      font-family: Lato;
       color: #333333;
       font-size: 30px;
       font-weight: 900;
@@ -435,9 +494,9 @@ footer {
         .footer_content_logo_caption_name {
           font-size: 20px; } }
     .footer_content_logo_caption_info {
-      font-family: Lato-Regular;
+      font-family: Lato;
       font-size: 16px;
-      font-weight: 400;
+      font-weight: normal;
       text-align: left; }
       @media screen and (max-width: 720px) {
         .footer_content_logo_caption_info {
@@ -449,8 +508,11 @@ footer {
     margin-left: 60px;
     flex-grow: 1;
     text-align: left; }
+    @media screen and (max-width: 576px) {
+      .footer_content_info {
+        margin-left: 0; } }
     .footer_content_info h2 {
-      font-family: Lato-Black;
+      font-family: Lato;
       color: #000000;
       font-size: 18px;
       font-weight: 900;
@@ -464,10 +526,10 @@ footer {
           font-size: 12px;
           text-align: center; } }
     .footer_content_info p {
-      font-family: Lato-Regular;
+      font-family: Lato;
       color: #000000;
       font-size: 18px;
-      font-weight: 400;
+      font-weight: normal;
       line-height: 27px;
       text-align: left; }
       @media screen and (max-width: 720px) {
@@ -483,12 +545,18 @@ footer {
     align-self: flex-start;
     margin-right: 10px;
     text-align: right; }
+    @media screen and (max-width: 576px) {
+      .footer_content_phone {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; } }
     .footer_content_phone_number {
       display: block;
       font-size: 24px;
-      font-weight: 400;
+      font-weight: normal;
       text-align: left;
-      font-family: Lato-Regular; }
+      font-family: Lato; }
       .footer_content_phone_number_icon {
         padding-top: 5px;
         display: inline-block;
@@ -497,10 +565,10 @@ footer {
         font-style: normal;
         transform: rotate(-20deg); }
     .footer_content_phone_call {
-      font-family: Lato-Regular;
+      font-family: Lato;
       color: #01afa5;
       font-size: 18px;
-      font-weight: 400;
+      font-weight: normal;
       text-align: left;
       text-decoration: none;
       border-bottom: 2px dotted #01afa5; }
@@ -509,7 +577,10 @@ footer {
           font-size: 14px; } }
       @media screen and (max-width: 576px) {
         .footer_content_phone_call {
-          font-size: 12px; } }
+          margin-top: 20px;
+          width: 100%;
+          font-size: 12px;
+          text-align: center; } }
 
 .debug {
   height: 100vh;
@@ -541,34 +612,36 @@ footer {
         outline: 1px solid red;
         background: rgba(0, 0, 0, 0.5); }
 
-@charset "UTF-8";
 @font-face {
-  font-family: Lato-Regular;
-  /* Гарнитура шрифта */
-  src: url(../font/Lato-Regular.ttf);
-  /* Путь к файлу со шрифтом */ }
+  font-family: 'Lato';
+  src: url("../font/Lato-Regular.eot");
+  src: url("../font/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Regular.woff") format("woff"), url("../font/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 
 @font-face {
-  font-family: Lato-Bold;
-  /* Гарнитура шрифта */
-  src: url(../font/Lato-Bold.ttf);
-  /* Путь к файлу со шрифтом */ }
+  font-family: 'Lato';
+  src: url("../font/Lato-Bold.eot");
+  src: url("../font/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Bold.woff") format("woff"), url("../font/Lato-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
 
 @font-face {
-  font-family: Lato-Black;
-  /* Гарнитура шрифта */
-  src: url(../font/Lato-Black.ttf);
-  /* Путь к файлу со шрифтом */ }
+  font-family: 'Lato';
+  src: url("../font/Lato-Black.eot");
+  src: url("../font/Lato-Black.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Black.woff") format("woff"), url("../font/Lato-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
 
 .get {
   padding-top: 100px;
   padding-bottom: 100px; }
   .get_caption {
-    font-family: Lato-Bold;
+    font-family: Lato;
     color: #333333;
     font-size: 48px;
     width: 50%;
-    font-weight: 700;
+    font-weight: bold;
     text-align: left;
     border-left: 8px solid #01afa5;
     padding-left: 20px;
@@ -586,7 +659,7 @@ footer {
         width: 90%; } }
     @media screen and (max-width: 576px) {
       .get_caption {
-        font-size: 36px;
+        font-size: 34px;
         width: 100%; } }
   .get_content {
     display: flex;
@@ -645,17 +718,17 @@ footer {
         font-size: 30px;
         color: #e1e1e1; }
       .get_content_block_caption {
-        font-family: Lato-Black;
+        font-family: Lato;
         color: #000000;
         font-size: 24px;
         font-weight: 900;
         text-align: left; }
       .get_content_block_text {
         margin-top: 20px;
-        font-family: Lato-Regular;
+        font-family: Lato;
         color: #000000;
         font-size: 18px;
-        font-weight: 400;
+        font-weight: normal;
         line-height: 24px;
         text-align: left; }
       .get_content_block_btn {
@@ -665,7 +738,7 @@ footer {
         background-color: #01afa5;
         width: 266px;
         padding: 20px 0;
-        font-family: Lato-Black;
+        font-family: Lato;
         color: #fcfcfc;
         font-size: 16px;
         font-weight: 900;
@@ -690,11 +763,19 @@ footer {
     box-sizing: border-box; }
     @media screen and (max-width: 1200px) {
       .get_info-block {
-        width: 70%; } }
+        width: 100%; } }
     @media screen and (max-width: 992px) {
       .get_info-block {
         font-size: 44px;
-        width: 80%; } }
+        width: 80%;
+        text-align: center;
+        margin: 0 auto; } }
+  @media screen and (max-width: 992px) and (max-width: 720px) {
+    .get_info-block {
+      font-size: 30px; } }
+  @media screen and (max-width: 992px) and (max-width: 576px) {
+    .get_info-block {
+      font-size: 20px; } }
     @media screen and (max-width: 720px) {
       .get_info-block {
         font-size: 40px;
@@ -704,14 +785,22 @@ footer {
         font-size: 36px;
         width: 100%; } }
     .get_info-block_information {
-      font-family: Lato-Regular;
+      font-family: Lato;
       color: #333333;
       font-size: 27px;
-      font-weight: 400;
+      font-weight: normal;
       line-height: 36px;
       text-align: center;
       width: 100%;
       margin-bottom: 50px; }
+      @media screen and (max-width: 720px) {
+        .get_info-block_information {
+          font-size: 20px;
+          line-height: 24px; } }
+      @media screen and (max-width: 576px) {
+        .get_info-block_information {
+          font-size: 16px;
+          line-height: 24px; } }
       .get_info-block_information_order {
         display: inline-block;
         border-radius: 50px;
@@ -720,7 +809,7 @@ footer {
         background-color: #333333;
         width: 387px;
         padding: 20px 0;
-        font-family: Lato-Black;
+        font-family: Lato;
         color: #fcfcfc;
         font-size: 16px;
         font-weight: 900;
@@ -733,6 +822,14 @@ footer {
             margin-right: 0; } }
         .get_info-block_information_order:hover {
           box-shadow: 0px 0px 2px 2px #999; }
+        @media screen and (max-width: 720px) {
+          .get_info-block_information_order {
+            font-size: 14px;
+            line-height: 18px; } }
+        @media screen and (max-width: 576px) {
+          .get_info-block_information_order {
+            font-size: 12px;
+            line-height: 16px; } }
       .get_info-block_information_status {
         display: inline-block;
         border-radius: 50px;
@@ -741,7 +838,7 @@ footer {
         background-color: #01afa5;
         width: 387px;
         padding: 20px 0;
-        font-family: Lato-Black;
+        font-family: Lato;
         color: #fcfcfc;
         font-size: 16px;
         font-weight: 900;
@@ -750,25 +847,37 @@ footer {
         margin-bottom: 20px; }
         .get_info-block_information_status:hover {
           box-shadow: 0px 0px 2px 2px #999; }
-
-@charset "UTF-8";
-@font-face {
-  font-family: Lato-Regular;
-  /* Гарнитура шрифта */
-  src: url(../font/Lato-Regular.ttf);
-  /* Путь к файлу со шрифтом */ }
-
-@font-face {
-  font-family: Lato-Bold;
-  /* Гарнитура шрифта */
-  src: url(../font/Lato-Bold.ttf);
-  /* Путь к файлу со шрифтом */ }
+        @media screen and (max-width: 720px) {
+          .get_info-block_information_status {
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 10px; } }
+        @media screen and (max-width: 576px) {
+          .get_info-block_information_status {
+            font-size: 12px;
+            line-height: 16px;
+            margin-bottom: 0px; } }
 
 @font-face {
-  font-family: Lato-Black;
-  /* Гарнитура шрифта */
-  src: url(../font/Lato-Black.ttf);
-  /* Путь к файлу со шрифтом */ }
+  font-family: 'Lato';
+  src: url("../font/Lato-Regular.eot");
+  src: url("../font/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Regular.woff") format("woff"), url("../font/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../font/Lato-Bold.eot");
+  src: url("../font/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Bold.woff") format("woff"), url("../font/Lato-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../font/Lato-Black.eot");
+  src: url("../font/Lato-Black.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Black.woff") format("woff"), url("../font/Lato-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
 
 header {
   background: url("../img/bg_header.png") no-repeat;
@@ -828,9 +937,9 @@ header {
       text-align: left;
       line-height: 30px; }
     .header_top_logo_caption_info {
-      font-family: Lato-Regular;
+      font-family: Lato;
       font-size: 16px;
-      font-weight: 400;
+      font-weight: normal;
       text-align: left; }
   @media screen and (max-width: 1200px) {
     .header_top_menu {
@@ -841,9 +950,9 @@ header {
     display: inline-block;
     list-style-type: none; }
     .header_top_menu_item_link {
-      font-family: Lato-Regular;
+      font-family: Lato;
       font-size: 18px;
-      font-weight: 400;
+      font-weight: normal;
       text-align: left;
       border-bottom: 2px dotted #333333;
       text-decoration: none;
@@ -855,9 +964,9 @@ header {
     .header_top_phone_number {
       display: block;
       font-size: 24px;
-      font-weight: 400;
+      font-weight: normal;
       text-align: left;
-      font-family: Lato-Regular; }
+      font-family: Lato; }
       .header_top_phone_number_icon {
         padding-top: 5px;
         display: inline-block;
@@ -866,10 +975,10 @@ header {
         font-style: normal;
         transform: rotate(-20deg); }
     .header_top_phone_call {
-      font-family: Lato-Regular;
+      font-family: Lato;
       color: #01afa5;
       font-size: 18px;
-      font-weight: 400;
+      font-weight: normal;
       text-align: left;
       text-decoration: none;
       border-bottom: 2px dotted #01afa5; }
@@ -897,7 +1006,7 @@ header {
   .header_content_caption {
     margin-left: -30px;
     border-left: 8px solid #01afa5;
-    font-family: Lato-Black;
+    font-family: Lato;
     line-height: 48px;
     font-size: 48px;
     font-weight: 900;
@@ -912,11 +1021,11 @@ header {
         font-size: 30px; } }
   .header_content_info {
     margin-top: 10px;
-    font-family: Lato-Regular;
+    font-family: Lato;
     font-size: 27px;
     line-height: 30px;
     width: 75%;
-    font-weight: 400;
+    font-weight: normal;
     text-align: left; }
     @media screen and (max-width: 1200px) {
       .header_content_info {
@@ -938,16 +1047,16 @@ header {
     margin-right: 15px;
     width: calc(100% / 12 * 3.5 - 30px);
     text-align: left;
-    font-family: Lato-Regular;
+    font-family: Lato;
     color: #333333;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 20px; }
     @media screen and (max-width: 720px) {
       .header_content_condition {
         font-size: 14px; } }
     .header_content_condition span {
-      font-family: Lato-Black;
+      font-family: Lato;
       color: #333333;
       font-size: 18px;
       font-weight: 900;
@@ -970,8 +1079,8 @@ header {
     height: 64px;
     color: #fcfcfc;
     font-size: 16px;
-    font-family: Lato-Bold;
-    font-weight: 700;
+    font-family: Lato;
+    font-weight: bold;
     line-height: 24px;
     border-radius: 50px;
     text-align: center;
@@ -991,40 +1100,46 @@ header {
 
 @charset "UTF-8";
 @font-face {
-  font-family: Lato-Regular;
-  /* Гарнитура шрифта */
-  src: url(../font/Lato-Regular.ttf);
-  /* Путь к файлу со шрифтом */ }
+  font-family: 'Lato';
+  src: url("../font/Lato-Regular.eot");
+  src: url("../font/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Regular.woff") format("woff"), url("../font/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 
 @font-face {
-  font-family: Lato-Bold;
-  /* Гарнитура шрифта */
-  src: url(../font/Lato-Bold.ttf);
-  /* Путь к файлу со шрифтом */ }
+  font-family: 'Lato';
+  src: url("../font/Lato-Bold.eot");
+  src: url("../font/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Bold.woff") format("woff"), url("../font/Lato-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
 
 @font-face {
-  font-family: Lato-Black;
-  /* Гарнитура шрифта */
-  src: url(../font/Lato-Black.ttf);
-  /* Путь к файлу со шрифтом */ }
+  font-family: 'Lato';
+  src: url("../font/Lato-Black.eot");
+  src: url("../font/Lato-Black.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Black.woff") format("woff"), url("../font/Lato-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
 
 @font-face {
-  font-family: Lato-Regular;
-  /* Гарнитура шрифта */
-  src: url(../font/Lato-Regular.ttf);
-  /* Путь к файлу со шрифтом */ }
+  font-family: 'Lato';
+  src: url("../font/Lato-Regular.eot");
+  src: url("../font/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Regular.woff") format("woff"), url("../font/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 
 @font-face {
-  font-family: Lato-Bold;
-  /* Гарнитура шрифта */
-  src: url(../font/Lato-Bold.ttf);
-  /* Путь к файлу со шрифтом */ }
+  font-family: 'Lato';
+  src: url("../font/Lato-Bold.eot");
+  src: url("../font/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Bold.woff") format("woff"), url("../font/Lato-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
 
 @font-face {
-  font-family: Lato-Black;
-  /* Гарнитура шрифта */
-  src: url(../font/Lato-Black.ttf);
-  /* Путь к файлу со шрифтом */ }
+  font-family: 'Lato';
+  src: url("../font/Lato-Black.eot");
+  src: url("../font/Lato-Black.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Black.woff") format("woff"), url("../font/Lato-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
 
 body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, input, textarea, p, blockquote, th, td {
   margin: 0;
@@ -1073,12 +1188,13 @@ img {
   height: auto; }
 
 body {
-  min-width: 320px;
+  min-width: 310px;
   background: url("../img/bg.png") repeat-y;
   background-size: 100%;
-  font-family: Lato-Regular;
+  font-family: Lato;
   color: #333333;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  margin: 0 auto; }
 
 section {
   max-width: 1920px;
@@ -1109,6 +1225,7 @@ section {
     width: 100%;
     margin-bottom: 10px; }
     .accordion_item_title_block {
+      cursor: pointer;
       position: relative;
       border-radius: 9px;
       border: 1px solid #d7d7d7;
@@ -1117,7 +1234,7 @@ section {
       box-shadow: 6px 10px 35px 0px rgba(0, 0, 0, 0.08);
       width: 100%;
       height: 97px;
-      font-family: Lato-Black;
+      font-family: Lato;
       color: #000000;
       font-size: 24px;
       font-weight: 900;
@@ -1131,25 +1248,24 @@ section {
         font-weight: 900; }
       @media screen and (max-width: 720px) {
         .accordion_item_title_block {
-          height: 150px; } }
+          height: 140px;
+          font-size: 18px; } }
       @media screen and (max-width: 576px) {
         .accordion_item_title_block {
           font-size: 14px; } }
     .accordion_item_title_block_active {
       border-radius: 9px 9px 0 0; }
     .accordion_item_info {
+      cursor: default;
       margin-top: -1px;
       display: none;
-      padding: 50px 50px;
       box-sizing: border-box;
       z-index: 0;
       border-radius: 0 0 9px 9px;
       border: 1px solid  #d7d7d7;
       background-color: white;
       box-shadow: 6px 10px 35px 0px rgba(0, 0, 0, 0.08);
-      width: 100%;
-      height: 157px;
-      transition: all 0.3s; }
+      width: 100%; }
       @media screen and (max-width: 576px) {
         .accordion_item_info {
           height: 200px; } }
@@ -1157,9 +1273,11 @@ section {
         .accordion_item_info {
           height: 200px;
           font-size: 12px; } }
+      .accordion_item_info_content {
+        padding: 50px 50px; }
 
 .modal_caption {
-  font-family: Lato-Black;
+  font-family: Lato;
   color: #333333;
   font-size: 35.98px;
   /* Приближение из-за подстановки шрифтов */
@@ -1169,22 +1287,30 @@ section {
   text-align: center;
   transform: scaleY(1.0004);
   /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */ }
+  @media screen and (max-width: 576px) {
+    .modal_caption {
+      font-size: 30px; } }
 
 .modal_text {
-  font-family: Lato-Regular;
+  font-family: Lato;
   color: #333333;
   font-size: 17.99px;
   /* Приближение из-за подстановки шрифтов */
-  font-weight: 400;
+  font-weight: normal;
   line-height: 27px;
   /* Приближение из-за подстановки шрифтов */
   text-align: center;
   transform: scaleY(1.0004);
   /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */ }
+  @media screen and (max-width: 576px) {
+    .modal_text {
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 10px; } }
 
 .modal_inp_name {
   display: block;
-  font-family: Lato-Black;
+  font-family: Lato;
   color: #333333;
   font-size: 14px;
   /* Приближение из-за подстановки шрифтов */
@@ -1192,6 +1318,12 @@ section {
   line-height: 33px;
   /* Приближение из-за подстановки шрифтов */
   margin-bottom: 10px; }
+  @media screen and (max-width: 576px) {
+    .modal_inp_name {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 12px;
+      line-height: 20px; } }
 
 .modal_edittext {
   border-radius: 9px;
@@ -1203,12 +1335,17 @@ section {
   width: 370px;
   height: 64px;
   padding: 10px 20px; }
+  @media screen and (max-width: 576px) {
+    .modal_edittext {
+      margin-bottom: 10px;
+      height: 40px;
+      width: 280px; } }
 
 .modal_send {
   background-color: #01afa5;
   width: 266px;
   height: 64px;
-  font-family: Lato-Black;
+  font-family: Lato;
   color: #fcfcfc;
   font-size: 16px;
   /* Приближение из-за подстановки шрифтов */
@@ -1217,7 +1354,8 @@ section {
   /* Приближение из-за подстановки шрифтов */
   border: none;
   border-radius: 50px;
-  text-align: center; }
+  text-align: center;
+  margin-top: 10px; }
 
 .modal_div {
   border-radius: 6px;
@@ -1234,6 +1372,12 @@ section {
   z-index: 5;
   padding: 20px 10px;
   transform: translateX(-260px) translateY(-294px); }
+  @media screen and (max-width: 576px) {
+    .modal_div {
+      width: 320px;
+      height: auto;
+      transform: translateX(-160px) translateY(-254px);
+      top: 100px; } }
   .modal_div form {
     height: 100%;
     padding: 20px 10px;
@@ -1244,6 +1388,9 @@ section {
     flex-direction: column;
     justify-content: space-around;
     align-items: center; }
+    @media screen and (max-width: 576px) {
+      .modal_div form {
+        padding: 20px 15px; } }
     .modal_div form label {
       display: flex;
       flex-wrap: wrap;
@@ -1251,6 +1398,9 @@ section {
       margin-right: -15px;
       flex-direction: column;
       justify-content: center; }
+      @media screen and (max-width: 576px) {
+        .modal_div form label {
+          width: 100%; } }
 
 /* Кнопка закрыть для тех кто в танке) */
 .modal_close {
@@ -1316,22 +1466,25 @@ section {
         background: rgba(0, 0, 0, 0.5); }
 
 @font-face {
-  font-family: Lato-Regular;
-  /* Гарнитура шрифта */
-  src: url(../font/Lato-Regular.ttf);
-  /* Путь к файлу со шрифтом */ }
+  font-family: 'Lato';
+  src: url("../font/Lato-Regular.eot");
+  src: url("../font/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Regular.woff") format("woff"), url("../font/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 
 @font-face {
-  font-family: Lato-Bold;
-  /* Гарнитура шрифта */
-  src: url(../font/Lato-Bold.ttf);
-  /* Путь к файлу со шрифтом */ }
+  font-family: 'Lato';
+  src: url("../font/Lato-Bold.eot");
+  src: url("../font/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Bold.woff") format("woff"), url("../font/Lato-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
 
 @font-face {
-  font-family: Lato-Black;
-  /* Гарнитура шрифта */
-  src: url(../font/Lato-Black.ttf);
-  /* Путь к файлу со шрифтом */ }
+  font-family: 'Lato';
+  src: url("../font/Lato-Black.eot");
+  src: url("../font/Lato-Black.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Black.woff") format("woff"), url("../font/Lato-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal; }
 
 header {
   background: url("../img/bg_header.png") no-repeat;
@@ -1391,9 +1544,9 @@ header {
       text-align: left;
       line-height: 30px; }
     .header_top_logo_caption_info {
-      font-family: Lato-Regular;
+      font-family: Lato;
       font-size: 16px;
-      font-weight: 400;
+      font-weight: normal;
       text-align: left; }
   @media screen and (max-width: 1200px) {
     .header_top_menu {
@@ -1404,9 +1557,9 @@ header {
     display: inline-block;
     list-style-type: none; }
     .header_top_menu_item_link {
-      font-family: Lato-Regular;
+      font-family: Lato;
       font-size: 18px;
-      font-weight: 400;
+      font-weight: normal;
       text-align: left;
       border-bottom: 2px dotted #333333;
       text-decoration: none;
@@ -1418,9 +1571,9 @@ header {
     .header_top_phone_number {
       display: block;
       font-size: 24px;
-      font-weight: 400;
+      font-weight: normal;
       text-align: left;
-      font-family: Lato-Regular; }
+      font-family: Lato; }
       .header_top_phone_number_icon {
         padding-top: 5px;
         display: inline-block;
@@ -1429,10 +1582,10 @@ header {
         font-style: normal;
         transform: rotate(-20deg); }
     .header_top_phone_call {
-      font-family: Lato-Regular;
+      font-family: Lato;
       color: #01afa5;
       font-size: 18px;
-      font-weight: 400;
+      font-weight: normal;
       text-align: left;
       text-decoration: none;
       border-bottom: 2px dotted #01afa5; }
@@ -1460,7 +1613,7 @@ header {
   .header_content_caption {
     margin-left: -30px;
     border-left: 8px solid #01afa5;
-    font-family: Lato-Black;
+    font-family: Lato;
     line-height: 48px;
     font-size: 48px;
     font-weight: 900;
@@ -1475,11 +1628,11 @@ header {
         font-size: 30px; } }
   .header_content_info {
     margin-top: 10px;
-    font-family: Lato-Regular;
+    font-family: Lato;
     font-size: 27px;
     line-height: 30px;
     width: 75%;
-    font-weight: 400;
+    font-weight: normal;
     text-align: left; }
     @media screen and (max-width: 1200px) {
       .header_content_info {
@@ -1501,16 +1654,16 @@ header {
     margin-right: 15px;
     width: calc(100% / 12 * 3.5 - 30px);
     text-align: left;
-    font-family: Lato-Regular;
+    font-family: Lato;
     color: #333333;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 20px; }
     @media screen and (max-width: 720px) {
       .header_content_condition {
         font-size: 14px; } }
     .header_content_condition span {
-      font-family: Lato-Black;
+      font-family: Lato;
       color: #333333;
       font-size: 18px;
       font-weight: 900;
@@ -1533,8 +1686,8 @@ header {
     height: 64px;
     color: #fcfcfc;
     font-size: 16px;
-    font-family: Lato-Bold;
-    font-weight: 700;
+    font-family: Lato;
+    font-weight: bold;
     line-height: 24px;
     border-radius: 50px;
     text-align: center;
@@ -1560,11 +1713,11 @@ header {
   padding-top: 100px;
   padding-bottom: 100px; }
   .no-answer_caption {
-    font-family: Lato-Bold;
+    font-family: Lato;
     color: #fff;
     font-size: 48px;
     width: 40%;
-    font-weight: 700;
+    font-weight: bold;
     text-align: left;
     border-left: 8px solid #FFF;
     padding-left: 20px;
@@ -1582,7 +1735,7 @@ header {
         width: 70%; } }
     @media screen and (max-width: 576px) {
       .no-answer_caption {
-        font-size: 36px;
+        font-size: 34px;
         width: 100%; } }
   .no-answer_content {
     margin-top: 100px;
@@ -1605,7 +1758,7 @@ header {
       margin-bottom: 20px;
       width: 100%;
       text-align: left;
-      font-family: Lato-Black;
+      font-family: Lato;
       color: #000000;
       font-size: 30px;
       font-weight: 900;
@@ -1632,7 +1785,7 @@ header {
         width: calc(100% / 12 * 12 - 30px); }
         .no-answer_content_box-big span {
           display: block;
-          font-family: Lato-Black;
+          font-family: Lato;
           color: #333333;
           font-size: 14px;
           font-weight: 900;
@@ -1646,15 +1799,15 @@ header {
           background-color: #ffffff;
           height: 194px;
           padding: 10px;
-          font-family: Lato-Regular;
+          font-family: Lato;
           color: #333333;
           font-size: 16px;
-          font-weight: 400;
+          font-weight: normal;
           line-height: 33px;
           text-align: left; }
       .no-answer_content_box span {
         display: block;
-        font-family: Lato-Black;
+        font-family: Lato;
         color: #333333;
         font-size: 14px;
         font-weight: 900;
@@ -1669,10 +1822,10 @@ header {
         box-sizing: border-box;
         height: 54px;
         padding: 10px;
-        font-family: Lato-Regular;
+        font-family: Lato;
         color: #333333;
         font-size: 16px;
-        font-weight: 400;
+        font-weight: normal;
         line-height: 33px;
         text-align: left; }
     .no-answer_content_send {
@@ -1682,10 +1835,10 @@ header {
       text-align: center;
       border: none;
       border-radius: 50px;
-      font-family: Lato-Bold;
+      font-family: Lato;
       color: #fcfcfc;
       font-size: 16px;
-      font-weight: 700;
+      font-weight: bold;
       line-height: 24px;
       text-transform: uppercase; }
       .no-answer_content_send:hover {
@@ -1698,26 +1851,55 @@ header {
   padding-top: 100px;
   padding-bottom: 100px;
   background: #f3f3f3; }
+  @media screen and (max-width: 992px) {
+    .our-testimonies {
+      padding-bottom: 200px; } }
+  @media screen and (max-width: 720px) {
+    .our-testimonies {
+      padding-bottom: 200px; } }
+  @media screen and (max-width: 576px) {
+    .our-testimonies {
+      padding-top: 50px;
+      padding-bottom: 200px; } }
   .our-testimonies_caption {
-    font-family: Lato-Bold;
+    font-family: Lato;
     color: #333333;
     font-size: 48px;
     width: 50%;
-    font-weight: 700;
+    font-weight: bold;
     text-align: left;
     border-left: 8px solid #01afa5;
     padding-left: 20px;
     text-transform: uppercase; }
+    @media screen and (max-width: 1200px) {
+      .our-testimonies_caption {
+        width: 50%; } }
+    @media screen and (max-width: 992px) {
+      .our-testimonies_caption {
+        font-size: 44px;
+        width: 65%; } }
+    @media screen and (max-width: 720px) {
+      .our-testimonies_caption {
+        font-size: 40px;
+        width: 70%; } }
+    @media screen and (max-width: 576px) {
+      .our-testimonies_caption {
+        font-size: 30px;
+        width: 100%; } }
 
 .partners {
   padding-top: 100px;
   padding-bottom: 100px; }
+  @media screen and (max-width: 576px) {
+    .partners {
+      padding-top: 70px;
+      padding-bottom: 20px; } }
   .partners_caption {
-    font-family: Lato-Bold;
+    font-family: Lato;
     color: #333333;
     font-size: 48px;
     width: 35%;
-    font-weight: 700;
+    font-weight: bold;
     text-align: left;
     border-left: 8px solid #01afa5;
     padding-left: 20px;
@@ -1776,18 +1958,30 @@ header {
   padding-top: 100px;
   padding-bottom: 100px; }
   .principles_caption {
-    font-family: Lato-Bold;
+    font-family: Lato;
     color: #333333;
     font-size: 48px;
     width: 35%;
-    font-weight: 700;
+    font-weight: bold;
     text-align: left;
     border-left: 8px solid #01afa5;
     padding-left: 20px;
     text-transform: uppercase; }
+    @media screen and (max-width: 1200px) {
+      .principles_caption {
+        width: 70%; } }
+    @media screen and (max-width: 992px) {
+      .principles_caption {
+        font-size: 44px;
+        width: 80%; } }
+    @media screen and (max-width: 720px) {
+      .principles_caption {
+        font-size: 40px;
+        width: 90%; } }
     @media screen and (max-width: 576px) {
       .principles_caption {
-        width: 85%; } }
+        font-size: 36px;
+        width: 100%; } }
   .principles_content {
     display: flex;
     flex-wrap: wrap;
@@ -1813,10 +2007,10 @@ header {
         .principles_content_item {
           width: calc(100% / 12 * 12 - 30px); } }
       .principles_content_item_info {
-        font-family: Lato-Regular;
+        font-family: Lato;
         color: #000000;
         font-size: 24px;
-        font-weight: 400;
+        font-weight: normal;
         line-height: 30px;
         text-align: left;
         padding: 10% 11% 5% 9%; }
@@ -1835,44 +2029,85 @@ header {
         width: 60px;
         text-align: center; }
 
-@charset "UTF-8";
 .reviews {
   padding-top: 100px; }
+  @media screen and (max-width: 992px) {
+    .reviews {
+      padding-bottom: 50px; } }
+  @media screen and (max-width: 720px) {
+    .reviews {
+      padding-bottom: 100px; } }
+  @media screen and (max-width: 576px) {
+    .reviews {
+      padding-bottom: 200px; } }
   .reviews_caption {
-    font-family: Lato-Bold;
+    font-family: Lato;
     color: #333333;
     font-size: 48px;
     width: 40%;
-    font-weight: 700;
+    font-weight: bold;
     text-align: left;
     border-left: 8px solid #01afa5;
     padding-left: 20px;
     text-transform: uppercase; }
+    @media screen and (max-width: 1200px) {
+      .reviews_caption {
+        width: 45%;
+        font-size: 46px; } }
+    @media screen and (max-width: 992px) {
+      .reviews_caption {
+        font-size: 44px;
+        width: 55%; } }
+    @media screen and (max-width: 720px) {
+      .reviews_caption {
+        font-size: 40px;
+        width: 65%; } }
+    @media screen and (max-width: 576px) {
+      .reviews_caption {
+        font-size: 36px;
+        width: 90%; } }
   .reviews_cont {
     padding-left: 40px;
     display: flex; }
+    @media screen and (max-width: 720px) {
+      .reviews_cont {
+        flex-direction: column;
+        padding-left: 0px;
+        justify-content: center;
+        align-items: center; } }
     .reviews_cont_block {
-      padding: 40px 30px 10px; }
+      padding: 40px 30px 10px 20px; }
+      @media screen and (max-width: 720px) {
+        .reviews_cont_block {
+          padding: 20px 15px 10px 10px; } }
     .reviews_cont_name {
-      font-family: Lato-Black;
+      font-family: Lato;
       color: #000000;
       font-size: 24px;
-      /* Приближение из-за подстановки шрифтов */
       font-weight: 900;
       text-align: left;
       margin-bottom: 30px; }
-    .reviews_cont_tex {
+      @media screen and (max-width: 720px) {
+        .reviews_cont_name {
+          font-size: 20px;
+          margin-bottom: 15px;
+          text-align: center; } }
+    .reviews_cont_text {
       padding-top: 23px;
-      font-family: Lato-Regular;
+      font-family: Lato;
       color: #000000;
       font-size: 18px;
-      /* Приближение из-за подстановки шрифтов */
-      font-weight: 400;
+      font-weight: normal;
       line-height: 24px;
-      /* Приближение из-за подстановки шрифтов */
       text-align: left; }
+      @media screen and (max-width: 720px) {
+        .reviews_cont_text {
+          font-size: 14px;
+          padding-top: 15px;
+          line-height: 18px;
+          text-align: center; } }
   .reviews_content {
-    width: 100%;
+    width: 95%;
     margin: 100px auto 0; }
     .reviews_content_block {
       box-sizing: border-box;
@@ -1892,14 +2127,18 @@ header {
       justify-content: center;
       align-items: center; }
 
+@media screen and (max-width: 720px) {
+  .slick-prev {
+    display: none; } }
+
 .safeguards {
   padding-top: 100px; }
   .safeguards_caption {
     width: 45%;
-    font-family: Lato-Bold;
+    font-family: Lato;
     color: #333333;
     font-size: 48px;
-    font-weight: 700;
+    font-weight: bold;
     text-align: left;
     border-left: 8px solid #01afa5;
     padding-left: 20px;
@@ -1926,6 +2165,9 @@ header {
     margin-right: -15px;
     justify-content: center;
     margin-top: 50px; }
+    @media screen and (max-width: 576px) {
+      .safeguards_content {
+        margin-top: 20px; } }
     .safeguards_content_item {
       margin: 50px 0 100px;
       box-sizing: border-box;
@@ -1942,25 +2184,31 @@ header {
           width: calc(100% / 12 * 6 - 30px); } }
       @media screen and (max-width: 576px) {
         .safeguards_content_item {
-          width: calc(100% / 12 * 10 - 30px); } }
+          width: calc(100% / 12 * 12 - 30px); } }
+      @media screen and (max-width: 992px) {
+        .safeguards_content_item {
+          margin: 20px 0 50px; } }
       .safeguards_content_item_img {
         display: block;
         margin: 0 auto;
         margin-bottom: 30px; }
       .safeguards_content_item_name {
         padding: 0 30px;
-        font-family: Lato-Black;
+        font-family: Lato;
         color: #000000;
         font-size: 24px;
         font-weight: 900;
         line-height: 24px;
         text-align: center;
         margin-bottom: 20px; }
+        @media screen and (max-width: 576px) {
+          .safeguards_content_item_name {
+            font-size: 20px; } }
       .safeguards_content_item_info {
-        font-family: Lato-Regular;
+        font-family: Lato;
         color: #000000;
         font-size: 16px;
-        font-weight: 400;
+        font-weight: normal;
         line-height: 24px;
         text-align: center; }
     .safeguards_content_request {
@@ -1977,31 +2225,50 @@ header {
           width: calc(100% / 12 * 10 - 30px); } }
       @media screen and (max-width: 576px) {
         .safeguards_content_request {
-          width: calc(100% / 12 * 11 - 30px); } }
+          width: calc(100% / 12 * 12 - 30px); } }
       .safeguards_content_request_name {
-        font-family: Lato-Bold;
+        font-family: Lato;
         color: #000000;
         font-size: 30px;
-        font-weight: 700;
+        font-weight: bold;
         text-align: left;
         margin-bottom: 20px; }
+        @media screen and (max-width: 720px) {
+          .safeguards_content_request_name {
+            font-size: 24px;
+            line-height: 28px; } }
+        @media screen and (max-width: 576px) {
+          .safeguards_content_request_name {
+            text-align: center;
+            font-size: 20px;
+            line-height: 24px; } }
       .safeguards_content_request_info {
-        font-family: Lato-Regular;
+        font-family: Lato;
         color: #000000;
         font-size: 21px;
-        font-weight: 400;
+        font-weight: normal;
         line-height: 21px;
         text-align: left;
         margin-bottom: 70px; }
+        @media screen and (max-width: 720px) {
+          .safeguards_content_request_info {
+            font-size: 14px;
+            line-height: 18px; } }
+        @media screen and (max-width: 576px) {
+          .safeguards_content_request_info {
+            text-align: center;
+            font-size: 14px;
+            line-height: 16px;
+            margin-bottom: 40px; } }
       .safeguards_content_request_btn {
         background-color: #01afa5;
         width: 266px;
         border-radius: 50px;
         padding: 30px;
-        font-family: Lato-Bold;
+        font-family: Lato;
         color: #fcfcfc;
         font-size: 16px;
-        font-weight: 700;
+        font-weight: bold;
         line-height: 24px;
         text-align: left;
         text-transform: uppercase;
@@ -2009,19 +2276,49 @@ header {
         margin-top: 40px; }
         .safeguards_content_request_btn:hover {
           box-shadow: 0px 0px 2px 2px #999; }
+        @media screen and (max-width: 720px) {
+          .safeguards_content_request_btn {
+            margin-left: 30px;
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 10px;
+            padding: 15px; } }
+        @media screen and (max-width: 576px) {
+          .safeguards_content_request_btn {
+            font-size: 12px;
+            line-height: 16px;
+            margin-bottom: 10px; } }
 
 .our-service {
   padding-top: 100px;
   padding-bottom: 100px; }
+  @media screen and (max-width: 720px) {
+    .our-service {
+      padding-top: 0px; } }
   .our-service_caption {
-    font-family: Lato-Bold;
+    font-family: Lato;
     color: #333333;
     font-size: 48px;
-    font-weight: 700;
+    font-weight: bold;
     text-align: left;
     border-left: 8px solid #01afa5;
     padding-left: 20px;
     text-transform: uppercase; }
+    @media screen and (max-width: 992px) {
+      .our-service_caption {
+        width: 55%; } }
+    @media screen and (max-width: 992px) {
+      .our-service_caption {
+        width: 50%;
+        font-size: 44px; } }
+    @media screen and (max-width: 720px) {
+      .our-service_caption {
+        width: 50%;
+        font-size: 42px; } }
+    @media screen and (max-width: 576px) {
+      .our-service_caption {
+        width: 80%;
+        font-size: 40px; } }
   .our-service_content {
     margin-top: 80px;
     display: flex;
@@ -2029,6 +2326,9 @@ header {
     margin-left: -15px;
     margin-right: -15px;
     justify-content: center; }
+    @media screen and (max-width: 720px) {
+      .our-service_content {
+        margin-top: 40px; } }
     .our-service_content_items-service {
       box-sizing: border-box;
       word-wrap: break-word;
@@ -2041,10 +2341,10 @@ header {
           width: calc(100% / 12 * 5 - 30px); } }
     .our-service_content_item {
       box-sizing: border-box;
-      font-family: Lato-Regular;
+      font-family: Lato;
       color: #000000;
       font-size: 18px;
-      font-weight: 400;
+      font-weight: normal;
       margin-bottom: 40px;
       line-height: 20px;
       text-align: left; }
@@ -2111,7 +2411,7 @@ header {
         .our-service_content_box-info {
           width: calc(100% / 12 * 10 - 30px); } }
       .our-service_content_box-info_caption {
-        font-family: Lato-Black;
+        font-family: Lato;
         color: #333333;
         font-size: 29.99px;
         font-weight: 900;
@@ -2121,10 +2421,10 @@ header {
       .our-service_content_box-info_items {
         margin-top: 20px; }
       .our-service_content_box-info_item {
-        font-family: Lato-Regular;
+        font-family: Lato;
         color: #333333;
         font-size: 17.99px;
-        font-weight: 400;
+        font-weight: normal;
         line-height: 33px;
         text-align: left;
         transform: scaleY(1.0004); }
@@ -2134,7 +2434,7 @@ header {
           flex: 20px;
           color: #01afa5; }
       .our-service_content_box-info_alarm {
-        font-family: Lato-Black;
+        font-family: Lato;
         color: #333333;
         font-size: 17.99px;
         font-weight: 900;
@@ -2145,10 +2445,10 @@ header {
       .our-service_content_box-info_terms {
         border-left: 4px solid #01afa5;
         padding-left: 10px;
-        font-family: Lato-Regular;
+        font-family: Lato;
         color: #333333;
         font-size: 17.99px;
-        font-weight: 400;
+        font-weight: normal;
         line-height: 24px;
         text-align: left;
         transform: scaleY(1.0004); }
@@ -2157,10 +2457,10 @@ header {
         display: block;
         background-color: #01afa5;
         width: 266px;
-        font-family: Lato-Bold;
+        font-family: Lato;
         color: #fcfcfc;
         font-size: 15.99px;
-        font-weight: 700;
+        font-weight: bold;
         text-transform: uppercase;
         line-height: 24px;
         transform: scaleY(1.0004);
@@ -2176,12 +2476,12 @@ header {
   background-size: cover;
   padding: 126px 0; }
   .situation_caption {
-    font-family: Lato-Bold;
+    font-family: Lato;
     color: #fff;
     line-height: 50px;
     width: 50%;
     font-size: 48px;
-    font-weight: 700;
+    font-weight: bold;
     padding-left: 10px;
     text-align: left;
     border-left: 8px solid #fff;
@@ -2227,8 +2527,11 @@ header {
       margin-right: 15px;
       width: calc(100% / 12 * 12 - 30px);
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       flex-wrap: wrap; }
+      @media screen and (max-width: 992px) {
+        .situation_content_type {
+          justify-content: center; } }
       .situation_content_type_select {
         display: flex;
         flex-wrap: wrap;
@@ -2242,7 +2545,7 @@ header {
             border: 1px solid #01afa5;
             border-radius: 50%;
             display: inline-block;
-            line-height: 20px;
+            line-height: 22px;
             margin: -5px 5px 0 0;
             height: 20px;
             width: 20px;
@@ -2252,14 +2555,18 @@ header {
             font-size: 0;
             transition: font-size ease .3s; }
           .situation_content_type_select div input[type=radio]:checked + label:before {
-            font-size: 15px; }
+            font-size: 20px; }
           .situation_content_type_select div label {
-            font-family: Lato-Regular;
+            font-family: Lato;
             color: #333333;
             font-size: 16px;
-            font-weight: 400;
+            font-weight: normal;
             line-height: 54px;
             text-align: left; }
+            @media screen and (max-width: 576px) {
+              .situation_content_type_select div label {
+                line-height: 40px;
+                font-size: 14px; } }
     .situation_content_box {
       margin-bottom: 15px;
       box-sizing: border-box;
@@ -2270,6 +2577,9 @@ header {
       @media screen and (max-width: 720px) {
         .situation_content_box {
           width: calc(100% / 12 * 10 - 30px); } }
+      @media screen and (max-width: 576px) {
+        .situation_content_box {
+          width: calc(100% / 12 * 12 - 30px); } }
       .situation_content_box_input {
         margin: 0 auto;
         margin-top: 15px;
@@ -2279,13 +2589,17 @@ header {
         background-color: #ffffff;
         width: 100%;
         height: 64px;
-        font-family: Lato-Regular;
+        font-family: Lato;
         color: #333333;
         font-size: 16px;
-        font-weight: 400;
+        font-weight: normal;
         line-height: 33px;
         text-align: left;
         padding: 5px 10px; }
+        .situation_content_box_input option {
+          height: 20px;
+          font-family: Lato;
+          font-size: 16px; }
       .situation_content_box_checkbox {
         position: relative;
         padding-left: 25px; }
@@ -2293,10 +2607,10 @@ header {
           display: none; }
         .situation_content_box_checkbox label {
           padding-left: 10px;
-          font-family: Lato-Regular;
+          font-family: Lato;
           color: #333333;
           font-size: 16px;
-          font-weight: 400;
+          font-weight: normal;
           line-height: 43px;
           text-align: left;
           text-decoration: solid; }
@@ -2324,12 +2638,11 @@ header {
         background-color: #01afa5;
         width: 472px;
         height: 64px;
-        font-family: Lato-Bold;
+        font-family: Lato;
         color: #fcfcfc;
         font-size: 15.99px;
-        font-weight: 700;
+        font-weight: bold;
         text-transform: uppercase;
-        line-height: 24px;
         transform: scaleY(1.0004); }
         .situation_content_box_send:hover {
           box-shadow: 0px 0px 2px 2px #999; }
@@ -2341,11 +2654,17 @@ header {
             font-size: 14px;
             width: 322px;
             display: block; } }
+        @media screen and (max-width: 576px) {
+          .situation_content_box_send {
+            margin-top: 10px;
+            margin-left: -15px;
+            width: 280px;
+            font-size: 12px; } }
     .situation_content_name {
-      font-family: Lato-Bold;
+      font-family: Lato;
       color: #333333;
       font-size: 14px;
-      font-weight: 700;
+      font-weight: bold;
       line-height: 33px;
       text-align: left;
       text-transform: uppercase;
@@ -2355,7 +2674,7 @@ header {
         border-radius: 50%;
         box-sizing: border-box;
         background-color: #01afa5;
-        padding: 2px 6px;
+        padding: 3px 6px;
         color: #fff;
         margin-right: 9px; }
 
@@ -2366,23 +2685,39 @@ header {
   background-size: cover;
   padding: 76px 0; }
   .vs_caption {
-    font-family: Lato-Bold;
+    font-family: Lato;
     color: #fff;
     line-height: 50px;
     width: 55%;
     font-size: 48px;
-    font-weight: 700;
+    font-weight: bold;
     padding-left: 10px;
     text-align: left;
     border-left: 8px solid #fff;
     text-transform: uppercase; }
+    @media screen and (max-width: 1200px) {
+      .vs_caption {
+        width: 65%;
+        font-size: 46px; } }
+    @media screen and (max-width: 992px) {
+      .vs_caption {
+        font-size: 44px;
+        width: 85%; } }
+    @media screen and (max-width: 720px) {
+      .vs_caption {
+        font-size: 40px;
+        width: 90%; } }
+    @media screen and (max-width: 576px) {
+      .vs_caption {
+        font-size: 36px;
+        width: 100%; } }
   .vs_info {
     margin-top: 10px;
     margin-left: 20px;
-    font-family: Lato-Regular;
+    font-family: Lato;
     color: #ffffff;
     font-size: 21px;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 24px;
     text-align: left; }
   .vs_content {
@@ -2401,10 +2736,13 @@ header {
       background-color: #fafbfc;
       margin: 0;
       display: block; }
+      @media screen and (max-width: 992px) {
+        .vs_content_block {
+          width: calc(100% / 12 * 12 - 30px); } }
       .vs_content_block:nth-child(odd) {
         border-radius: 5000px 0 0 0 !important; }
       .vs_content_block_caption {
-        font-family: Lato-Black;
+        font-family: Lato;
         color: #000000;
         font-size: 24px;
         font-weight: 900;
@@ -2421,19 +2759,35 @@ header {
             color: #01afa5; }
           .vs_content_block_caption i.red {
             color: #da5353; }
+        @media screen and (max-width: 992px) {
+          .vs_content_block_caption {
+            font-size: 20px;
+            padding: 20px 30px; } }
+        @media screen and (max-width: 1200px) {
+          .vs_content_block_caption {
+            font-size: 22px;
+            padding: 25px 50px; } }
       .vs_content_block_main {
-        font-family: Lato-Regular;
+        font-family: Lato;
         background: #fff;
         padding: 30px 70px;
         color: #000000;
         font-size: 18px;
-        font-weight: 400;
+        font-weight: normal;
         line-height: 30px;
         text-align: left;
         box-shadow: 6px 10px 35px rgba(0, 0, 0, 0.08);
         border: 1px solid #d7d7d7; }
+        @media screen and (max-width: 992px) {
+          .vs_content_block_main {
+            font-size: 14px;
+            padding: 20px 30px; } }
+        @media screen and (max-width: 1200px) {
+          .vs_content_block_main {
+            font-size: 16px;
+            padding: 25px 50px; } }
       .vs_content_block_caption_result {
-        font-family: Lato-Black;
+        font-family: Lato;
         color: #000000;
         font-size: 24px;
         font-weight: 900;
@@ -2442,11 +2796,19 @@ header {
         padding: 30px 70px;
         box-shadow: 6px 10px 35px rgba(0, 0, 0, 0.08);
         border: 1px solid #d7d7d7; }
+        @media screen and (max-width: 992px) {
+          .vs_content_block_caption_result {
+            font-size: 20px;
+            padding: 20px 30px; } }
+        @media screen and (max-width: 1200px) {
+          .vs_content_block_caption_result {
+            font-size: 22px;
+            padding: 25px 50px; } }
       .vs_content_block_result {
-        font-family: Lato-Regular;
+        font-family: Lato;
         color: #000000;
         font-size: 18px;
-        font-weight: 400;
+        font-weight: normal;
         line-height: 30px;
         text-align: left;
         background: #fff;
@@ -2454,16 +2816,24 @@ header {
         box-shadow: 6px 10px 35px rgba(0, 0, 0, 0.08);
         border: 1px solid #d7d7d7; }
         .vs_content_block_result span {
-          font-weight: 700; }
+          font-weight: bold; }
+        @media screen and (max-width: 1200px) {
+          .vs_content_block_result {
+            font-size: 16px;
+            padding: 25px 50px; } }
+        @media screen and (max-width: 992px) {
+          .vs_content_block_result {
+            font-size: 14px;
+            padding: 20px 30px; } }
 
 .we-helps {
   padding-top: 100px; }
   .we-helps_caption {
-    font-family: Lato-Bold;
+    font-family: Lato;
     width: 40%;
     color: #333333;
     font-size: 48px;
-    font-weight: 700;
+    font-weight: bold;
     line-height: 50px;
     text-align: left;
     border-left: 8px solid #01afa5;
@@ -2493,7 +2863,7 @@ header {
     justify-content: center; }
   .we-helps_item {
     margin-bottom: 10px;
-    font-family: Lato-Regular;
+    font-family: Lato;
     box-sizing: border-box;
     word-wrap: break-word;
     margin-left: 15px;
@@ -2521,29 +2891,52 @@ header {
       padding: 10px; }
     .we-helps_item_info {
       margin-top: 20px;
-      font-family: Lato-Regular;
+      font-family: Lato;
       color: #333333;
       font-size: 18px;
-      font-weight: 400;
+      font-weight: normal;
       line-height: 24px;
       text-align: center; }
+      @media screen and (max-width: 576px) {
+        .we-helps_item_info {
+          text-align: center;
+          font-size: 12px;
+          line-height: 16px; } }
   .we-helps_info {
-    font-family: Lato-Regular;
+    font-family: Lato;
     color: #333333;
     font-size: 27px;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 36px;
     text-align: center;
     padding: 50px 12%; }
+    @media screen and (max-width: 576px) {
+      .we-helps_info {
+        text-align: center;
+        font-size: 16px;
+        line-height: 18px;
+        padding: 25px 5%; } }
 
 .all_b {
   height: 400px;
   display: flex;
   justify-content: center; }
+  @media screen and (max-width: 720px) {
+    .all_b {
+      height: 200px; } }
+  @media screen and (max-width: 992px) {
+    .all_b {
+      height: 260px; } }
 
 .slider {
   margin-top: 50px;
   height: 400px; }
+  @media screen and (max-width: 720px) {
+    .slider {
+      height: 200px; } }
+  @media screen and (max-width: 992px) {
+    .slider {
+      height: 260px; } }
 
 .sliders {
   height: 200px;
