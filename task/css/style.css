@@ -747,7 +747,7 @@ footer {
         text-transform: uppercase;
         text-decoration: none; }
         .get_content_block_btn:hover {
-          box-shadow: 0px 0px 2px 2px #999; }
+          box-shadow: 0px 2px 2px 1px rgba(1, 175, 165, 0.7); }
   .get_info-block {
     box-sizing: border-box;
     word-wrap: break-word;
@@ -821,7 +821,7 @@ footer {
           .get_info-block_information_order {
             margin-right: 0; } }
         .get_info-block_information_order:hover {
-          box-shadow: 0px 0px 2px 2px #999; }
+          box-shadow: 0px 2px 2px 1px rgba(51, 51, 51, 0.7); }
         @media screen and (max-width: 720px) {
           .get_info-block_information_order {
             font-size: 14px;
@@ -846,7 +846,7 @@ footer {
         text-align: center;
         margin-bottom: 20px; }
         .get_info-block_information_status:hover {
-          box-shadow: 0px 0px 2px 2px #999; }
+          box-shadow: 0px 2px 2px 1px rgba(1, 175, 165, 0.7); }
         @media screen and (max-width: 720px) {
           .get_info-block_information_status {
             font-size: 14px;
@@ -1087,7 +1087,7 @@ header {
     text-transform: uppercase;
     border: none; }
     .header_content_bth:hover {
-      box-shadow: 0px 0px 2px 2px #999; }
+      box-shadow: 0px 2px 2px 1px rgba(1, 175, 165, 0.7); }
 
 .line_theme-1 {
   background-color: #bae387; }
@@ -1694,7 +1694,7 @@ header {
     text-transform: uppercase;
     border: none; }
     .header_content_bth:hover {
-      box-shadow: 0px 0px 2px 2px #999; }
+      box-shadow: 0px 2px 2px 1px rgba(1, 175, 165, 0.7); }
 
 .line_theme-1 {
   background-color: #bae387; }
@@ -1842,7 +1842,7 @@ header {
       line-height: 24px;
       text-transform: uppercase; }
       .no-answer_content_send:hover {
-        box-shadow: 0px 0px 2px 2px #999; }
+        box-shadow: 0px 2px 2px 1px rgba(1, 175, 165, 0.7); }
       @media screen and (max-width: 720px) {
         .no-answer_content_send {
           width: 327px; } }
@@ -2275,7 +2275,7 @@ header {
         text-decoration: none;
         margin-top: 40px; }
         .safeguards_content_request_btn:hover {
-          box-shadow: 0px 0px 2px 2px #999; }
+          box-shadow: 0px 2px 2px 1px rgba(1, 175, 165, 0.7); }
         @media screen and (max-width: 720px) {
           .safeguards_content_request_btn {
             margin-left: 30px;
@@ -2469,7 +2469,7 @@ header {
         text-decoration: none;
         padding: 20px 0; }
         .our-service_content_box-info_btn:hover {
-          box-shadow: 0px 0px 2px 2px #999; }
+          box-shadow: 0px 2px 2px 1px rgba(1, 175, 165, 0.7); }
 
 .situation {
   background: url("../img/look.png") no-repeat;
@@ -2645,7 +2645,7 @@ header {
         text-transform: uppercase;
         transform: scaleY(1.0004); }
         .situation_content_box_send:hover {
-          box-shadow: 0px 0px 2px 2px #999; }
+          box-shadow: 0px 2px 2px 1px rgba(1, 175, 165, 0.7); }
         @media screen and (max-width: 1200px) {
           .situation_content_box_send {
             width: 342px; } }
