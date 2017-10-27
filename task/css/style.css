@@ -2299,6 +2299,10 @@ header {
             padding: 15px; } }
         @media screen and (max-width: 576px) {
           .safeguards_content_request_btn {
+            text-align: center;
+            display: block;
+            margin-left: 50%;
+            transform: translateX(-140px);
             font-size: 12px;
             line-height: 16px;
             margin-bottom: 10px; } }
