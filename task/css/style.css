@@ -2431,6 +2431,9 @@ header {
       @media screen and (max-width: 992px) {
         .our-service_content_items-service {
           width: calc(100% / 12 * 5 - 30px); } }
+      @media screen and (max-width: 576px) {
+        .our-service_content_items-service {
+          width: calc(100% / 12 * 11 - 30px); } }
     .our-service_content .border_img_service {
       border: 10px solid #01afa5;
       border-radius: 5px;
