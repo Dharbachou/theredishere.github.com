@@ -190,10 +190,6 @@ section {
       width: 100%; }
       @media screen and (max-width: 576px) {
         .accordion_item_info {
-          height: 200px; } }
-      @media screen and (max-width: 576px) {
-        .accordion_item_info {
-          height: 200px;
           font-size: 12px; } }
       .accordion_item_info_content {
         padding: 50px 50px; }
@@ -703,7 +699,7 @@ footer {
         width: 90%; } }
     @media screen and (max-width: 576px) {
       .get_caption {
-        font-size: 34px;
+        font-size: 30px;
         width: 100%; } }
   .get_content {
     display: flex;
@@ -1314,10 +1310,6 @@ section {
       width: 100%; }
       @media screen and (max-width: 576px) {
         .accordion_item_info {
-          height: 200px; } }
-      @media screen and (max-width: 576px) {
-        .accordion_item_info {
-          height: 200px;
           font-size: 12px; } }
       .accordion_item_info_content {
         padding: 50px 50px; }
@@ -1930,11 +1922,11 @@ header {
       padding-bottom: 200px; } }
   @media screen and (max-width: 720px) {
     .our-testimonies {
-      padding-bottom: 200px; } }
+      padding-bottom: 150px; } }
   @media screen and (max-width: 576px) {
     .our-testimonies {
       padding-top: 50px;
-      padding-bottom: 200px; } }
+      padding-bottom: 100px; } }
   .our-testimonies_caption {
     font-family: Lato;
     color: #333333;
@@ -2054,7 +2046,7 @@ header {
         width: 90%; } }
     @media screen and (max-width: 576px) {
       .principles_caption {
-        font-size: 36px;
+        font-size: 30px;
         width: 100%; } }
   .principles_content {
     display: flex;
@@ -2516,11 +2508,14 @@ header {
           width: calc(100% / 12 * 8 - 30px); } }
       @media screen and (max-width: 576px) {
         .our-service_content_box-info {
-          width: calc(100% / 12 * 10 - 30px); } }
+          width: calc(100% / 12 * 12 - 30px); } }
       @media screen and (max-width: 1200px) {
         .our-service_content_box-info {
           box-shadow: 6px 10px 35px 0px rgba(0, 0, 0, 0.08);
           padding: 50px; } }
+      @media screen and (max-width: 720px) {
+        .our-service_content_box-info {
+          padding: 20px; } }
       .our-service_content_box-info_caption {
         font-family: Lato;
         color: #333333;
@@ -2529,6 +2524,10 @@ header {
         line-height: 36px;
         text-align: left;
         transform: scaleY(1.0004); }
+        @media screen and (max-width: 720px) {
+          .our-service_content_box-info_caption {
+            width: 100%;
+            text-align: center; } }
       .our-service_content_box-info_items {
         margin-top: 20px; }
       .our-service_content_box-info_item {
@@ -2544,6 +2543,9 @@ header {
           content: "\2022";
           flex: 20px;
           color: #01afa5; }
+        @media screen and (max-width: 720px) {
+          .our-service_content_box-info_item {
+            font-size: 16px; } }
       .our-service_content_box-info_alarm {
         font-family: Lato;
         color: #333333;
@@ -3048,10 +3050,16 @@ header {
   justify-content: center; }
   @media screen and (max-width: 720px) {
     .all_b {
-      height: 200px; } }
+      height: 200px;
+      width: 100px; }
+      .all_b img {
+        width: 100%; } }
   @media screen and (max-width: 992px) {
     .all_b {
-      height: 260px; } }
+      width: 130px;
+      height: 260px; }
+      .all_b img {
+        width: 100%; } }
 
 .slider {
   margin-top: 50px;
