@@ -2801,12 +2801,9 @@ header {
       width: 100%; }
       .situation_content_name i {
         font-style: normal;
-        border-radius: 50%;
-        box-sizing: border-box;
-        background-color: #01afa5;
-        padding: 3px 6px;
-        color: #fff;
-        margin-right: 9px; }
+        color: #01afa5;
+        margin-right: 9px;
+        font-size: 20px; }
 
 
 
