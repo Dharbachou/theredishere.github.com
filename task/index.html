@@ -38,6 +38,34 @@
             <!--</div>-->
         <!--</div>-->
     <!--</div>-->
+    <nav class="menu_scroll main-nav">
+        <div class="wrapper_nemu">
+            <div class="header_top">
+                <div class="header_top_logo">
+                    <div class="header_top_logo_img">
+                        <img src="./img/logo.png" alt="">
+                    </div>
+                    <div class="header_top_logo_caption">
+                        <p class="header_top_logo_caption_name">ЭКСПЕРТ</p>
+                        <span class="header_top_logo_caption_info">Кредитный центр</span>
+                    </div>
+                </div>
+                <div class="header_top_menu">
+                    <ul class="header_top_menu_items">
+                        <li class="header_top_menu_item"><a class="header_top_menu_item_link go_to" href=".our-service">Наши услуги</a></li>
+                        <li class="header_top_menu_item"><a class="header_top_menu_item_link go_to" href=".get">Подбор кредита</a></li>
+                        <li class="header_top_menu_item"><a class="header_top_menu_item_link go_to" href=".safeguards">Гарантии</a></li>
+                        <li class="header_top_menu_item"><a class="header_top_menu_item_link go_to" href=".reviews">Отзывы</a></li>
+                    </ul>
+                </div>
+                <div class="header_top_phone">
+                    <span class="header_top_phone_number"><i class="header_top_phone_number_icon">
+&#128222;</i>8 (962) 729-22-72</span>
+                    <a href="#modal3" class="open_modal header_top_phone_call">Заказать звонок</a>
+                </div>
+            </div>
+        </div>
+    </nav>
     <header>
         <div class="header_white">
         <div class="wrapper flex-column header_white">
@@ -142,18 +170,18 @@
            </h1>
            <div class="our-service_content">
                <ul class="our-service_content_items-service">
-                   <li class="our-service_content_item">Потребительский кредит  </li>
-                   <li class="our-service_content_item">Ипотека</li>
-                   <li class="our-service_content_item">Рефинансирование</li>
-                   <li class="our-service_content_item">  Кредит под залог квартиры  или дома</li>
-                   <li class="our-service_content_item">Кредит под залог автомобиля</li>
+                   <li data-tab-href="#credit" class="our-service_content_item active_service-title">Потребительский кредит  </li>
+                   <li data-tab-href="#ipoteca" class="our-service_content_item">Ипотека</li>
+                   <li data-tab-href="#referan" class="our-service_content_item">Рефинансирование</li>
+                   <li data-tab-href="#credit_home" class="our-service_content_item">  Кредит под залог квартиры  или дома</li>
+                   <li data-tab-href="#cradit_car" class="our-service_content_item">Кредит под залог автомобиля</li>
                </ul>
                <div class="our-service_content_box">
                    <div class="our-service_content_box_relev"></div>
                    <div class="our-service_content_box_img_bor"></div>
-                   <img src="img/service_content.png" alt="" class="our-service_content_box_img">
+                   <div class="border_img_service"><img src="img/service_content.png" alt="" class="our-service_content_box_img"></div>
                </div>
-               <div class="our-service_content_box-info">
+               <div id="credit" class="our-service_content_box-info active_service-info">
                    <h2 class="our-service_content_box-info_caption">
                        Потребительский кредит
                    </h2>
@@ -166,8 +194,78 @@
                    </ul>
                     <p class="our-service_content_box-info_alarm">Сумма от 50 000 до 3 000 000 руб.
                     </p>
-                    <p class="our-service_content_box-info_terms">Срок кредита - до 7 лет<br/> Процентная ставка - до 22% годовых
+                    <p class="our-service_content_box-info_terms">Срок кредита - до 7 лет<br/> Процентная ставка - до 12% годовых
                     </p>
+                   <a href="#modal1" class="open_modal our-service_content_box-info_btn">Получить кредит</a>
+               </div>
+               <div id="referan" class="our-service_content_box-info">
+                   <h2 class="our-service_content_box-info_caption">
+                       Рефинансирование
+                   </h2>
+                   <ul class="our-service_content_box-info_items">
+                       <li class="our-service_content_box-info_item">Закрытие до 5 кредитов и кредитных карт</li>
+                       <li class="our-service_content_box-info_item"> Короткий срок рассмотрения без предоставления справок об остатков с других банков</li>
+                       <li class="our-service_content_box-info_item"> По двум документам</li>
+                       <li class="our-service_content_box-info_item"> Поможем клиентам с высокой кредитной нагрузкой и с неофициальным трудоустройством</li>
+                       <li class="our-service_content_box-info_item">Минимальная процентная ставка по программе рефинансирования</li>
+                   </ul>
+                   <p class="our-service_content_box-info_alarm">Сумма до: 3 000 000 руб.
+                   </p>
+                   <p class="our-service_content_box-info_terms">Срок кредита – до 15 лет<br/> Процентная ставка – до 14,9% годовых
+                   </p>
+                   <a href="#modal1" class="open_modal our-service_content_box-info_btn">Получить кредит</a>
+               </div>
+               <div id="credit_home" class="our-service_content_box-info">
+                   <h2 class="our-service_content_box-info_caption">
+                       Кредит под залог квартиры или дома
+                   </h2>
+                   <ul class="our-service_content_box-info_items">
+                       <li class="our-service_content_box-info_item">Без подвержения дохода и трудоустройства</li>
+                       <li class="our-service_content_box-info_item"> Сумма - до 70% оценочной стоимости недвижимости</li>
+                       <li class="our-service_content_box-info_item">Оформление под залог как в банке, так и у наших частных партнеров</li>
+                       <li class="our-service_content_box-info_item"> Любой объект недвижимости: квартира, дом, либо комната. СПб и Ленобласть (до 50 км от КАД)</li>
+                       <li class="our-service_content_box-info_item">Любая кредитная история</li>
+                       <li class="our-service_content_box-info_item">Деньги в день обращения</li>
+                   </ul>
+                   <p class="our-service_content_box-info_alarm">Сумма до: 30 000 000 руб.
+                   </p>
+                   <p class="our-service_content_box-info_terms">Срок займа – до 10 лет<br/> Процентная ставка – от 2% в месяц
+                   </p>
+                   <a href="#modal1" class="open_modal our-service_content_box-info_btn">Получить кредит</a>
+               </div>
+               <div id="cradit_car" class="our-service_content_box-info">
+                   <h2 class="our-service_content_box-info_caption">
+                       Кредит под залог автомобиля
+                   </h2>
+                   <ul class="our-service_content_box-info_items">
+                       <li class="our-service_content_box-info_item">Сумма - до 50% от стоимости автомобиля</li>
+                       <li class="our-service_content_box-info_item"> Без подтверждения дохода</li>
+                       <li class="our-service_content_box-info_item"> Деньги в день обращения</li>
+                   </ul>
+                   <p class="our-service_content_box-info_alarm">Сумма до: 10 000 000 руб.
+                   </p>
+                   <p class="our-service_content_box-info_terms">Срок кредита – до 5 лет<br/> Процентная ставка – до 2% в месяц
+                   </p>
+                   <a href="#modal1" class="open_modal our-service_content_box-info_btn">Получить кредит</a>
+               </div>
+               <div id="ipoteca" class="our-service_content_box-info">
+                   <h2 class="our-service_content_box-info_caption">
+                       Ипотека
+                   </h2>
+                   <ul class="our-service_content_box-info_items">
+                       <li class="our-service_content_box-info_item">Возраст от 21 до 65 лет т</li>
+                       <li class="our-service_content_box-info_item"> Без первоначального взноса</li>
+                       <li class="our-service_content_box-info_item"> Без официального трудоустройства</li>
+                       <li class="our-service_content_box-info_item"> Решение банка за 1-3 дня</li>
+                       <li class="our-service_content_box-info_item">Полное сопровождение сделки на всех этапах</li>
+                       <li class="our-service_content_box-info_item">Использование материнского капитала</li>
+                       <li class="our-service_content_box-info_item">Поможем клиентам с высокой кредитной нагрузкой</li>
+
+                   </ul>
+                   <p class="our-service_content_box-info_alarm">Сумма до: 30 000 000 руб.
+                   </p>
+                   <p class="our-service_content_box-info_terms">Срок кредита – до 25 лет<br/> Процентная ставка - до 12% годовых
+                   </p>
                    <a href="#modal1" class="open_modal our-service_content_box-info_btn">Получить кредит</a>
                </div>
            </div>
@@ -179,7 +277,7 @@
             <h1 class="situation_caption">
                 давайте рассмотрим  вашу ситуацию
             </h1>
-            <from class="situation_content">
+            <form class="situation_content" action="#" >
                 <label class="situation_content_type">
                     <span class="situation_content_name"><i>1</i>Вид кредита:</span>
                     <span class="situation_content_type_select">
@@ -207,43 +305,40 @@
                 </label>
                 <label class="situation_content_box">
                     <span class="situation_content_name"><i>2</i>Нужная сумма:</span>
-                    <input placeholder="400000" type="text" class="situation_content_box_input">
+                    <input pattern="[0-9]{3,7}" title="только цифры до семи знаков!" required placeholder="400000" type="text" class="situation_content_box_input">
                 </label>
                 <label class="situation_content_box">
                     <span class="situation_content_name"><i>3</i>Срок:</span>
                     <!--<input type="text" class="situation_content_box_input">-->
                     <select class="situation_content_box_input">
-                        <option>24 месяца</option>
                         <option>12 месяцев</option>
-                        <option>6 месяцев</option>
-                        <option>3 месяцев</option>
-                        <option>1 месяцев</option>
+                        <option>24 месяца</option>
+                        <option>60 месяцев</option>
+                        <option>Другой</option>
                     </select>
                 </label>
                 <label class="situation_content_box">
                     <span class="situation_content_name"><i>4</i>Кредитная история:</span>
                     <!--<input type="text" class="situation_content_box_input">-->
                     <select class="situation_content_box_input">
-                        <option>Негативная</option>
-                        <option>Негативная</option>
-                        <option>Негативная</option>
-                        <option>Негативная</option>
+                        <option>Идеальная</option>
+                        <option>Испорченная</option>
+                        <option>Плохая</option>
+                        <option>Нужна проверка в БКИ</option>
                     </select>
                 </label>
                 <label class="situation_content_box">
                     <span class="situation_content_name"><i>5</i>Форма занятости:</span>
                     <!--<input type="text" class="situation_content_box_input">-->
                     <select class="situation_content_box_input">
-                        <option>Официально трудоустроен</option>
-                        <option>Официально трудоустроен</option>
-                        <option>Официально трудоустроен</option>
-                        <option>Официально трудоустроен</option>
-                        <option>Официально трудоустроен</option>
+                        <option>Наемный работник </option>
+                        <option>Предприниматель</option>
+                        <option>Не трудоустроен</option>
                     </select>
                 </label>
                 <label class="situation_content_box">
                     <span class="situation_content_name"><i>6</i>Ваш телефон:</span>
-                    <input placeholder="+7 (909) 903-12-12" type="text" class="situation_content_box_input">
+                    <input required placeholder="+7 (909) 903-12-12" type="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="situation_content_box_input">
                 </label>
                 <label class="situation_content_box">
                     <label class="situation_content_box_checkbox">
@@ -251,7 +346,7 @@
                     </label>
                     <input type="submit" class="situation_content_box_send" value="Получить индивидуальные условия">
                 </label>
-            </from>
+            </form>
         </div>
     </section>
     <section class="safeguards">
@@ -630,10 +725,10 @@
             <p class="modal_text">Введите Ваш телефон и наши специалисты проконсультируют Вас в течении 15 минут</p>
             <label>
                 <span class="modal_inp_name">Ваш номер телефона:</span>
-                <input class="modal_edittext" type="text" placeholder="+7 (909) 898-23-23">
+                <input pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="modal_edittext" type="tel" placeholder="+7 (909) 898-23-23" title="+7 (909) 898-23-23" >
             </label>
             <p class="modal_text">Оставление заявки Вас ни к чему не обязывает. Мы не распространяем информацию о Вас третьим лицам.</p>
-            <input class="modal_send" type="text" value="Оформить заявку">
+            <input class="modal_send" type="submit" value="Оформить заявку">
         </form>
     </div>
 
@@ -644,10 +739,10 @@
             <p class="modal_text">Узнайте свою кредитную историю, не  выходя из дома. Мы свяжемся с Вами и  проконсультируем по статусу.</p>
             <label>
                 <span class="modal_inp_name">Ваш номер телефона:</span>
-                <input class="modal_edittext" type="text" placeholder="+7 (909) 898-23-23">
+                <input pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="modal_edittext" type="tel" placeholder="+7 (909) 898-23-23" title="+7 (909) 898-23-23" >
             </label>
             <p class="modal_text">Оставление заявки Вас ни к чему не обязывает. Мы не распространяем информацию о Вас третьим лицам.</p>
-            <input class="modal_send" type="text" value="Проверить статус">
+            <input class="modal_send" type="submit" value="Проверить статус">
         </form>
     </div>
 
@@ -658,10 +753,10 @@
             <p class="modal_text">Введите Ваш телефон и наши  спеуиалисты проконсультируют Вас  в течении 15 минут.</p>
             <label>
                 <span class="modal_inp_name">Ваш номер телефона:</span>
-                <input class="modal_edittext" type="text" placeholder="+7 (909) 898-23-23">
+                <input pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required class="modal_edittext" type="text" placeholder="+7 (909) 898-23-23" title="+7 (909) 898-23-23" >
             </label>
             <p class="modal_text">Оставление заявки Вас ни к чему не обязывает. Мы не распространяем информацию о Вас третьим лицам.</p>
-            <input class="modal_send" type="text" value="Заказать звонок">
+            <input class="modal_send" type="submit" value="Заказать звонок">
         </form>
     </div>
 

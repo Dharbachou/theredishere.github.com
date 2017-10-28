@@ -76,16 +76,63 @@ $(document).ready(function () {
             );
     });
 
-    if ($(window).width() > 800) {
+
+
+    $(window).scroll(function() {
+        if($(this).scrollTop() >= 900 && $(window).width() > 1170) {
+            $('nav.main-nav').css({
+                display: "block"
+            });
+            console.log($(this).scrollTop());
+        }
+        else{
+            $('nav.main-nav').css({
+                display: "none"
+            });
+            console.log($(this).scrollTop());
+        }
+
+        if ($(window).width() > 800) {
             $('.single-item').slick({
+                infinite: true,
+                dots: false,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true,
+                centerMode: true,
+            });
+            console.log($(window).width());
+            $('.single-iteml').slick();
+        }
+        if($(window).width() < 800){
+            $('.single-item').slick({
+                arrows: false,
+                centerMode: true,});
+            console.log($(window).width());
+            $('.single-iteml').slick({
+                arrows: false,
+            });
+        }
+    });
+
+    $('.our-service_content_item').click(function () {
+        $('.our-service_content_item').removeClass('active_service-title');
+        $('.our-service_content_box-info').removeClass('active_service-info');
+        $(this).addClass('active_service-title');
+        var target = $(this).attr("data-tab-href");
+        $(target).addClass('active_service-info');
+    });
+
+    if ($(window).width() > 800) {
+        $('.single-item').slick({
             infinite: true,
             dots: false,
             slidesToShow: 3,
             slidesToScroll: 1,
-                arrows: true,
+            arrows: true,
             centerMode: true,
         });
-            console.log($(window).width());
+        console.log($(window).width());
         $('.single-iteml').slick();
     }
     if($(window).width() < 800){
