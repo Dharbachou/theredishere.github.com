@@ -1398,6 +1398,11 @@ header {
     text-align: left;
     transform: scaleX(1.0006);
     /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */ }
+  @media screen and (max-width: 576px) {
+    .header-mobile .header_content_condition {
+      font-size: 11px; }
+      .header-mobile .header_content_condition span {
+        font-size: 11px; } }
 
 @charset "UTF-8";
 @font-face {
@@ -2278,6 +2283,11 @@ header {
     text-align: left;
     transform: scaleX(1.0006);
     /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */ }
+  @media screen and (max-width: 576px) {
+    .header-mobile .header_content_condition {
+      font-size: 11px; }
+      .header-mobile .header_content_condition span {
+        font-size: 11px; } }
 
 
 
