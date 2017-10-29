@@ -1245,158 +1245,159 @@ header {
       transform: rotate(-135deg);
       margin-top: 0; }
 
-.header-mobile .wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
-  justify-content: center; }
-  .header-mobile .wrapper img {
+.header-mobile {
+  display: none; }
+  @media screen and (max-width: 992px) {
+    .header-mobile {
+      display: block; } }
+  .header-mobile .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    justify-content: center; }
+    .header-mobile .wrapper img {
+      box-sizing: border-box;
+      word-wrap: break-word;
+      margin-left: 15px;
+      margin-right: 15px;
+      width: calc(100% / 12 * 11 - 30px);
+      max-width: 100%;
+      align-self: center;
+      margin: 10px 0 40px; }
+  .header-mobile_top {
+    padding: 20px 40px 10px;
     box-sizing: border-box;
     word-wrap: break-word;
     margin-left: 15px;
     margin-right: 15px;
     width: calc(100% / 12 * 11 - 30px);
-    max-width: 100%;
-    align-self: center;
-    margin: 10px 0 40px; }
-
-.header-mobile_top {
-  padding: 20px 40px 10px;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 15px;
-  margin-right: 15px;
-  width: calc(100% / 12 * 11 - 30px);
-  display: flex;
-  justify-content: space-between;
-  align-self: center; }
-  .header-mobile_top_logo {
-    flex-grow: 1;
-    border-bottom: 1px solid  #b3b3b3;
-    border-right: 1px solid  #b3b3b3;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; }
-    .header-mobile_top_logo_img {
-      width: 70px; }
-    .header-mobile_top_logo_caption {
-      margin-top: -40px; }
-      .header-mobile_top_logo_caption_name {
-        width: 100%;
-        font-family: Lato;
-        color: #333333;
-        font-size: 24px;
-        font-weight: 900;
-        text-align: left;
-        transform: scaleY(1.0112);
-        /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */
-        margin-bottom: -5px; }
-        @media screen and (max-width: 576px) {
-          .header-mobile_top_logo_caption_name {
-            padding-top: 10px;
-            margin: -10px;
-            font-size: 15.61px;
-            /* Приближение из-за подстановки шрифтов */ } }
-      .header-mobile_top_logo_caption_info {
-        font-family: Lato;
-        color: #333333;
-        font-size: 14px;
-        /* Приближение из-за подстановки шрифтов */
-        font-weight: 400;
-        text-align: left;
-        line-height: 24px;
-        padding-top: -20px;
-        transform: scaleY(1.0112);
-        /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */ }
-        @media screen and (max-width: 576px) {
-          .header-mobile_top_logo_caption_info {
-            margin-left: -10px;
-            font-size: 10px;
-            /* Приближение из-за подстановки шрифтов */ } }
-  .header-mobile_top_phone {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    flex-grow: 1;
-    border-bottom: 1px solid  #b3b3b3;
-    margin-right: 10px;
-    margin-top: 20px;
-    text-align: right; }
-    .header-mobile_top_phone_number {
-      display: block;
-      font-size: 24px;
-      font-weight: normal;
-      text-align: left;
-      font-family: Lato; }
-      .header-mobile_top_phone_number_icon {
-        padding-top: 5px;
-        display: inline-block;
-        color: #01afa5;
-        margin-right: 9px;
-        font-style: normal;
-        transform: rotate(-20deg); }
-      @media screen and (max-width: 576px) {
-        .header-mobile_top_phone_number {
+    justify-content: space-between;
+    align-self: center; }
+    .header-mobile_top_logo {
+      flex-grow: 1;
+      border-bottom: 1px solid  #b3b3b3;
+      border-right: 1px solid  #b3b3b3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .header-mobile_top_logo_img {
+        width: 70px; }
+      .header-mobile_top_logo_caption {
+        margin-top: -40px; }
+        .header-mobile_top_logo_caption_name {
+          width: 100%;
           font-family: Lato;
-          color: #000000;
-          font-size: 18px;
-          /* Приближение из-за подстановки шрифтов */
-          font-weight: 700;
-          line-height: 30px;
-          /* Приближение из-за подстановки шрифтов */
-          text-align: right;
-          margin-bottom: -10px; } }
-    .header-mobile_top_phone_call {
-      font-family: Lato;
-      color: #01afa5;
-      font-size: 18px;
-      font-weight: normal;
-      text-align: left;
-      text-decoration: none;
-      border-bottom: 2px dotted #01afa5; }
-      @media screen and (max-width: 576px) {
-        .header-mobile_top_phone_call {
+          color: #333333;
+          font-size: 24px;
+          font-weight: 900;
+          text-align: left;
+          transform: scaleY(1.0112);
+          /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */
+          margin-bottom: -5px; }
+          @media screen and (max-width: 576px) {
+            .header-mobile_top_logo_caption_name {
+              padding-top: 10px;
+              margin: -10px;
+              font-size: 15.61px;
+              /* Приближение из-за подстановки шрифтов */ } }
+        .header-mobile_top_logo_caption_info {
           font-family: Lato;
-          color: #00d6ce;
-          font-size: 13px;
+          color: #333333;
+          font-size: 14px;
           /* Приближение из-за подстановки шрифтов */
           font-weight: 400;
-          line-height: 30px;
-          /* Приближение из-за подстановки шрифтов */
           text-align: left;
-          margin-bottom: 10px; } }
-
-.header-mobile_content {
-  box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 15px;
-  margin-right: 15px;
-  width: calc(100% / 12 * 10 - 30px); }
-
-.header-mobile_content_caption {
-  margin-left: -30px;
-  border-left: 8px solid #01afa5;
-  font-family: Lato;
-  color: #333333;
-  font-size: 26.59px;
-  /* Приближение из-за подстановки шрифтов */
-  font-weight: 900;
-  text-align: left;
-  padding-left: 15px;
-  transform: scaleX(1.0006); }
-
-.header-mobile_content_info {
-  margin-top: 20px;
-  font-family: Lato;
-  color: #333333;
-  font-size: 14.96px;
-  /* Приближение из-за подстановки шрифтов */
-  font-weight: 400;
-  text-align: left;
-  transform: scaleX(1.0006);
-  /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */ }
+          line-height: 24px;
+          padding-top: -20px;
+          transform: scaleY(1.0112);
+          /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */ }
+          @media screen and (max-width: 576px) {
+            .header-mobile_top_logo_caption_info {
+              margin-left: -10px;
+              font-size: 10px;
+              /* Приближение из-за подстановки шрифтов */ } }
+    .header-mobile_top_phone {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      flex-grow: 1;
+      border-bottom: 1px solid  #b3b3b3;
+      margin-right: 10px;
+      margin-top: 20px;
+      text-align: right; }
+      .header-mobile_top_phone_number {
+        display: block;
+        font-size: 24px;
+        font-weight: normal;
+        text-align: left;
+        font-family: Lato; }
+        .header-mobile_top_phone_number_icon {
+          padding-top: 5px;
+          display: inline-block;
+          color: #01afa5;
+          margin-right: 9px;
+          font-style: normal;
+          transform: rotate(-20deg); }
+        @media screen and (max-width: 576px) {
+          .header-mobile_top_phone_number {
+            font-family: Lato;
+            color: #000000;
+            font-size: 18px;
+            /* Приближение из-за подстановки шрифтов */
+            font-weight: 700;
+            line-height: 30px;
+            /* Приближение из-за подстановки шрифтов */
+            text-align: right;
+            margin-bottom: -10px; } }
+      .header-mobile_top_phone_call {
+        font-family: Lato;
+        color: #01afa5;
+        font-size: 18px;
+        font-weight: normal;
+        text-align: left;
+        text-decoration: none;
+        border-bottom: 2px dotted #01afa5; }
+        @media screen and (max-width: 576px) {
+          .header-mobile_top_phone_call {
+            font-family: Lato;
+            color: #00d6ce;
+            font-size: 13px;
+            /* Приближение из-за подстановки шрифтов */
+            font-weight: 400;
+            line-height: 30px;
+            /* Приближение из-за подстановки шрифтов */
+            text-align: left;
+            margin-bottom: 10px; } }
+  .header-mobile_content {
+    box-sizing: border-box;
+    word-wrap: break-word;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% / 12 * 10 - 30px); }
+  .header-mobile_content_caption {
+    margin-left: -30px;
+    border-left: 8px solid #01afa5;
+    font-family: Lato;
+    color: #333333;
+    font-size: 26.59px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 900;
+    text-align: left;
+    padding-left: 15px;
+    transform: scaleX(1.0006); }
+  .header-mobile_content_info {
+    margin-top: 20px;
+    font-family: Lato;
+    color: #333333;
+    font-size: 14.96px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    text-align: left;
+    transform: scaleX(1.0006);
+    /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */ }
 
 @charset "UTF-8";
 @font-face {
@@ -2124,158 +2125,159 @@ header {
       transform: rotate(-135deg);
       margin-top: 0; }
 
-.header-mobile .wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
-  justify-content: center; }
-  .header-mobile .wrapper img {
+.header-mobile {
+  display: none; }
+  @media screen and (max-width: 992px) {
+    .header-mobile {
+      display: block; } }
+  .header-mobile .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    justify-content: center; }
+    .header-mobile .wrapper img {
+      box-sizing: border-box;
+      word-wrap: break-word;
+      margin-left: 15px;
+      margin-right: 15px;
+      width: calc(100% / 12 * 11 - 30px);
+      max-width: 100%;
+      align-self: center;
+      margin: 10px 0 40px; }
+  .header-mobile_top {
+    padding: 20px 40px 10px;
     box-sizing: border-box;
     word-wrap: break-word;
     margin-left: 15px;
     margin-right: 15px;
     width: calc(100% / 12 * 11 - 30px);
-    max-width: 100%;
-    align-self: center;
-    margin: 10px 0 40px; }
-
-.header-mobile_top {
-  padding: 20px 40px 10px;
-  box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 15px;
-  margin-right: 15px;
-  width: calc(100% / 12 * 11 - 30px);
-  display: flex;
-  justify-content: space-between;
-  align-self: center; }
-  .header-mobile_top_logo {
-    flex-grow: 1;
-    border-bottom: 1px solid  #b3b3b3;
-    border-right: 1px solid  #b3b3b3;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; }
-    .header-mobile_top_logo_img {
-      width: 70px; }
-    .header-mobile_top_logo_caption {
-      margin-top: -40px; }
-      .header-mobile_top_logo_caption_name {
-        width: 100%;
-        font-family: Lato;
-        color: #333333;
-        font-size: 24px;
-        font-weight: 900;
-        text-align: left;
-        transform: scaleY(1.0112);
-        /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */
-        margin-bottom: -5px; }
-        @media screen and (max-width: 576px) {
-          .header-mobile_top_logo_caption_name {
-            padding-top: 10px;
-            margin: -10px;
-            font-size: 15.61px;
-            /* Приближение из-за подстановки шрифтов */ } }
-      .header-mobile_top_logo_caption_info {
-        font-family: Lato;
-        color: #333333;
-        font-size: 14px;
-        /* Приближение из-за подстановки шрифтов */
-        font-weight: 400;
-        text-align: left;
-        line-height: 24px;
-        padding-top: -20px;
-        transform: scaleY(1.0112);
-        /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */ }
-        @media screen and (max-width: 576px) {
-          .header-mobile_top_logo_caption_info {
-            margin-left: -10px;
-            font-size: 10px;
-            /* Приближение из-за подстановки шрифтов */ } }
-  .header-mobile_top_phone {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    flex-grow: 1;
-    border-bottom: 1px solid  #b3b3b3;
-    margin-right: 10px;
-    margin-top: 20px;
-    text-align: right; }
-    .header-mobile_top_phone_number {
-      display: block;
-      font-size: 24px;
-      font-weight: normal;
-      text-align: left;
-      font-family: Lato; }
-      .header-mobile_top_phone_number_icon {
-        padding-top: 5px;
-        display: inline-block;
-        color: #01afa5;
-        margin-right: 9px;
-        font-style: normal;
-        transform: rotate(-20deg); }
-      @media screen and (max-width: 576px) {
-        .header-mobile_top_phone_number {
+    justify-content: space-between;
+    align-self: center; }
+    .header-mobile_top_logo {
+      flex-grow: 1;
+      border-bottom: 1px solid  #b3b3b3;
+      border-right: 1px solid  #b3b3b3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .header-mobile_top_logo_img {
+        width: 70px; }
+      .header-mobile_top_logo_caption {
+        margin-top: -40px; }
+        .header-mobile_top_logo_caption_name {
+          width: 100%;
           font-family: Lato;
-          color: #000000;
-          font-size: 18px;
-          /* Приближение из-за подстановки шрифтов */
-          font-weight: 700;
-          line-height: 30px;
-          /* Приближение из-за подстановки шрифтов */
-          text-align: right;
-          margin-bottom: -10px; } }
-    .header-mobile_top_phone_call {
-      font-family: Lato;
-      color: #01afa5;
-      font-size: 18px;
-      font-weight: normal;
-      text-align: left;
-      text-decoration: none;
-      border-bottom: 2px dotted #01afa5; }
-      @media screen and (max-width: 576px) {
-        .header-mobile_top_phone_call {
+          color: #333333;
+          font-size: 24px;
+          font-weight: 900;
+          text-align: left;
+          transform: scaleY(1.0112);
+          /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */
+          margin-bottom: -5px; }
+          @media screen and (max-width: 576px) {
+            .header-mobile_top_logo_caption_name {
+              padding-top: 10px;
+              margin: -10px;
+              font-size: 15.61px;
+              /* Приближение из-за подстановки шрифтов */ } }
+        .header-mobile_top_logo_caption_info {
           font-family: Lato;
-          color: #00d6ce;
-          font-size: 13px;
+          color: #333333;
+          font-size: 14px;
           /* Приближение из-за подстановки шрифтов */
           font-weight: 400;
-          line-height: 30px;
-          /* Приближение из-за подстановки шрифтов */
           text-align: left;
-          margin-bottom: 10px; } }
-
-.header-mobile_content {
-  box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 15px;
-  margin-right: 15px;
-  width: calc(100% / 12 * 10 - 30px); }
-
-.header-mobile_content_caption {
-  margin-left: -30px;
-  border-left: 8px solid #01afa5;
-  font-family: Lato;
-  color: #333333;
-  font-size: 26.59px;
-  /* Приближение из-за подстановки шрифтов */
-  font-weight: 900;
-  text-align: left;
-  padding-left: 15px;
-  transform: scaleX(1.0006); }
-
-.header-mobile_content_info {
-  margin-top: 20px;
-  font-family: Lato;
-  color: #333333;
-  font-size: 14.96px;
-  /* Приближение из-за подстановки шрифтов */
-  font-weight: 400;
-  text-align: left;
-  transform: scaleX(1.0006);
-  /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */ }
+          line-height: 24px;
+          padding-top: -20px;
+          transform: scaleY(1.0112);
+          /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */ }
+          @media screen and (max-width: 576px) {
+            .header-mobile_top_logo_caption_info {
+              margin-left: -10px;
+              font-size: 10px;
+              /* Приближение из-за подстановки шрифтов */ } }
+    .header-mobile_top_phone {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      flex-grow: 1;
+      border-bottom: 1px solid  #b3b3b3;
+      margin-right: 10px;
+      margin-top: 20px;
+      text-align: right; }
+      .header-mobile_top_phone_number {
+        display: block;
+        font-size: 24px;
+        font-weight: normal;
+        text-align: left;
+        font-family: Lato; }
+        .header-mobile_top_phone_number_icon {
+          padding-top: 5px;
+          display: inline-block;
+          color: #01afa5;
+          margin-right: 9px;
+          font-style: normal;
+          transform: rotate(-20deg); }
+        @media screen and (max-width: 576px) {
+          .header-mobile_top_phone_number {
+            font-family: Lato;
+            color: #000000;
+            font-size: 18px;
+            /* Приближение из-за подстановки шрифтов */
+            font-weight: 700;
+            line-height: 30px;
+            /* Приближение из-за подстановки шрифтов */
+            text-align: right;
+            margin-bottom: -10px; } }
+      .header-mobile_top_phone_call {
+        font-family: Lato;
+        color: #01afa5;
+        font-size: 18px;
+        font-weight: normal;
+        text-align: left;
+        text-decoration: none;
+        border-bottom: 2px dotted #01afa5; }
+        @media screen and (max-width: 576px) {
+          .header-mobile_top_phone_call {
+            font-family: Lato;
+            color: #00d6ce;
+            font-size: 13px;
+            /* Приближение из-за подстановки шрифтов */
+            font-weight: 400;
+            line-height: 30px;
+            /* Приближение из-за подстановки шрифтов */
+            text-align: left;
+            margin-bottom: 10px; } }
+  .header-mobile_content {
+    box-sizing: border-box;
+    word-wrap: break-word;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% / 12 * 10 - 30px); }
+  .header-mobile_content_caption {
+    margin-left: -30px;
+    border-left: 8px solid #01afa5;
+    font-family: Lato;
+    color: #333333;
+    font-size: 26.59px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 900;
+    text-align: left;
+    padding-left: 15px;
+    transform: scaleX(1.0006); }
+  .header-mobile_content_info {
+    margin-top: 20px;
+    font-family: Lato;
+    color: #333333;
+    font-size: 14.96px;
+    /* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    text-align: left;
+    transform: scaleX(1.0006);
+    /* свойства ширины и высоты были исключены, поскольку было выполнено трансформирование */ }
 
 
 
