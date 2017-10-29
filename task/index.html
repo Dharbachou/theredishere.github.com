@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Эксперт кредитный центр</title>
-    <!--<link href="https://fonts.googleapis.com/css?family=Lato&amp;subset=latin-ext" rel="stylesheet">-->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/logo.png" type="image/png">
     <link rel="stylesheet" href="./css/flaticon.css">
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="./slick/slick.min.js"></script>
     <script src="./js/main.js"></script>
 
@@ -38,6 +37,21 @@
             <!--</div>-->
         <!--</div>-->
     <!--</div>-->
+    <a href="#menu" class="menu-link">
+        <span></span>
+
+    </a>
+    <nav class="menu_burger">
+        <!--<span class="menu_burger_close">X</span>-->
+        <div class="menu_burger_menu">
+            <ul class="menu_burger_menu_items">
+                <li class="menu_burger_item"><a class="menu_burger_item_link go_to" href=".our-service">Наши услуги</a></li>
+                <li class="menu_burger_item"><a class="menu_burger_item_link go_to" href=".get">Подбор кредита</a></li>
+                <li class="menu_burger_item"><a class="menu_burger_item_link go_to" href=".safeguards">Гарантии</a></li>
+                <li class="menu_burger_item"><a class="menu_burger_item_link go_to" href=".reviews">Отзывы</a></li>
+            </ul>
+        </div>
+    </nav>
     <nav class="menu_scroll main-nav">
         <div class="wrapper_nemu">
             <div class="header_top">
@@ -121,6 +135,52 @@
         </div>
         </div>
     </header>
+    <section class="header-mobile">
+        <div class="wrapper">
+            <div class="header-mobile_top">
+                <div class="header-mobile_top_logo">
+                    <div class="header-mobile_top_logo_img">
+                        <img src="./img/logo.png" alt="">
+                    </div>
+                    <div class="header-mobile_top_logo_caption">
+                        <p class="header-mobile_top_logo_caption_name">ЭКСПЕРТ</p>
+                        <span class="header-mobile_top_logo_caption_info">Кредитный центр</span>
+                    </div>
+                </div>
+                <div class="header-mobile_top_phone">
+                    <span class="header-mobile_top_phone_number"><i class="header_top_phone_number_icon">
+&#128222;</i>8 (962) 729-22-72</span>
+                    <a href="#modal3" class="open_modal header-mobile_top_phone_call">Заказать звонок</a>
+                </div>
+            </div>
+            <img src="./img/bg_header.png" alt="">
+            <div class="header-mobile_content">
+                <h1 class="header-mobile_content_caption">Кредитный центр <br/> в Санкт-Петербурге  </h1>
+                <p class="header-mobile_content_info">Получите кредит до 30 000 000  на выгодных условиях</p>
+                <div class="header_content_conditions">
+                    <div class="header_content_condition">
+                        <hr class="header_content_condition_line line_theme-1">
+                        <p class="header_content_condition_content">
+                            На <span>1-3 % ниже</span>  официальной  ставки банка  
+                        </p>
+                    </div>
+                    <div class="header_content_condition">
+                        <hr class="header_content_condition_line line_theme-2">
+                        <p class="header_content_condition_content">
+                            Одобрение заявки  <span>от 15 минут </span>
+                        </p>
+                    </div>
+                    <div class="header_content_condition">
+                        <hr class="header_content_condition_line line_theme-3">
+                        <p class="header_content_condition_content">
+                            Без <span>предоплат</span>
+                        </p>
+                    </div>
+                </div>
+                <a href="#modal1" class="open_modal header_content_bth" >Оформить заявку</a>
+            </div>
+        </div>
+    </section>
     <section class="we-helps">
         <div class="wrapper">
             <h1 class="we-helps_caption">Мы поможем, даже если:
@@ -269,6 +329,106 @@
                </div>
            </div>
        </div>
+    </section>
+    <section class="our-service-md">
+        <div class="wrapper">
+            <div class="our-service-md_content">
+                <ul class="our-service-md_content_items-service">
+                    <li data-tab-href="#credit-md" class="our-service-md_content_item our-service-md_content_item-active"><img src="./img/service-md/if_credit-card_216166.png" alt=""></li>
+                    <li data-tab-href="#ipoteca-md" class="our-service-md_content_item"><img src="./img/service-md/�迁%202.png" alt=""></li>
+                    <li data-tab-href="#referan-md" class="our-service-md_content_item"><img src="./img/service-md/if_money-3_322465.png" alt=""></li>
+                    <li data-tab-href="#credit_home-md" class="our-service-md_content_item"><img src="./img/service-md/if_home_216242.png" alt=""></li>
+                    <li data-tab-href="#cradit_car-md" class="our-service-md_content_item"><img src="./img/service-md/if_ic_directions_car_48px_352315.png" alt=""></li>
+                </ul>
+                <div id="credit-md" class="our-service-md_content_box-info our-service-md_content_box-info-active">
+                    <h2 class="our-service-md_content_box-info_caption">
+                        Потребительский кредит
+                    </h2>
+                    <ul class="our-service-md_content_box-info_items">
+                        <li class="our-service-md_content_box-info_item">Возраст от 18 до 80 лет</li>
+                        <li class="our-service-md_content_box-info_item">Кредит в день обращения</li>
+                        <li class="our-service-md_content_box-info_item">По двум документам</li>
+                        <li class="our-service-md_content_box-info_item">Поможем клиентам с высокой кредитной нагрузкой</li>
+                        <li class="our-service-md_content_box-info_item">Специальные условия для пенсионеров</li>
+                    </ul>
+                    <p class="our-service-md_content_box-info_alarm">Сумма от 50 000 до 3 000 000 руб.
+                    </p>
+                    <p class="our-service-md_content_box-info_terms">Срок кредита - до 7 лет<br/>Процентная ставка - до 12% годовых
+                    </p>
+                    <a href="#modal1" class="open_modal our-service-md_content_box-info_btn">Получить кредит</a>
+                </div>
+                <div id="referan-md" class="our-service-md_content_box-info">
+                    <h2 class="our-service-md_content_box-info_caption">
+                        Рефинансирование
+                    </h2>
+                    <ul class="our-service_content_box-info_items">
+                        <li class="our-service-md_content_box-info_item">Закрытие до 5 кредитов и кредитных карт</li>
+                        <li class="our-service-md_content_box-info_item">Короткий срок рассмотрения без предоставления справок об остатков с других банков</li>
+                        <li class="our-service-md_content_box-info_item">По двум документам</li>
+                        <li class="our-service-md_content_box-info_item">Поможем клиентам с высокой кредитной нагрузкой и с неофициальным трудоустройством</li>
+                        <li class="our-service-md_content_box-info_item">Минимальная процентная ставка по программе рефинансирования</li>
+                    </ul>
+                    <p class="our-service-md_content_box-info_alarm">Сумма до: 3 000 000 руб.
+                    </p>
+                    <p class="our-service-md_content_box-info_terms">Срок кредита – до 15 лет<br/>Процентная ставка – до 14,9% годовых
+                    </p>
+                    <a href="#modal1" class="open_modal our-service-md_content_box-info_btn">Получить кредит</a>
+                </div>
+                <div id="credit_home-md" class="our-service-md_content_box-info">
+                    <h2 class="our-service-md_content_box-info_caption">
+                        Кредит под залог квартиры или дома
+                    </h2>
+                    <ul class="our-service-md_content_box-info_items">
+                        <li class="our-service-md_content_box-info_item">Без подвержения дохода и трудоустройства</li>
+                        <li class="our-service-md_content_box-info_item">Сумма - до 70% оценочной стоимости недвижимости</li>
+                        <li class="our-service-md_content_box-info_item">Оформление под залог как в банке, так и у наших частных партнеров</li>
+                        <li class="our-service-md_content_box-info_item">Любой объект недвижимости: квартира, дом, либо комната. СПб и Ленобласть (до 50 км от КАД)</li>
+                        <li class="our-service-md_content_box-info_item">Любая кредитная история</li>
+                        <li class="our-service-md_content_box-info_item">Деньги в день обращения</li>
+                    </ul>
+                    <p class="our-service-md_content_box-info_alarm">Сумма до: 30 000 000 руб.
+                    </p>
+                    <p class="our-service-md_content_box-info_terms">Срок займа – до 10 лет<br/>Процентная ставка – от 2% в месяц
+                    </p>
+                    <a href="#modal1" class="open_modal our-service-md_content_box-info_btn">Получить кредит</a>
+                </div>
+                <div id="cradit_car-md" class="our-service-md_content_box-info">
+                    <h2 class="our-service-md_content_box-info_caption">
+                        Кредит под залог автомобиля
+                    </h2>
+                    <ul class="our-service-md_content_box-info_items">
+                        <li class="our-service-md_content_box-info_item">Сумма - до 50% от стоимости автомобиля</li>
+                        <li class="our-service-md_content_box-info_item">Без подтверждения дохода</li>
+                        <li class="our-service-md_content_box-info_item">Деньги в день обращения</li>
+                    </ul>
+                    <p class="our-service-md_content_box-info_alarm">Сумма до: 10 000 000 руб.
+                    </p>
+                    <p class="our-service-md_content_box-info_terms">Срок кредита – до 5 лет<br/>Процентная ставка – до 2% в месяц
+                    </p>
+                    <a href="#modal1" class="open_modal our-service-md_content_box-info_btn">Получить кредит</a>
+                </div>
+                <div id="ipoteca-md" class="our-service-md_content_box-info">
+                    <h2 class="our-service-md_content_box-info_caption">
+                        Ипотека
+                    </h2>
+                    <ul class="our-service-md_content_box-info_items">
+                        <li class="our-service-md_content_box-info_item">Возраст от 21 до 65 лет т</li>
+                        <li class="our-service-md_content_box-info_item">Без первоначального взноса</li>
+                        <li class="our-service-md_content_box-info_item">Без официального трудоустройства</li>
+                        <li class="our-service-md_content_box-info_item">Решение банка за 1-3 дня</li>
+                        <li class="our-service-md_content_box-info_item">Полное сопровождение сделки на всех этапах</li>
+                        <li class="our-service-md_content_box-info_item">Использование материнского капитала</li>
+                        <li class="our-service-md_content_box-info_item">Поможем клиентам с высокой кредитной нагрузкой</li>
+
+                    </ul>
+                    <p class="our-service-md_content_box-info_alarm">Сумма до: 30 000 000 руб.
+                    </p>
+                    <p class="our-service-md_content_box-info_terms">Срок кредита – до 25 лет<br/>Процентная ставка - до 12% годовых
+                    </p>
+                    <a href="#modal1" class="open_modal our-service-md_content_box-info_btn">Получить кредит</a>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="situation">
         <div class="wrapper">
@@ -758,10 +918,6 @@
         </form>
     </div>
 
-
-
-
-    <!-- Подложка только одна -->
     <div id="overlay"></div>
 </body>
 </html>

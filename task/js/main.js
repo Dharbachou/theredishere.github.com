@@ -83,15 +83,12 @@ $(document).ready(function () {
             $('nav.main-nav').css({
                 display: "block"
             });
-            console.log($(this).scrollTop());
         }
         else{
             $('nav.main-nav').css({
                 display: "none"
             });
-            console.log($(this).scrollTop());
         }
-
         if ($(window).width() > 800) {
             $('.single-item').slick({
                 infinite: true,
@@ -101,16 +98,22 @@ $(document).ready(function () {
                 arrows: true,
                 centerMode: true,
             });
-            console.log($(window).width());
             $('.single-iteml').slick();
         }
         if($(window).width() < 800){
             $('.single-item').slick({
                 arrows: false,
                 centerMode: true,});
-            console.log($(window).width());
             $('.single-iteml').slick({
                 arrows: false,
+            });
+        }
+    });
+
+    $(window).resize(function(){
+        if($(window).width() > 1170) {
+            $('nav.main-nav').css({
+                display: "none"
             });
         }
     });
@@ -121,6 +124,14 @@ $(document).ready(function () {
         $(this).addClass('active_service-title');
         var target = $(this).attr("data-tab-href");
         $(target).addClass('active_service-info');
+    });
+
+    $('.our-service-md_content_item').click(function () {
+        $('.our-service-md_content_item').removeClass('our-service-md_content_item-active');
+        $('.our-service-md_content_box-info').removeClass('our-service-md_content_box-info-active');
+        $(this).addClass('our-service-md_content_item-active');
+        var target = $(this).attr("data-tab-href");
+        $(target).addClass('our-service-md_content_box-info-active');
     });
 
     if ($(window).width() > 800) {
@@ -145,4 +156,20 @@ $(document).ready(function () {
         });
     }
 
+    var link = $('.menu-link');
+    var link_active = $('.menu-link_active');
+    var menu = $('.menu_burger');
+    var nav_link = $('.menu_burger_item_link');
+
+    link.click(function(){
+        link.toggleClass('menu-link_active');
+        menu.toggleClass('menu_burger_active');
+    });
+    link_active.click(function(){
+        link.removeClass('menu-link_active');
+    });
+    nav_link.click(function(){
+        link.removeClass('menu-link_active');
+        menu.removeClass('menu_burger_active');
+    });
 });
