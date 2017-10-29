@@ -1271,7 +1271,7 @@ header {
     word-wrap: break-word;
     margin-left: 15px;
     margin-right: 15px;
-    width: calc(100% / 12 * 11 - 30px);
+    width: calc(100% / 12 * 12 - 30px);
     display: flex;
     justify-content: space-between;
     align-self: center; }
@@ -2156,7 +2156,7 @@ header {
     word-wrap: break-word;
     margin-left: 15px;
     margin-right: 15px;
-    width: calc(100% / 12 * 11 - 30px);
+    width: calc(100% / 12 * 12 - 30px);
     display: flex;
     justify-content: space-between;
     align-self: center; }
