@@ -1173,7 +1173,7 @@ header {
       background: #fff;
       justify-content: center;
       align-items: center;
-      transform: translateX(150vh);
+      transform: translateX(200vh);
       transition: all 0.3s; } }
   @media screen and (max-width: 720px) {
     .menu_burger {
@@ -1264,9 +1264,9 @@ header {
       width: calc(100% / 12 * 11 - 30px);
       max-width: 100%;
       align-self: center;
-      margin: 10px 0 40px; }
+      margin: 0 0 40px; }
   .header-mobile_top {
-    padding: 20px 40px 10px;
+    padding: 0px 0px 10px;
     box-sizing: border-box;
     word-wrap: break-word;
     margin-left: 15px;
@@ -1283,6 +1283,12 @@ header {
       flex-direction: column;
       align-items: center;
       justify-content: center; }
+      @media screen and (max-width: 720px) {
+        .header-mobile_top_logo {
+          padding-top: 10px; } }
+      @media screen and (max-width: 576px) {
+        .header-mobile_top_logo {
+          padding-top: 0; } }
       .header-mobile_top_logo_img {
         width: 70px; }
       .header-mobile_top_logo_caption {
@@ -1387,7 +1393,8 @@ header {
     font-weight: 900;
     text-align: left;
     padding-left: 15px;
-    transform: scaleX(1.0006); }
+    transform: scaleX(1.0006);
+    text-transform: uppercase; }
   .header-mobile_content_info {
     margin-top: 20px;
     font-family: Lato;
@@ -2058,7 +2065,7 @@ header {
       background: #fff;
       justify-content: center;
       align-items: center;
-      transform: translateX(150vh);
+      transform: translateX(200vh);
       transition: all 0.3s; } }
   @media screen and (max-width: 720px) {
     .menu_burger {
@@ -2149,9 +2156,9 @@ header {
       width: calc(100% / 12 * 11 - 30px);
       max-width: 100%;
       align-self: center;
-      margin: 10px 0 40px; }
+      margin: 0 0 40px; }
   .header-mobile_top {
-    padding: 20px 40px 10px;
+    padding: 0px 0px 10px;
     box-sizing: border-box;
     word-wrap: break-word;
     margin-left: 15px;
@@ -2168,6 +2175,12 @@ header {
       flex-direction: column;
       align-items: center;
       justify-content: center; }
+      @media screen and (max-width: 720px) {
+        .header-mobile_top_logo {
+          padding-top: 10px; } }
+      @media screen and (max-width: 576px) {
+        .header-mobile_top_logo {
+          padding-top: 0; } }
       .header-mobile_top_logo_img {
         width: 70px; }
       .header-mobile_top_logo_caption {
@@ -2272,7 +2285,8 @@ header {
     font-weight: 900;
     text-align: left;
     padding-left: 15px;
-    transform: scaleX(1.0006); }
+    transform: scaleX(1.0006);
+    text-transform: uppercase; }
   .header-mobile_content_info {
     margin-top: 20px;
     font-family: Lato;
