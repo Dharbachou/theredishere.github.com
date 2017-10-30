@@ -43,6 +43,9 @@ $(document).ready(function () {
     $('.go_to').click(function (event) { // ловим клик по ссылке с классом go_to
         event.preventDefault(); // вырубаем стандартное поведение
         var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
+        if(scroll_el == ".our-service" && $(window).width() < 991){
+            scroll_el = scroll_el + '-md';
+        }
         if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
             $('html, body').animate({scrollTop: $(scroll_el).offset().top}, 1000); // анимируем скроолинг к элементу scroll_el
         }
