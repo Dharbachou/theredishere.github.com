@@ -59,7 +59,7 @@
 
                 images_loop();
             }
-        }, 10);
+        }, 100);
     }
 
     $("*").each(function () {
@@ -109,6 +109,8 @@
     }
 
     window.addEventListener('load', function(){
+        if(!this.document.getElementById('submit'))
+            return;
         document.getElementById('submit').addEventListener('click', function(e){
             var error = document.getElementById('popup1');
             var form = document.forms[0];
